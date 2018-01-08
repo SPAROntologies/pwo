@@ -1,5 +1,21 @@
 [
   {
+    "@id": "_:N2c1ffbd8fa414344849074b6b1840f02",
+    "@type": [
+      "http://www.w3.org/2003/11/swrl#AtomList"
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [
+      {
+        "@id": "_:Ncb4463576a644d8f814d404d47a13857"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [
+      {
+        "@list": []
+      }
+    ]
+  },
+  {
     "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#isTaskDefinedIn",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
@@ -24,7 +40,7 @@
     ]
   },
   {
-    "@id": "_:Ndee7407f9f9c4b21b106e07adf163efb",
+    "@id": "_:Ne46f8ca925f24b428bfa33ff124a9338",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -96,6 +112,22 @@
     ]
   },
   {
+    "@id": "_:Na5d491bcce9544d594ec75d8b2478e83",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://purl.org/spar/pwo/happened"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#TimeInterval"
+      }
+    ]
+  },
+  {
     "@id": "http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#hasIntervalDate",
     "@type": [
       "http://www.w3.org/2002/07/owl#DatatypeProperty"
@@ -114,18 +146,56 @@
     ]
   },
   {
-    "@id": "_:N38575d391954427686a283ee1005b302",
+    "@id": "_:N19515e31b7bb4d55bfb936d4fd30cf8f",
     "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
+      "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"
     ],
-    "http://www.w3.org/2002/07/owl#complementOf": [
+    "http://www.w3.org/2003/11/swrl#argument1": [
       {
-        "@id": "_:Na13be4f74d644d319214f008facbd480"
+        "@id": "urn:swrl#sj"
+      }
+    ],
+    "http://www.w3.org/2003/11/swrl#argument2": [
+      {
+        "@id": "urn:swrl#r"
+      }
+    ],
+    "http://www.w3.org/2003/11/swrl#propertyPredicate": [
+      {
+        "@id": "http://purl.org/spar/pwo/produces"
       }
     ]
   },
   {
-    "@id": "_:N312a41fc4f404fbfb71c4d469d177fa7",
+    "@id": "http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#directlyFollows",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2002/07/owl#versionInfo",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "_:Nf4c2e301d1204e589a452ac7dcaf2c08",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://purl.org/spar/pwo/Workflow"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#isTaskDefinedIn"
+      }
+    ]
+  },
+  {
+    "@id": "_:Ncb4463576a644d8f814d404d47a13857",
     "@type": [
       "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"
     ],
@@ -146,13 +216,115 @@
     ]
   },
   {
-    "@id": "http://www.w3.org/2002/07/owl#versionInfo",
+    "@id": "http://www.semanticweb.org/owlapi#nodeID",
     "@type": [
       "http://www.w3.org/2002/07/owl#AnnotationProperty"
     ]
   },
   {
-    "@id": "_:N6608c5559b1c4524a43f46591bade87c",
+    "@id": "http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#hasTimeIndexedSetting",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  {
+    "@id": "_:N0518e3bc47384910b68a76db27e92aee",
+    "@type": [
+      "http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"
+    ],
+    "http://www.w3.org/2003/11/swrl#argument1": [
+      {
+        "@id": "urn:swrl#si"
+      }
+    ],
+    "http://www.w3.org/2003/11/swrl#argument2": [
+      {
+        "@value": "A step cannot need a resource that will be produced by a following step"
+      }
+    ],
+    "http://www.w3.org/2003/11/swrl#propertyPredicate": [
+      {
+        "@id": "http://www.essepuntato.it/2009/10/error/hasError"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#isExecutedIn",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  {
+    "@id": "http://purl.org/spar/pwo/hasPreviousStep",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A property linking a step in a workflow with the step that directly precedes it."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has previous step"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#directlyFollows"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nbcc6dc6fb9ab410c93c96104ea036af6",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://purl.org/spar/pwo/Step"
+          },
+          {
+            "@id": "http://www.ontologydesignpatterns.org/cp/owl/participation.owl#Event"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#forEntity",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  {
+    "@id": "_:N3c214e2040cd4c38a85e76aacaa73641",
+    "@type": [
+      "http://www.w3.org/2003/11/swrl#AtomList"
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [
+      {
+        "@id": "_:N0518e3bc47384910b68a76db27e92aee"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [
+      {
+        "@list": []
+      }
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/cp/owl/participation.owl#hasParticipant",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  {
+    "@id": "_:N5bc049bd1b22412ea68fe3efeac62e4a",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -168,196 +340,24 @@
     ]
   },
   {
-    "@id": "_:Na13be4f74d644d319214f008facbd480",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://purl.org/spar/pwo/hasPreviousStep"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "http://purl.org/spar/pwo/Step"
-      }
-    ]
-  },
-  {
-    "@id": "_:N4bdaf61ac64042b2a7c8941256dc45d9",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://purl.org/spar/pwo/involvesAction"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "_:Nee7da6a0f1824b1a9875d664f4e60a8b"
-      }
-    ]
-  },
-  {
-    "@id": "_:N419f1c1db8674e33a0916c483def2878",
-    "@type": [
-      "http://www.w3.org/2003/11/swrl#AtomList"
-    ],
-    "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [
-      {
-        "@id": "_:N02bb9c6030074d07b8f4f2b027b1b60f"
-      }
-    ],
-    "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [
-      {
-        "@id": "_:N69ee0f9e0a3e49c0b04a47a2ffbd2e47"
-      }
-    ]
-  },
-  {
-    "@id": "urn:swrl#sj",
-    "@type": [
-      "http://www.w3.org/2003/11/swrl#Variable"
-    ]
-  },
-  {
-    "@id": "_:N1cbd02fa0eeb48159d368014e4cd39df",
-    "@type": [
-      "http://www.w3.org/2003/11/swrl#AtomList"
-    ],
-    "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [
-      {
-        "@id": "_:Na8f50817193649bd928bc129e8a7ece7"
-      }
-    ],
-    "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [
-      {
-        "@list": []
-      }
-    ]
-  },
-  {
-    "@id": "http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#hasTimeIndexedSetting",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ]
-  },
-  {
-    "@id": "_:Nd1e2b14e66de40249a1a4bf0ece4cff9",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onClass": [
-      {
-        "@id": "http://www.w3.org/2006/time#DurationDescription"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/parameter.owl#hasParameter"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#qualifiedCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/owlapi#nodeID",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#isExecutedIn",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ]
-  },
-  {
-    "@id": "_:Nc410698ddec64c4eb23021803dc08ac8",
-    "@type": [
-      "http://www.w3.org/2003/11/swrl#ClassAtom"
-    ],
-    "http://www.w3.org/2003/11/swrl#argument1": [
-      {
-        "@id": "urn:swrl#sj"
-      }
-    ],
-    "http://www.w3.org/2003/11/swrl#classPredicate": [
-      {
-        "@id": "http://purl.org/spar/pwo/Step"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#forEntity",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ]
-  },
-  {
-    "@id": "_:N25eacd63dde749338efaab04319055d2",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://purl.org/spar/pwo/hasFirstStep"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "http://purl.org/spar/pwo/Step"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.ontologydesignpatterns.org/cp/owl/participation.owl#hasParticipant",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ]
-  },
-  {
-    "@id": "_:N5361e72652e04bb58bb971d285545f3b",
-    "@type": [
-      "http://www.w3.org/2003/11/swrl#AtomList"
-    ],
-    "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [
-      {
-        "@id": "_:Nc410698ddec64c4eb23021803dc08ac8"
-      }
-    ],
-    "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [
-      {
-        "@id": "_:N49918c6df93a407c9ed79fbc813e4125"
-      }
-    ]
-  },
-  {
     "@id": "http://purl.org/dc/elements/1.1/description",
     "@type": [
       "http://www.w3.org/2002/07/owl#AnnotationProperty"
     ]
   },
   {
-    "@id": "_:Nee7da6a0f1824b1a9875d664f4e60a8b",
+    "@id": "_:Na3283bda780143b58d465a3af3da4dcd",
     "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
+      "http://www.w3.org/2003/11/swrl#AtomList"
     ],
-    "http://www.w3.org/2002/07/owl#intersectionOf": [
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [
       {
-        "@list": [
-          {
-            "@id": "http://purl.org/spar/pwo/Action"
-          },
-          {
-            "@id": "_:Ndee7407f9f9c4b21b106e07adf163efb"
-          }
-        ]
+        "@id": "_:Nc326fb28b904401db244689c4dc24377"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [
+      {
+        "@id": "_:Nc1a39746c1eb4cbfbe1618f0bf728ef5"
       }
     ]
   },
@@ -464,25 +464,18 @@
     ]
   },
   {
-    "@id": "http://purl.org/spar/pwo/hasPreviousStep",
+    "@id": "_:Ned7d98a394a7429baab8a1867c315b4f",
     "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
+      "http://www.w3.org/2003/11/swrl#AtomList"
     ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [
       {
-        "@language": "en",
-        "@value": "A property linking a step in a workflow with the step that directly precedes it."
+        "@id": "_:Nf4f7ca1611ad413ab880a56a2fe8a137"
       }
     ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [
       {
-        "@language": "en",
-        "@value": "has previous step"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#directlyFollows"
+        "@id": "_:N7b4994cac402403f93eb759831d2dacc"
       }
     ]
   },
@@ -505,7 +498,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:N38575d391954427686a283ee1005b302"
+        "@id": "_:N1e881d0432f9433e90af7f7f9705b1d0"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
@@ -533,16 +526,16 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
+        "@id": "_:Nb82a8654a5ec4697a92448d1121f1cfb"
+      },
+      {
+        "@id": "_:N2ea7193ee6894193acb2719ade3cfb97"
+      },
+      {
         "@id": "http://www.ontologydesignpatterns.org/cp/owl/taskrole.owl#Task"
       },
       {
-        "@id": "_:Nd1e2b14e66de40249a1a4bf0ece4cff9"
-      },
-      {
-        "@id": "_:Nb6125e579b9d45318e75336de0212c21"
-      },
-      {
-        "@id": "_:Nd19245d0094241cebd87af9574b71acc"
+        "@id": "_:Nf4c2e301d1204e589a452ac7dcaf2c08"
       }
     ]
   },
@@ -553,24 +546,63 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplanexecution.owl#PlanExecution"
-      },
-      {
         "@id": "http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#TimeIndexedSituation"
       },
       {
-        "@id": "_:N6608c5559b1c4524a43f46591bade87c"
+        "@id": "_:N5bc049bd1b22412ea68fe3efeac62e4a"
       },
       {
-        "@id": "_:N4bdaf61ac64042b2a7c8941256dc45d9"
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplanexecution.owl#PlanExecution"
+      },
+      {
+        "@id": "_:N13b5aaef649c44c680bf9cf46406ccc9"
+      }
+    ]
+  },
+  {
+    "@id": "_:N92296d39d057467ea4d3e6f329f3a601",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://purl.org/spar/pwo/hasFirstStep"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://purl.org/spar/pwo/Step"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/spar/pwo/needs",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The property linking a workflow step or an event (e.g. an action executing a workflow step) to anything required to undertake that step/event."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:Nbcc6dc6fb9ab410c93c96104ea036af6"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "needs"
       }
     ]
   },
   {
     "@id": "http://purl.org/spar/pwo/isStepOf",
     "@type": [
-      "http://www.w3.org/2002/07/owl#FunctionalProperty",
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
+      "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "http://www.w3.org/2002/07/owl#FunctionalProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
@@ -591,29 +623,198 @@
     ]
   },
   {
+    "@id": "_:Nfe585697a9a34415a52c928e01b735ac",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplanexecution.owl#Action"
+          },
+          {
+            "@id": "http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#Action"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "@id": "http://purl.org/dc/elements/1.1/date",
     "@type": [
       "http://www.w3.org/2002/07/owl#AnnotationProperty"
     ]
   },
   {
-    "@id": "_:Ne2b34c24b7724f5697ed2488074f4ee6",
+    "@id": "_:N7b4994cac402403f93eb759831d2dacc",
     "@type": [
-      "http://www.w3.org/2003/11/swrl#Imp"
+      "http://www.w3.org/2003/11/swrl#AtomList"
     ],
-    "http://www.w3.org/2003/11/swrl#body": [
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [
       {
-        "@id": "_:N8fa3d36268204910b8b66e72aa351d1e"
+        "@id": "_:N2af3b15aa8984c879fe8c7efaa2bf21f"
       }
     ],
-    "http://www.w3.org/2003/11/swrl#head": [
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [
       {
-        "@id": "_:N1cbd02fa0eeb48159d368014e4cd39df"
+        "@id": "_:Na3283bda780143b58d465a3af3da4dcd"
       }
     ]
   },
   {
-    "@id": "_:N4c5ef30eb7d4418aa298fb9d97acb819",
+    "@id": "http://purl.org/dc/elements/1.1/contributor",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "_:N2af3b15aa8984c879fe8c7efaa2bf21f",
+    "@type": [
+      "http://www.w3.org/2003/11/swrl#ClassAtom"
+    ],
+    "http://www.w3.org/2003/11/swrl#argument1": [
+      {
+        "@id": "urn:swrl#sj"
+      }
+    ],
+    "http://www.w3.org/2003/11/swrl#classPredicate": [
+      {
+        "@id": "http://purl.org/spar/pwo/Step"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#atTime",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A step is performed within a time interval."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "at time"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2000/01/rdf-schema#comment",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "urn:swrl#r",
+    "@type": [
+      "http://www.w3.org/2003/11/swrl#Variable"
+    ]
+  },
+  {
+    "@id": "_:Nb82a8654a5ec4697a92448d1121f1cfb",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onClass": [
+      {
+        "@id": "http://www.w3.org/2006/time#DurationDescription"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/parameter.owl#hasParameter"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#qualifiedCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/spar/pwo/produces",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The property linking a workflow step or an event (e.g. an action executing a workflow step) to the thing that the step/event produces, creates or results in."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:Nb63b3acd086746d1b001b97c4bac8b5c"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "produces"
+      }
+    ]
+  },
+  {
+    "@id": "urn:swrl#si",
+    "@type": [
+      "http://www.w3.org/2003/11/swrl#Variable"
+    ]
+  },
+  {
+    "@id": "http://purl.org/spar/pwo/Workflow",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A sequence of connected steps, representing a sequence of publishing operations undertaken by agents. A workflow may be seen as an abstract model of real work."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "workflow"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#Plan"
+      },
+      {
+        "@id": "_:N92296d39d057467ea4d3e6f329f3a601"
+      }
+    ]
+  },
+  {
+    "@id": "_:N2ea7193ee6894193acb2719ade3cfb97",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://purl.org/spar/pwo/Action"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#isExecutedIn"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ]
+  },
+  {
+    "@id": "_:Nc326fb28b904401db244689c4dc24377",
     "@type": [
       "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"
     ],
@@ -631,12 +832,6 @@
       {
         "@id": "http://purl.org/spar/pwo/needs"
       }
-    ]
-  },
-  {
-    "@id": "http://purl.org/dc/elements/1.1/contributor",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
     ]
   },
   {
@@ -673,211 +868,9 @@
     ]
   },
   {
-    "@id": "http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#atTime",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "A step is performed within a time interval."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "at time"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.w3.org/2000/01/rdf-schema#comment",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "urn:swrl#r",
-    "@type": [
-      "http://www.w3.org/2003/11/swrl#Variable"
-    ]
-  },
-  {
-    "@id": "http://purl.org/spar/pwo/produces",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "The property linking a workflow step or an event (e.g. an action executing a workflow step) to the thing that the step/event produces, creates or results in."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:Nda776c91e87a4fe08ac33622bacd1999"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "produces"
-      }
-    ]
-  },
-  {
-    "@id": "urn:swrl#si",
-    "@type": [
-      "http://www.w3.org/2003/11/swrl#Variable"
-    ]
-  },
-  {
-    "@id": "http://purl.org/spar/pwo/Workflow",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "A sequence of connected steps, representing a sequence of publishing operations undertaken by agents. A workflow may be seen as an abstract model of real work."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "workflow"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:N25eacd63dde749338efaab04319055d2"
-      },
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#Plan"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/spar/pwo/needs",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "The property linking a workflow step or an event (e.g. an action executing a workflow step) to anything required to undertake that step/event."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:N60098bdcf776446780c35a2e90400f0f"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "needs"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ]
-  },
-  {
-    "@id": "_:Nbbc893d8b980432f9cb6339b5571c7eb",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#intersectionOf": [
-      {
-        "@list": [
-          {
-            "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplanexecution.owl#Action"
-          },
-          {
-            "@id": "http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#Action"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:Nd19245d0094241cebd87af9574b71acc",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "http://purl.org/spar/pwo/Action"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#isExecutedIn"
-      }
-    ]
-  },
-  {
     "@id": "http://purl.org/dc/elements/1.1/rights",
     "@type": [
       "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#definesTask",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ]
-  },
-  {
-    "@id": "_:N8fa3d36268204910b8b66e72aa351d1e",
-    "@type": [
-      "http://www.w3.org/2003/11/swrl#AtomList"
-    ],
-    "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [
-      {
-        "@id": "_:N23ecc1c13dce4ad2951a58e025459bbb"
-      }
-    ],
-    "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [
-      {
-        "@id": "_:N5361e72652e04bb58bb971d285545f3b"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nc671f50c49864711810be3e4ae61e53d",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://purl.org/spar/pwo/happened"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#TimeInterval"
-      }
-    ]
-  },
-  {
-    "@id": "_:N23ecc1c13dce4ad2951a58e025459bbb",
-    "@type": [
-      "http://www.w3.org/2003/11/swrl#ClassAtom"
-    ],
-    "http://www.w3.org/2003/11/swrl#argument1": [
-      {
-        "@id": "urn:swrl#si"
-      }
-    ],
-    "http://www.w3.org/2003/11/swrl#classPredicate": [
-      {
-        "@id": "http://purl.org/spar/pwo/Step"
-      }
     ]
   },
   {
@@ -887,18 +880,26 @@
     ]
   },
   {
-    "@id": "_:N49918c6df93a407c9ed79fbc813e4125",
+    "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#definesTask",
     "@type": [
-      "http://www.w3.org/2003/11/swrl#AtomList"
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  {
+    "@id": "_:Nb63b3acd086746d1b001b97c4bac8b5c",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
     ],
-    "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [
+    "http://www.w3.org/2002/07/owl#unionOf": [
       {
-        "@id": "_:N4c5ef30eb7d4418aa298fb9d97acb819"
-      }
-    ],
-    "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [
-      {
-        "@id": "_:N419f1c1db8674e33a0916c483def2878"
+        "@list": [
+          {
+            "@id": "http://purl.org/spar/pwo/Step"
+          },
+          {
+            "@id": "http://www.ontologydesignpatterns.org/cp/owl/participation.owl#Event"
+          }
+        ]
       }
     ]
   },
@@ -906,6 +907,49 @@
     "@id": "http://www.essepuntato.it/2009/10/error/hasError",
     "@type": [
       "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ]
+  },
+  {
+    "@id": "_:N7d4ee794a9eb4a6eb0c3f32f75e2b5eb",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://purl.org/spar/pwo/hasPreviousStep"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://purl.org/spar/pwo/Step"
+      }
+    ]
+  },
+  {
+    "@id": "_:N1e881d0432f9433e90af7f7f9705b1d0",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#complementOf": [
+      {
+        "@id": "_:N7d4ee794a9eb4a6eb0c3f32f75e2b5eb"
+      }
+    ]
+  },
+  {
+    "@id": "_:N50fc0e9b34324397bb5d882524d42f77",
+    "@type": [
+      "http://www.w3.org/2003/11/swrl#Imp"
+    ],
+    "http://www.w3.org/2003/11/swrl#body": [
+      {
+        "@id": "_:Ned7d98a394a7429baab8a1867c315b4f"
+      }
+    ],
+    "http://www.w3.org/2003/11/swrl#head": [
+      {
+        "@id": "_:N3c214e2040cd4c38a85e76aacaa73641"
+      }
     ]
   },
   {
@@ -927,44 +971,18 @@
     ]
   },
   {
-    "@id": "_:N60098bdcf776446780c35a2e90400f0f",
+    "@id": "_:Nc1a39746c1eb4cbfbe1618f0bf728ef5",
     "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
+      "http://www.w3.org/2003/11/swrl#AtomList"
     ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [
       {
-        "@list": [
-          {
-            "@id": "http://purl.org/spar/pwo/Step"
-          },
-          {
-            "@id": "http://www.ontologydesignpatterns.org/cp/owl/participation.owl#Event"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/spar/pwo/Action",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "An event with at least one agent that is participant in it and that is linked to a workflow execution and to a step of the related workflow description."
+        "@id": "_:N19515e31b7bb4d55bfb936d4fd30cf8f"
       }
     ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [
       {
-        "@value": "action"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:Nc671f50c49864711810be3e4ae61e53d"
-      },
-      {
-        "@id": "_:Nbbc893d8b980432f9cb6339b5571c7eb"
+        "@id": "_:N2c1ffbd8fa414344849074b6b1840f02"
       }
     ]
   },
@@ -975,10 +993,10 @@
     ],
     "http://purl.org/dc/elements/1.1/creator": [
       {
-        "@value": "Silvio Peroni"
+        "@value": "Aldo Gangemi"
       },
       {
-        "@value": "Aldo Gangemi"
+        "@value": "Silvio Peroni"
       },
       {
         "@value": "David Shotton"
@@ -1001,7 +1019,7 @@
     "http://purl.org/dc/elements/1.1/rights": [
       {
         "@language": "en",
-        "@value": "This work is distributed under a Creative Commons Attribution License (http://creativecommons.org/licenses/by/3.0/)."
+        "@value": "This work is distributed under a Creative Commons Attribution License (http://creativecommons.org/licenses/by/4.0/)."
       }
     ],
     "http://purl.org/dc/elements/1.1/title": [
@@ -1012,33 +1030,33 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "The Publishing Workflow Ontology (PWO) is an ontology for describing the workflow associated with the publication of a document.  It forms part of SPAR, a suite of Semantic Publishing and Referencing Ontologies."
+        "@value": "The Publishing Workflow Ontology (PWO) is a simple ontology for describing the steps in the workflow associated with the publication of a document or other publication entity.\n\n**URL:** http://purl.org/spar/pwo\n\n**Creators**: [Aldo Gangemi](https://orcid.org/0000-0001-5568-2684), [David Shotton](http://orcid.org/0000-0001-5506-523X), [Silvio Peroni](http://orcid.org/0000-0003-0530-4305)\n\n**License:** [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/legalcode)\n\n**Website:** http://www.sparontologies.net/ontologies/pwo\n\n**Cite as:** Gangemi, A., Peroni, S., Shotton, D., Vitali, F. (2014). The Publishing Workflow Ontology (PWO). In Semantic Web, 8 (5): 703-718. DOI: https://doi.org/10.3233/SW-160230. Open Access at: http://www.semantic-web-journal.net/system/files/swj1301.pdf"
       }
     ],
     "http://www.w3.org/2002/07/owl#imports": [
       {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/sequence.owl"
+      },
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/participation.owl"
+      },
+      {
         "@id": "http://www.w3.org/2006/time"
+      },
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplan.owl"
       },
       {
         "@id": "http://www.ontologydesignpatterns.org/cp/owl/controlflow.owl"
       },
       {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/sequence.owl"
-      },
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplan.owl"
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl"
       },
       {
         "@id": "http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl"
       },
       {
         "@id": "http://www.essepuntato.it/2009/10/error"
-      },
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/participation.owl"
-      },
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl"
       }
     ],
     "http://www.w3.org/2002/07/owl#priorVersion": [
@@ -1064,18 +1082,20 @@
     ]
   },
   {
-    "@id": "_:N69ee0f9e0a3e49c0b04a47a2ffbd2e47",
+    "@id": "_:N0d08a46e087a46919b07b4166e052a3d",
     "@type": [
-      "http://www.w3.org/2003/11/swrl#AtomList"
+      "http://www.w3.org/2002/07/owl#Class"
     ],
-    "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
       {
-        "@id": "_:N312a41fc4f404fbfb71c4d469d177fa7"
-      }
-    ],
-    "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [
-      {
-        "@list": []
+        "@list": [
+          {
+            "@id": "http://purl.org/spar/pwo/Action"
+          },
+          {
+            "@id": "_:Ne46f8ca925f24b428bfa33ff124a9338"
+          }
+        ]
       }
     ]
   },
@@ -1153,70 +1173,58 @@
     ]
   },
   {
-    "@id": "http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#directlyFollows",
+    "@id": "_:N13b5aaef649c44c680bf9cf46406ccc9",
     "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://purl.org/spar/pwo/involvesAction"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "_:N0d08a46e087a46919b07b4166e052a3d"
+      }
     ]
   },
   {
-    "@id": "http://purl.org/spar/pwo/executes",
+    "@id": "_:Nf4f7ca1611ad413ab880a56a2fe8a137",
     "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
+      "http://www.w3.org/2003/11/swrl#ClassAtom"
+    ],
+    "http://www.w3.org/2003/11/swrl#argument1": [
+      {
+        "@id": "urn:swrl#si"
+      }
+    ],
+    "http://www.w3.org/2003/11/swrl#classPredicate": [
+      {
+        "@id": "http://purl.org/spar/pwo/Step"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/spar/pwo/Action",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
-        "@language": "en",
-        "@value": "This property allows to link a workflow execution to the related workflow description."
+        "@value": "An event with at least one agent that is participant in it and that is linked to a workflow execution and to a step of the related workflow description."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@language": "en",
-        "@value": "executes"
+        "@value": "action"
       }
     ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplan.owl#satisfies"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#inverseOf": [
+        "@id": "_:Na5d491bcce9544d594ec75d8b2478e83"
+      },
       {
-        "@id": "http://purl.org/spar/pwo/isExecutedBy"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nda776c91e87a4fe08ac33622bacd1999",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "http://purl.org/spar/pwo/Step"
-          },
-          {
-            "@id": "http://www.ontologydesignpatterns.org/cp/owl/participation.owl#Event"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:Nb6125e579b9d45318e75336de0212c21",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "http://purl.org/spar/pwo/Workflow"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#isTaskDefinedIn"
+        "@id": "_:Nfe585697a9a34415a52c928e01b735ac"
       }
     ]
   },
@@ -1256,23 +1264,36 @@
     ]
   },
   {
-    "@id": "_:Na8f50817193649bd928bc129e8a7ece7",
+    "@id": "urn:swrl#sj",
     "@type": [
-      "http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"
+      "http://www.w3.org/2003/11/swrl#Variable"
+    ]
+  },
+  {
+    "@id": "http://purl.org/spar/pwo/executes",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
-    "http://www.w3.org/2003/11/swrl#argument1": [
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
-        "@id": "urn:swrl#si"
+        "@language": "en",
+        "@value": "This property allows to link a workflow execution to the related workflow description."
       }
     ],
-    "http://www.w3.org/2003/11/swrl#argument2": [
+    "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "A step cannot need a resource that will be produced by a following step"
+        "@language": "en",
+        "@value": "executes"
       }
     ],
-    "http://www.w3.org/2003/11/swrl#propertyPredicate": [
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
       {
-        "@id": "http://www.essepuntato.it/2009/10/error/hasError"
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplan.owl#satisfies"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "http://purl.org/spar/pwo/isExecutedBy"
       }
     ]
   },
@@ -1280,27 +1301,6 @@
     "@id": "http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#precedes",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ]
-  },
-  {
-    "@id": "_:N02bb9c6030074d07b8f4f2b027b1b60f",
-    "@type": [
-      "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"
-    ],
-    "http://www.w3.org/2003/11/swrl#argument1": [
-      {
-        "@id": "urn:swrl#sj"
-      }
-    ],
-    "http://www.w3.org/2003/11/swrl#argument2": [
-      {
-        "@id": "urn:swrl#r"
-      }
-    ],
-    "http://www.w3.org/2003/11/swrl#propertyPredicate": [
-      {
-        "@id": "http://purl.org/spar/pwo/produces"
-      }
     ]
   }
 ]

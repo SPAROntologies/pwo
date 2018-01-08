@@ -1,264 +1,264 @@
-<http://purl.org/spar/pwo/isProducedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:N1cbd02fa0eeb48159d368014e4cd39df <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<http://purl.org/spar/pwo/Step> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Nd1e2b14e66de40249a1a4bf0ece4cff9 .
-<http://purl.org/spar/pwo/hasStep> <http://www.w3.org/2000/01/rdf-schema#comment> "The property linking a workflow to a component step."@en .
-<http://purl.org/dc/elements/1.1/rights> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-_:N25eacd63dde749338efaab04319055d2 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/pwo/hasFirstStep> .
-<http://purl.org/spar/pwo> <http://www.w3.org/2002/07/owl#versionIRI> <http://purl.org/spar/pwo/2017-06-01> .
-<http://www.w3.org/2000/01/rdf-schema#comment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-_:N25eacd63dde749338efaab04319055d2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://purl.org/spar/pwo/isNeededBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/spar/pwo/Step> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/cp/owl/taskrole.owl#Task> .
-<http://purl.org/spar/pwo/Step> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Nd19245d0094241cebd87af9574b71acc .
-_:N02bb9c6030074d07b8f4f2b027b1b60f <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
-<http://purl.org/spar/pwo/happened> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/pwo/isIntervalFor> .
-<http://purl.org/spar/pwo> <http://www.w3.org/2002/07/owl#priorVersion> <https://svn.code.sf.net/p/sempublishing/code/PWO/2016-03-14_pwo-2_3.owl> .
-_:N03fbea6f60414c6fb77d626172964a3a <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Ne066fc8bc03c46fc927b144fd895405d .
-_:Nc671f50c49864711810be3e4ae61e53d <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/pwo/happened> .
-<http://www.ontologydesignpatterns.org/cp/owl/participation.owl#Object> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#executesTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/spar/pwo/isProducedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is produced by"@en .
-_:N349b71f8dbbf4c6aae1df70a09401f1a <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#directlyPrecedes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#TimeInterval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/spar/pwo> <http://www.w3.org/2002/07/owl#imports> <http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl> .
-<http://purl.org/spar/pwo> <http://www.w3.org/2000/01/rdf-schema#comment> "The Publishing Workflow Ontology (PWO) is an ontology for describing the workflow associated with the publication of a document.  It forms part of SPAR, a suite of Semantic Publishing and Referencing Ontologies."@en .
-_:N419f1c1db8674e33a0916c483def2878 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
-_:N4c5ef30eb7d4418aa298fb9d97acb819 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
-<http://purl.org/spar/pwo/hasFirstStep> <http://www.w3.org/2000/01/rdf-schema#comment> "A workflow that starts with a particular step."@en .
-_:N704b50aafb9d4e6a8b4804be2ac329d1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:N03fbea6f60414c6fb77d626172964a3a <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.ontologydesignpatterns.org/cp/owl/basicplanexecution.owl#Action> .
-_:N5a33acc01b65425c95223fc04d13f1dd <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:N322aa344d30f49e3914d0060a952cc07 .
-<http://purl.org/spar/pwo/isStepOf> <http://www.w3.org/2000/01/rdf-schema#comment> "The property linking a step in a workflow to the workflow of which it is a component."@en .
-_:N322aa344d30f49e3914d0060a952cc07 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/pwo/hasStep> .
-_:Ne066fc8bc03c46fc927b144fd895405d <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#Action> .
-<http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#hasIntervalDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-_:Nd1e2b14e66de40249a1a4bf0ece4cff9 <http://www.w3.org/2002/07/owl#onClass> <http://www.w3.org/2006/time#DurationDescription> .
-<http://purl.org/spar/pwo/isStepOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:N23ecc1c13dce4ad2951a58e025459bbb <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#si> .
-<http://purl.org/spar/pwo/isIntervalFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/spar/pwo> <http://purl.org/dc/elements/1.1/creator> "Silvio Peroni"^^<http://www.w3.org/2001/XMLSchema#string> .
-<http://purl.org/spar/pwo/happened> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#TimeInterval> .
-_:Na8f50817193649bd928bc129e8a7ece7 <http://www.w3.org/2003/11/swrl#argument2> "A step cannot need a resource that will be produced by a following step"^^<http://www.w3.org/2001/XMLSchema#string> .
-_:N02bb9c6030074d07b8f4f2b027b1b60f <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#sj> .
-<http://purl.org/spar/pwo/isExecutedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is executed by" .
-_:N6608c5559b1c4524a43f46591bade87c <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/pwo/Workflow> .
-<http://purl.org/spar/pwo> <http://www.w3.org/2002/07/owl#imports> <http://www.essepuntato.it/2009/10/error> .
-_:N419f1c1db8674e33a0916c483def2878 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:N69ee0f9e0a3e49c0b04a47a2ffbd2e47 .
-_:N6608c5559b1c4524a43f46591bade87c <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:Ndee7407f9f9c4b21b106e07adf163efb <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:Ndee7407f9f9c4b21b106e07adf163efb <http://www.w3.org/2002/07/owl#onProperty> <http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#executesTask> .
-_:N60098bdcf776446780c35a2e90400f0f <http://www.w3.org/2002/07/owl#unionOf> _:N95358fc1a00f4f5a84778e7ffba06429 .
-<http://purl.org/spar/pwo/isProducedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The property linking something to the workflow step or an event (e.g. an action executing a workflow step) that produces, creates or results in that thing."@en .
-<http://purl.org/spar/pwo/Step> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Nb6125e579b9d45318e75336de0212c21 .
-<http://purl.org/spar/pwo/executes> <http://www.w3.org/2000/01/rdf-schema#comment> "This property allows to link a workflow execution to the related workflow description."@en .
-<http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#atTime> <http://www.w3.org/2000/01/rdf-schema#label> "at time"@en .
-<http://purl.org/spar/pwo/hasFirstStep> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/pwo/hasStep> .
-<http://purl.org/spar/pwo/produces> <http://www.w3.org/2000/01/rdf-schema#comment> "The property linking a workflow step or an event (e.g. an action executing a workflow step) to the thing that the step/event produces, creates or results in."@en .
-<http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#isExecutedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/spar/pwo/isActionInvolvedIn> <http://www.w3.org/2000/01/rdf-schema#comment> "The property linking an event to a particular execution of a workflow description."@en .
-<http://www.w3.org/2000/01/rdf-schema#label> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-_:N322aa344d30f49e3914d0060a952cc07 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:N2068dddfdc634d3fa06cdee9725d8975 .
-<http://purl.org/spar/pwo/needs> <http://www.w3.org/2000/01/rdf-schema#label> "needs"@en .
-_:N69ee0f9e0a3e49c0b04a47a2ffbd2e47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:N312a41fc4f404fbfb71c4d469d177fa7 .
-_:N69ee0f9e0a3e49c0b04a47a2ffbd2e47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<http://purl.org/spar/pwo/WorkflowExecution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:N6608c5559b1c4524a43f46591bade87c .
-_:N312a41fc4f404fbfb71c4d469d177fa7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
-_:N041270ed24a44dc98d3c907071a64ef0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<http://www.ontologydesignpatterns.org/cp/owl/taskrole.owl#Task> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/spar/pwo/isStepOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
-<http://purl.org/spar/pwo/Step> <http://www.w3.org/2000/01/rdf-schema#label> "step"@en .
-<http://purl.org/spar/pwo/involvesAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:Nd19245d0094241cebd87af9574b71acc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://purl.org/spar/pwo/hasNextStep> <http://www.w3.org/2000/01/rdf-schema#comment> "A property linking a step in a workflow with the step that directly follows it."@en .
-_:N6608c5559b1c4524a43f46591bade87c <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/pwo/executes> .
-<http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#Action> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:Ne066fc8bc03c46fc927b144fd895405d <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:Nc410698ddec64c4eb23021803dc08ac8 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#sj> .
-_:N1cbd02fa0eeb48159d368014e4cd39df <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
-<http://purl.org/spar/pwo/Action> <http://www.w3.org/2000/01/rdf-schema#label> "action" .
-<http://purl.org/spar/pwo/happened> <http://www.w3.org/2000/01/rdf-schema#comment> "It allows one to link an event to the interval when it happened."@en .
-_:Ne2b34c24b7724f5697ed2488074f4ee6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
-<http://purl.org/spar/pwo/WorkflowExecution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:N4bdaf61ac64042b2a7c8941256dc45d9 .
-<http://purl.org/spar/pwo/hasPreviousStep> <http://www.w3.org/2000/01/rdf-schema#label> "has previous step"@en .
-<http://purl.org/spar/pwo/hasNextStep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/spar/pwo/Action> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Nc671f50c49864711810be3e4ae61e53d .
-<http://purl.org/spar/pwo/hasStep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.ontologydesignpatterns.org/cp/owl/situation.owl#isSettingFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:N49918c6df93a407c9ed79fbc813e4125 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:N4c5ef30eb7d4418aa298fb9d97acb819 .
-<http://purl.org/spar/pwo/hasStep> <http://www.w3.org/2000/01/rdf-schema#label> "has step"@en .
-<http://purl.org/spar/pwo/isProducedBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/pwo/produces> .
-<http://purl.org/spar/pwo/Action> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/spar/pwo/Workflow> <http://www.w3.org/2000/01/rdf-schema#label> "workflow"@en .
-<http://purl.org/spar/pwo/Step> <http://www.w3.org/2000/01/rdf-schema#comment> "An atomic unit of a workflow, that may be characterized by a starting time and an ending time, and may be associated with one or more events.  A workflow step usually involves some input information, material or energy needed to complete the step, and some output information, material or energy produced by that step.  In the case of a publishing workflow, a step typically results in the creation of a publication entity, usually by the modification of another pre-existing publication entity, e.g. the creation of an edited paper from a rough draft, or of an HTML representation from an XML mark-up."@en .
-_:N4bdaf61ac64042b2a7c8941256dc45d9 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/pwo/involvesAction> .
-<http://purl.org/spar/pwo/isActionInvolvedIn> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:N95a9d18571234ee4aef71198b8d5962e .
-<http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/spar/pwo/hasNextStep> <http://www.w3.org/2000/01/rdf-schema#label> "has next step"@en .
-<http://purl.org/spar/pwo/involvesAction> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/pwo/Action> .
-_:Nc671f50c49864711810be3e4ae61e53d <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#TimeInterval> .
-<http://purl.org/spar/pwo/involvesAction> <http://www.w3.org/2000/01/rdf-schema#comment> "The property linking a particular execution of a workflow to an action."@en .
-<http://purl.org/spar/pwo/isExecutedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/cp/owl/basicplan.owl#isSatisfiedBy> .
-<http://purl.org/spar/pwo/Action> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Nbbc893d8b980432f9cb6339b5571c7eb .
-<http://purl.org/spar/pwo/isExecutedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/spar/pwo/isNeededBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The property linking a thing required to undertake a workflow step or an event (e.g. an action executing a workflow step) to the step/event itself."@en .
-_:N82d06e7bff304cfe923c58ee5405c60c <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:N349b71f8dbbf4c6aae1df70a09401f1a .
-_:Ne2b34c24b7724f5697ed2488074f4ee6 <http://www.w3.org/2003/11/swrl#head> _:N1cbd02fa0eeb48159d368014e4cd39df .
-<http://purl.org/spar/pwo/happened> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/spar/pwo/needs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:N041270ed24a44dc98d3c907071a64ef0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.ontologydesignpatterns.org/cp/owl/participation.owl#Event> .
-_:Nb6125e579b9d45318e75336de0212c21 <http://www.w3.org/2002/07/owl#onProperty> <http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#isTaskDefinedIn> .
-_:Nda776c91e87a4fe08ac33622bacd1999 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.ontologydesignpatterns.org/cp/owl/participation.owl#hasParticipant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#precedes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/spar/pwo> <http://www.w3.org/2002/07/owl#imports> <http://www.ontologydesignpatterns.org/cp/owl/participation.owl> .
-<http://purl.org/spar/pwo/hasPreviousStep> <http://www.w3.org/2000/01/rdf-schema#comment> "A property linking a step in a workflow with the step that directly precedes it."@en .
-_:N2068dddfdc634d3fa06cdee9725d8975 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<http://purl.org/spar/pwo/hasFirstStep> <http://www.w3.org/2000/01/rdf-schema#label> "has first step"@en .
-<http://purl.org/spar/pwo/happened> <http://www.w3.org/2000/01/rdf-schema#label> "happened"@en .
-<http://purl.org/spar/pwo/Workflow> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#Plan> .
-<http://purl.org/spar/pwo/executes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/spar/pwo/Action> <http://www.w3.org/2000/01/rdf-schema#comment> "An event with at least one agent that is participant in it and that is linked to a workflow execution and to a step of the related workflow description." .
-<http://purl.org/spar/pwo/hasNextStep> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/pwo/Step> .
-_:Na8f50817193649bd928bc129e8a7ece7 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.essepuntato.it/2009/10/error/hasError> .
-<http://purl.org/spar/pwo> <http://purl.org/dc/elements/1.1/creator> "David Shotton"^^<http://www.w3.org/2001/XMLSchema#string> .
-<http://purl.org/spar/pwo/hasNextStep> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/pwo/Step> .
-_:N704b50aafb9d4e6a8b4804be2ac329d1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.ontologydesignpatterns.org/cp/owl/participation.owl#Event> .
-<http://purl.org/spar/pwo/involvesAction> <http://www.w3.org/2000/01/rdf-schema#label> "involves action"@en .
-_:N5361e72652e04bb58bb971d285545f3b <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:Nc410698ddec64c4eb23021803dc08ac8 .
-_:Nd19245d0094241cebd87af9574b71acc <http://www.w3.org/2002/07/owl#allValuesFrom> <http://purl.org/spar/pwo/Action> .
-<http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#isTaskDefinedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<urn:swrl#si> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
-_:N95a9d18571234ee4aef71198b8d5962e <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:N8b88ae88af0e40ea93d9a7baf3576a3b .
-<http://purl.org/spar/pwo/isExecutedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "This property allows to link a workflow description to the related workflow execution." .
-<http://purl.org/spar/pwo> <http://purl.org/dc/elements/1.1/rights> "This work is distributed under a Creative Commons Attribution License (http://creativecommons.org/licenses/by/3.0/)."@en .
-_:Nbbc893d8b980432f9cb6339b5571c7eb <http://www.w3.org/2002/07/owl#intersectionOf> _:N03fbea6f60414c6fb77d626172964a3a .
-_:N8fa3d36268204910b8b66e72aa351d1e <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
-<http://purl.org/spar/pwo/involvesAction> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:N5a33acc01b65425c95223fc04d13f1dd .
-<http://purl.org/spar/pwo> <http://www.w3.org/2002/07/owl#imports> <http://www.ontologydesignpatterns.org/cp/owl/controlflow.owl> .
-_:N1cbd02fa0eeb48159d368014e4cd39df <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:Na8f50817193649bd928bc129e8a7ece7 .
-_:N8b88ae88af0e40ea93d9a7baf3576a3b <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/pwo/isStepOf> .
-<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<http://purl.org/spar/pwo> <http://www.w3.org/2002/07/owl#imports> <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl> .
-<http://purl.org/spar/pwo> <http://www.w3.org/2002/07/owl#imports> <http://www.ontologydesignpatterns.org/cp/owl/basicplan.owl> .
-<http://purl.org/spar/pwo> <http://purl.org/dc/elements/1.1/creator> "Aldo Gangemi"^^<http://www.w3.org/2001/XMLSchema#string> .
-<http://purl.org/spar/pwo/produces> <http://www.w3.org/2000/01/rdf-schema#domain> _:Nda776c91e87a4fe08ac33622bacd1999 .
-<http://purl.org/spar/pwo> <http://www.w3.org/2002/07/owl#imports> <http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl> .
-<http://purl.org/spar/pwo/hasNextStep> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#directlyPrecedes> .
-<http://purl.org/spar/pwo/hasFirstStep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<http://purl.org/spar/pwo/involvesAction> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/pwo/isActionInvolvedIn> .
-<http://purl.org/spar/pwo/isActionInvolvedIn> <http://www.w3.org/2000/01/rdf-schema#label> "is action involved in"@en .
-<http://purl.org/spar/pwo/hasPreviousStep> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#directlyFollows> .
-<http://purl.org/spar/pwo/Step> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/spar/pwo/produces> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:N8fa3d36268204910b8b66e72aa351d1e <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:N5361e72652e04bb58bb971d285545f3b .
-_:Na8f50817193649bd928bc129e8a7ece7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
 <http://purl.org/spar/pwo/executes> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/pwo/isExecutedBy> .
-_:N38575d391954427686a283ee1005b302 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/spar/pwo> <http://purl.org/dc/elements/1.1/description> <http://purl.org/spar/pwo/pwo.png> .
-_:N4c5ef30eb7d4418aa298fb9d97acb819 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://purl.org/spar/pwo/needs> .
-<http://purl.org/spar/pwo/WorkflowExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/spar/pwo/hasStep> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#definesTask> .
-_:Nee7da6a0f1824b1a9875d664f4e60a8b <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/dc/elements/1.1/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<http://purl.org/spar/pwo/involvesAction> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/pwo/WorkflowExecution> .
-_:N4c5ef30eb7d4418aa298fb9d97acb819 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#r> .
-<http://www.essepuntato.it/2009/10/error/hasError> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-_:N2ed7e01c3c50431a980e40b260166693 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<http://purl.org/spar/pwo/isIntervalFor> <http://www.w3.org/2000/01/rdf-schema#comment> "It allows one to link an interval describing when an event happened to the related event."@en .
-<http://purl.org/spar/pwo/Workflow> <http://www.w3.org/2000/01/rdf-schema#comment> "A sequence of connected steps, representing a sequence of publishing operations undertaken by agents. A workflow may be seen as an abstract model of real work."@en .
-<http://purl.org/spar/pwo/needs> <http://www.w3.org/2000/01/rdf-schema#domain> _:N60098bdcf776446780c35a2e90400f0f .
-<http://purl.org/spar/pwo/hasPreviousStep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/spar/pwo/executes> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/cp/owl/basicplan.owl#satisfies> .
-_:N95a9d18571234ee4aef71198b8d5962e <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#executesTask> .
-_:N349b71f8dbbf4c6aae1df70a09401f1a <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:Ndee7407f9f9c4b21b106e07adf163efb .
-_:N2068dddfdc634d3fa06cdee9725d8975 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#isExecutedIn> .
-<http://purl.org/spar/pwo/WorkflowExecution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#TimeIndexedSituation> .
-<http://purl.org/spar/pwo/isStepOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#isTaskDefinedIn> .
-<http://purl.org/spar/pwo/isNeededBy> <http://www.w3.org/2000/01/rdf-schema#label> "is needed by"@en .
-_:Na13be4f74d644d319214f008facbd480 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/pwo/hasPreviousStep> .
-<http://purl.org/spar/pwo/hasNextStep> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/pwo/hasPreviousStep> .
-<http://purl.org/spar/pwo> <http://www.w3.org/2002/07/owl#versionInfo> "2.4"^^<http://www.w3.org/2001/XMLSchema#string> .
-_:Na8f50817193649bd928bc129e8a7ece7 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#si> .
-_:N49918c6df93a407c9ed79fbc813e4125 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
-<http://purl.org/spar/pwo/hasStep> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/pwo/Workflow> .
-_:N23ecc1c13dce4ad2951a58e025459bbb <http://www.w3.org/2003/11/swrl#classPredicate> <http://purl.org/spar/pwo/Step> .
-_:Nda776c91e87a4fe08ac33622bacd1999 <http://www.w3.org/2002/07/owl#unionOf> _:N2745f316afcc4752abdf92d1a5bdf771 .
-_:Nbbc893d8b980432f9cb6339b5571c7eb <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:Nd1e2b14e66de40249a1a4bf0ece4cff9 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:N38575d391954427686a283ee1005b302 <http://www.w3.org/2002/07/owl#complementOf> _:Na13be4f74d644d319214f008facbd480 .
-_:N4c5ef30eb7d4418aa298fb9d97acb819 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#si> .
-_:Nc410698ddec64c4eb23021803dc08ac8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
-<http://purl.org/spar/pwo/produces> <http://www.w3.org/2000/01/rdf-schema#label> "produces"@en .
-<http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#hasTimeIndexedSetting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<http://purl.org/spar/pwo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-_:N312a41fc4f404fbfb71c4d469d177fa7 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#si> .
-_:N82d06e7bff304cfe923c58ee5405c60c <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/pwo/Action> .
-_:N8fa3d36268204910b8b66e72aa351d1e <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:N23ecc1c13dce4ad2951a58e025459bbb .
-_:Na13be4f74d644d319214f008facbd480 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/pwo/Step> .
-<http://purl.org/spar/pwo> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2006/time> .
-<urn:swrl#sj> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
-<http://www.ontologydesignpatterns.org/cp/owl/basicplanexecution.owl#PlanExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/spar/pwo/needs> <http://www.w3.org/2000/01/rdf-schema#comment> "The property linking a workflow step or an event (e.g. an action executing a workflow step) to anything required to undertake that step/event."@en .
-<http://purl.org/spar/pwo/WorkflowExecution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/cp/owl/basicplanexecution.owl#PlanExecution> .
-_:N419f1c1db8674e33a0916c483def2878 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:N02bb9c6030074d07b8f4f2b027b1b60f .
-_:N95358fc1a00f4f5a84778e7ffba06429 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:N041270ed24a44dc98d3c907071a64ef0 .
-_:N02bb9c6030074d07b8f4f2b027b1b60f <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://purl.org/spar/pwo/produces> .
-_:Nc410698ddec64c4eb23021803dc08ac8 <http://www.w3.org/2003/11/swrl#classPredicate> <http://purl.org/spar/pwo/Step> .
-_:Ndee7407f9f9c4b21b106e07adf163efb <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/pwo/Step> .
+_:Ncb4463576a644d8f814d404d47a13857 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#sj> .
 <http://purl.org/spar/pwo/isNeededBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/pwo/needs> .
-<http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#atTime> <http://www.w3.org/2000/01/rdf-schema#comment> "A step is performed within a time interval."@en .
-<http://purl.org/dc/elements/1.1/date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<http://www.w3.org/2002/07/owl#versionInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<http://purl.org/spar/pwo/hasFirstStep> <http://www.w3.org/2000/01/rdf-schema#range> _:N38575d391954427686a283ee1005b302 .
-<http://purl.org/spar/pwo/isStepOf> <http://www.w3.org/2000/01/rdf-schema#label> "is step of"@en .
-<http://purl.org/spar/pwo> <http://purl.org/dc/elements/1.1/date> "2017-06-01"^^<http://www.w3.org/2001/XMLSchema#string> .
-_:N95358fc1a00f4f5a84778e7ffba06429 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/pwo/Step> .
-_:N4bdaf61ac64042b2a7c8941256dc45d9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:Ne2b34c24b7724f5697ed2488074f4ee6 <http://www.w3.org/2003/11/swrl#body> _:N8fa3d36268204910b8b66e72aa351d1e .
-<http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#atTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/spar/pwo/isActionInvolvedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/owlapi#nodeID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<http://purl.org/spar/pwo/Workflow> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:N25eacd63dde749338efaab04319055d2 .
-<http://purl.org/spar/pwo/happened> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ontologydesignpatterns.org/cp/owl/participation.owl#Event> .
-<urn:swrl#r> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
-_:N5361e72652e04bb58bb971d285545f3b <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:N49918c6df93a407c9ed79fbc813e4125 .
-_:N312a41fc4f404fbfb71c4d469d177fa7 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#precedes> .
-_:Na13be4f74d644d319214f008facbd480 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:N2745f316afcc4752abdf92d1a5bdf771 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:N704b50aafb9d4e6a8b4804be2ac329d1 .
-_:N312a41fc4f404fbfb71c4d469d177fa7 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#sj> .
-<http://purl.org/spar/pwo/hasStep> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/pwo/isStepOf> .
-_:Nd1e2b14e66de40249a1a4bf0ece4cff9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#TimeIndexedSituation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/spar/pwo/Workflow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:Nd1e2b14e66de40249a1a4bf0ece4cff9 <http://www.w3.org/2002/07/owl#onProperty> <http://www.ontologydesignpatterns.org/cp/owl/parameter.owl#hasParameter> .
-_:N60098bdcf776446780c35a2e90400f0f <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/spar/pwo> <http://purl.org/dc/elements/1.1/description> "The Publishing Workflow Ontology (PWO) is a simple ontology written in OWL 2 DL for the characterization of the main stages in the workflow associated with the publication of a document (e.g. being written, under review, XML capture, page design, publication to the Web)."@en .
-_:N8b88ae88af0e40ea93d9a7baf3576a3b <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:N2ed7e01c3c50431a980e40b260166693 .
-_:N25eacd63dde749338efaab04319055d2 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/pwo/Step> .
-<http://purl.org/spar/pwo> <http://purl.org/dc/elements/1.1/title> "The Publishing Workflow Ontology (PWO)"^^<http://www.w3.org/2001/XMLSchema#string> .
-<http://www.ontologydesignpatterns.org/cp/owl/participation.owl#isParticipantIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:N4bdaf61ac64042b2a7c8941256dc45d9 <http://www.w3.org/2002/07/owl#someValuesFrom> _:Nee7da6a0f1824b1a9875d664f4e60a8b .
-_:N5361e72652e04bb58bb971d285545f3b <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
-_:N2745f316afcc4752abdf92d1a5bdf771 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/pwo/Step> .
-_:N02bb9c6030074d07b8f4f2b027b1b60f <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#r> .
-<http://purl.org/spar/pwo/hasStep> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/pwo/Step> .
-<http://www.ontologydesignpatterns.org/cp/owl/participation.owl#Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:Nb6125e579b9d45318e75336de0212c21 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://purl.org/spar/pwo/Workflow> .
-_:Nc671f50c49864711810be3e4ae61e53d <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:N23ecc1c13dce4ad2951a58e025459bbb <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
-<http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#directlyFollows> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:N5a33acc01b65425c95223fc04d13f1dd <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/pwo/executes> .
-_:Nd19245d0094241cebd87af9574b71acc <http://www.w3.org/2002/07/owl#onProperty> <http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#isExecutedIn> .
-_:N2ed7e01c3c50431a980e40b260166693 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/pwo/isExecutedBy> .
-<http://purl.org/spar/pwo/isIntervalFor> <http://www.w3.org/2000/01/rdf-schema#label> "is interval for"@en .
-_:Nb6125e579b9d45318e75336de0212c21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:N69ee0f9e0a3e49c0b04a47a2ffbd2e47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
-_:Nee7da6a0f1824b1a9875d664f4e60a8b <http://www.w3.org/2002/07/owl#intersectionOf> _:N82d06e7bff304cfe923c58ee5405c60c .
+_:Nbcc6dc6fb9ab410c93c96104ea036af6 <http://www.w3.org/2002/07/owl#unionOf> _:Nbb6333c36819417cbfed18b3be6ee0cd .
+_:Nb82a8654a5ec4697a92448d1121f1cfb <http://www.w3.org/2002/07/owl#onClass> <http://www.w3.org/2006/time#DurationDescription> .
+<http://purl.org/spar/pwo> <http://www.w3.org/2002/07/owl#imports> <http://www.ontologydesignpatterns.org/cp/owl/basicplan.owl> .
+_:Nd010c281869447748d17e987c00fa225 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:N3388f707636240cfaaf6aeff5ae1657a .
+<http://purl.org/spar/pwo> <http://www.w3.org/2000/01/rdf-schema#comment> "The Publishing Workflow Ontology (PWO) is a simple ontology for describing the steps in the workflow associated with the publication of a document or other publication entity.\n\n**URL:** http://purl.org/spar/pwo\n\n**Creators**: [Aldo Gangemi](https://orcid.org/0000-0001-5568-2684), [David Shotton](http://orcid.org/0000-0001-5506-523X), [Silvio Peroni](http://orcid.org/0000-0003-0530-4305)\n\n**License:** [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/legalcode)\n\n**Website:** http://www.sparontologies.net/ontologies/pwo\n\n**Cite as:** Gangemi, A., Peroni, S., Shotton, D., Vitali, F. (2014). The Publishing Workflow Ontology (PWO). In Semantic Web, 8 (5): 703-718. DOI: https://doi.org/10.3233/SW-160230. Open Access at: http://www.semantic-web-journal.net/system/files/swj1301.pdf"@en .
+<http://purl.org/spar/pwo/isNeededBy> <http://www.w3.org/2000/01/rdf-schema#label> "is needed by"@en .
+_:N4352e0a929714870ae40ee8a4d8a07b9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#executesTask> .
+<http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#precedes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:N50fc0e9b34324397bb5d882524d42f77 <http://www.w3.org/2003/11/swrl#head> _:N3c214e2040cd4c38a85e76aacaa73641 .
+_:Nb82a8654a5ec4697a92448d1121f1cfb <http://www.w3.org/2002/07/owl#onProperty> <http://www.ontologydesignpatterns.org/cp/owl/parameter.owl#hasParameter> .
+<http://purl.org/spar/pwo/isNeededBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/pwo> <http://www.w3.org/2002/07/owl#versionInfo> "2.4"^^<http://www.w3.org/2001/XMLSchema#string> .
 <http://purl.org/spar/pwo/executes> <http://www.w3.org/2000/01/rdf-schema#label> "executes"@en .
+_:Nb63b3acd086746d1b001b97c4bac8b5c <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:Nbb6333c36819417cbfed18b3be6ee0cd <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/pwo/Step> .
+_:Na3283bda780143b58d465a3af3da4dcd <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+<http://purl.org/spar/pwo> <http://purl.org/dc/elements/1.1/description> "The Publishing Workflow Ontology (PWO) is a simple ontology written in OWL 2 DL for the characterization of the main stages in the workflow associated with the publication of a document (e.g. being written, under review, XML capture, page design, publication to the Web)."@en .
+_:Nc326fb28b904401db244689c4dc24377 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#si> .
+<http://purl.org/spar/pwo/needs> <http://www.w3.org/2000/01/rdf-schema#domain> _:Nbcc6dc6fb9ab410c93c96104ea036af6 .
+<http://purl.org/spar/pwo/isStepOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+_:N5bc049bd1b22412ea68fe3efeac62e4a <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.ontologydesignpatterns.org/cp/owl/situation.owl#isSettingFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/pwo/hasStep> <http://www.w3.org/2000/01/rdf-schema#comment> "The property linking a workflow to a component step."@en .
+_:N92296d39d057467ea4d3e6f329f3a601 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.ontologydesignpatterns.org/cp/owl/taskrole.owl#Task> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:Nb63b3acd086746d1b001b97c4bac8b5c <http://www.w3.org/2002/07/owl#unionOf> _:N7f0f8d401db94573828c2f76b0e62efe .
+<http://purl.org/spar/pwo> <http://www.w3.org/2002/07/owl#imports> <http://www.essepuntato.it/2009/10/error> .
+<http://purl.org/spar/pwo/hasStep> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/pwo/Workflow> .
+_:N62f6ae99cece42b8a13efc8d0df8c8c7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:N9ecb6cd399c241a3bf734502755f099b .
+<http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#atTime> <http://www.w3.org/2000/01/rdf-schema#label> "at time"@en .
+_:N7b4994cac402403f93eb759831d2dacc <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:N2af3b15aa8984c879fe8c7efaa2bf21f .
+_:N19515e31b7bb4d55bfb936d4fd30cf8f <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#sj> .
+_:N05ddc186441d48259afcc7e6668453f6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/pwo/executes> .
+<http://purl.org/spar/pwo> <http://purl.org/dc/elements/1.1/creator> "Aldo Gangemi"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+_:Nf4f7ca1611ad413ab880a56a2fe8a137 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#si> .
+_:N2c1ffbd8fa414344849074b6b1840f02 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:N5bc049bd1b22412ea68fe3efeac62e4a <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/pwo/Workflow> .
+<http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#hasTimeIndexedSetting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/pwo/Workflow> <http://www.w3.org/2000/01/rdf-schema#comment> "A sequence of connected steps, representing a sequence of publishing operations undertaken by agents. A workflow may be seen as an abstract model of real work."@en .
+<http://purl.org/spar/pwo/involvesAction> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/pwo/isActionInvolvedIn> .
+<http://purl.org/spar/pwo/happened> <http://www.w3.org/2000/01/rdf-schema#comment> "It allows one to link an event to the interval when it happened."@en .
+_:N7f0f8d401db94573828c2f76b0e62efe <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/pwo/Step> .
+_:N7f0f8d401db94573828c2f76b0e62efe <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:N9f4522b014c04c86b466a546ce24e020 .
+<http://purl.org/spar/pwo> <http://www.w3.org/2002/07/owl#imports> <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl> .
+<http://purl.org/spar/pwo/Step> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:N2ea7193ee6894193acb2719ade3cfb97 .
+<http://purl.org/spar/pwo/isStepOf> <http://www.w3.org/2000/01/rdf-schema#comment> "The property linking a step in a workflow to the workflow of which it is a component."@en .
+_:Na5d491bcce9544d594ec75d8b2478e83 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:N6938ddbe548f470e9f4382d7b77b895d <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:N617b808d49894328b49c20d074c32b99 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/pwo/isExecutedBy> .
+<http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/pwo/involvesAction> <http://www.w3.org/2000/01/rdf-schema#comment> "The property linking a particular execution of a workflow to an action."@en .
+_:N617b808d49894328b49c20d074c32b99 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:N05ddc186441d48259afcc7e6668453f6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Nd9983e0ac4744de2af51ec54700d3055 .
+<http://purl.org/spar/pwo/isIntervalFor> <http://www.w3.org/2000/01/rdf-schema#comment> "It allows one to link an interval describing when an event happened to the related event."@en .
+_:N19515e31b7bb4d55bfb936d4fd30cf8f <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+<http://purl.org/spar/pwo/Workflow> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:N92296d39d057467ea4d3e6f329f3a601 .
+<http://purl.org/spar/pwo/isStepOf> <http://www.w3.org/2000/01/rdf-schema#label> "is step of"@en .
+<http://purl.org/spar/pwo/hasNextStep> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/pwo/hasPreviousStep> .
+_:N2ea7193ee6894193acb2719ade3cfb97 <http://www.w3.org/2002/07/owl#onProperty> <http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#isExecutedIn> .
+<http://purl.org/spar/pwo> <http://www.w3.org/2002/07/owl#priorVersion> <https://svn.code.sf.net/p/sempublishing/code/PWO/2016-03-14_pwo-2_3.owl> .
+<http://purl.org/spar/pwo/happened> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#TimeInterval> .
+<http://purl.org/spar/pwo/isExecutedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/cp/owl/basicplan.owl#isSatisfiedBy> .
+_:N2c1ffbd8fa414344849074b6b1840f02 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:Ncb4463576a644d8f814d404d47a13857 .
+_:N19515e31b7bb4d55bfb936d4fd30cf8f <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#r> .
+<http://purl.org/spar/pwo/needs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#Action> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#directlyPrecedes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:N9f4522b014c04c86b466a546ce24e020 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.ontologydesignpatterns.org/cp/owl/participation.owl#Event> .
+_:Nb70217229f4f49398f456510c5396860 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/pwo/isStepOf> .
+<http://purl.org/spar/pwo/produces> <http://www.w3.org/2000/01/rdf-schema#comment> "The property linking a workflow step or an event (e.g. an action executing a workflow step) to the thing that the step/event produces, creates or results in."@en .
+_:N19515e31b7bb4d55bfb936d4fd30cf8f <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://purl.org/spar/pwo/produces> .
+<http://purl.org/spar/pwo> <http://purl.org/dc/elements/1.1/description> <http://purl.org/spar/pwo/pwo.png> .
+_:Nfe585697a9a34415a52c928e01b735ac <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:N62f6ae99cece42b8a13efc8d0df8c8c7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/pwo/Action> .
+<urn:swrl#r> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<http://purl.org/spar/pwo/hasNextStep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:Nc326fb28b904401db244689c4dc24377 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+<http://purl.org/spar/pwo/WorkflowExecution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:N5bc049bd1b22412ea68fe3efeac62e4a .
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/spar/pwo/hasNextStep> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/pwo/Step> .
+<http://purl.org/spar/pwo/WorkflowExecution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#TimeIndexedSituation> .
+<http://purl.org/spar/pwo/WorkflowExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:N92296d39d057467ea4d3e6f329f3a601 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/pwo/hasFirstStep> .
+<http://purl.org/spar/pwo/involvesAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:N50fc0e9b34324397bb5d882524d42f77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+<http://purl.org/spar/pwo/Workflow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/pwo/isProducedBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/pwo/produces> .
+_:Nd9983e0ac4744de2af51ec54700d3055 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/pwo/hasStep> .
+<http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#executesTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/pwo/WorkflowExecution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/cp/owl/basicplanexecution.owl#PlanExecution> .
+_:Nfe585697a9a34415a52c928e01b735ac <http://www.w3.org/2002/07/owl#intersectionOf> _:Nd010c281869447748d17e987c00fa225 .
+<http://purl.org/spar/pwo> <http://purl.org/dc/elements/1.1/title> "The Publishing Workflow Ontology (PWO)"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/spar/pwo/produces> <http://www.w3.org/2000/01/rdf-schema#domain> _:Nb63b3acd086746d1b001b97c4bac8b5c .
+<http://purl.org/spar/pwo/hasPreviousStep> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#directlyFollows> .
+_:N2af3b15aa8984c879fe8c7efaa2bf21f <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+<http://purl.org/spar/pwo/isProducedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/pwo/WorkflowExecution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:N13b5aaef649c44c680bf9cf46406ccc9 .
+<http://purl.org/spar/pwo/produces> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/pwo/needs> <http://www.w3.org/2000/01/rdf-schema#label> "needs"@en .
+<http://purl.org/spar/pwo/Action> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<urn:swrl#sj> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<http://purl.org/spar/pwo/isExecutedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:Ncb4463576a644d8f814d404d47a13857 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#si> .
+_:N9ecb6cd399c241a3bf734502755f099b <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:N2af3b15aa8984c879fe8c7efaa2bf21f <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#sj> .
+<http://purl.org/spar/pwo/needs> <http://www.w3.org/2000/01/rdf-schema#comment> "The property linking a workflow step or an event (e.g. an action executing a workflow step) to anything required to undertake that step/event."@en .
+_:N57dbda277c3642ae9916f766976fa42c <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:Nc1a39746c1eb4cbfbe1618f0bf728ef5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+<http://purl.org/dc/elements/1.1/date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+_:N9f4522b014c04c86b466a546ce24e020 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://purl.org/dc/elements/1.1/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/spar/pwo/hasPreviousStep> <http://www.w3.org/2000/01/rdf-schema#label> "has previous step"@en .
+<http://purl.org/spar/pwo/isExecutedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "This property allows to link a workflow description to the related workflow execution." .
+<http://purl.org/spar/pwo> <http://www.w3.org/2002/07/owl#imports> <http://www.ontologydesignpatterns.org/cp/owl/participation.owl> .
+<http://purl.org/spar/pwo> <http://www.w3.org/2002/07/owl#versionIRI> <http://purl.org/spar/pwo/2017-06-01> .
+_:Nd010c281869447748d17e987c00fa225 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.ontologydesignpatterns.org/cp/owl/basicplanexecution.owl#Action> .
+<http://purl.org/spar/pwo/Action> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Nfe585697a9a34415a52c928e01b735ac .
+_:N3c214e2040cd4c38a85e76aacaa73641 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:N0518e3bc47384910b68a76db27e92aee .
+<http://purl.org/spar/pwo/involvesAction> <http://www.w3.org/2000/01/rdf-schema#label> "involves action"@en .
+<urn:swrl#si> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<http://purl.org/spar/pwo> <http://www.w3.org/2002/07/owl#imports> <http://www.ontologydesignpatterns.org/cp/owl/controlflow.owl> .
+_:Nc326fb28b904401db244689c4dc24377 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://purl.org/spar/pwo/needs> .
+_:N1e881d0432f9433e90af7f7f9705b1d0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:Nb70217229f4f49398f456510c5396860 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:N617b808d49894328b49c20d074c32b99 .
+<http://purl.org/spar/pwo/hasStep> <http://www.w3.org/2000/01/rdf-schema#label> "has step"@en .
+<http://purl.org/spar/pwo/hasFirstStep> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/pwo/hasStep> .
+<http://purl.org/spar/pwo/involvesAction> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/pwo/WorkflowExecution> .
+_:N7b4994cac402403f93eb759831d2dacc <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Na3283bda780143b58d465a3af3da4dcd .
+<http://www.w3.org/2000/01/rdf-schema#label> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/spar/pwo> <http://www.w3.org/2002/07/owl#imports> <http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl> .
+<http://purl.org/spar/pwo/isExecutedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is executed by" .
+<http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#TimeInterval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#atTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:N0d08a46e087a46919b07b4166e052a3d <http://www.w3.org/2002/07/owl#intersectionOf> _:N62f6ae99cece42b8a13efc8d0df8c8c7 .
+_:N1e881d0432f9433e90af7f7f9705b1d0 <http://www.w3.org/2002/07/owl#complementOf> _:N7d4ee794a9eb4a6eb0c3f32f75e2b5eb .
+_:N0518e3bc47384910b68a76db27e92aee <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:Na3283bda780143b58d465a3af3da4dcd <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Nc1a39746c1eb4cbfbe1618f0bf728ef5 .
+_:N3388f707636240cfaaf6aeff5ae1657a <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://purl.org/spar/pwo/isStepOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#isTaskDefinedIn> .
+<http://purl.org/spar/pwo/happened> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ontologydesignpatterns.org/cp/owl/participation.owl#Event> .
+<http://purl.org/spar/pwo/Step> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/cp/owl/taskrole.owl#Task> .
+_:Nc1a39746c1eb4cbfbe1618f0bf728ef5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:N2c1ffbd8fa414344849074b6b1840f02 .
+<http://purl.org/spar/pwo/isActionInvolvedIn> <http://www.w3.org/2000/01/rdf-schema#comment> "The property linking an event to a particular execution of a workflow description."@en .
+<http://purl.org/spar/pwo/isNeededBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The property linking a thing required to undertake a workflow step or an event (e.g. an action executing a workflow step) to the step/event itself."@en .
+<http://purl.org/spar/pwo/Step> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.ontologydesignpatterns.org/cp/owl/participation.owl#Object> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:N0518e3bc47384910b68a76db27e92aee <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#si> .
+<http://purl.org/spar/pwo/isActionInvolvedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#definesTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:N49918c6df93a407c9ed79fbc813e4125 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:N419f1c1db8674e33a0916c483def2878 .
+<http://purl.org/spar/pwo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+_:Nc326fb28b904401db244689c4dc24377 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#r> .
+_:Ned7d98a394a7429baab8a1867c315b4f <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:N7b4994cac402403f93eb759831d2dacc .
+_:Nbb6333c36819417cbfed18b3be6ee0cd <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:N6938ddbe548f470e9f4382d7b77b895d .
+<http://purl.org/spar/pwo/hasFirstStep> <http://www.w3.org/2000/01/rdf-schema#comment> "A workflow that starts with a particular step."@en .
+<http://purl.org/spar/pwo/Action> <http://www.w3.org/2000/01/rdf-schema#comment> "An event with at least one agent that is participant in it and that is linked to a workflow execution and to a step of the related workflow description." .
+_:Na3283bda780143b58d465a3af3da4dcd <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:Nc326fb28b904401db244689c4dc24377 .
+<http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#isExecutedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#TimeIndexedSituation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:Nd9983e0ac4744de2af51ec54700d3055 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:N57dbda277c3642ae9916f766976fa42c .
+<http://purl.org/spar/pwo/hasStep> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/pwo/isStepOf> .
+_:N6938ddbe548f470e9f4382d7b77b895d <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.ontologydesignpatterns.org/cp/owl/participation.owl#Event> .
+_:N7d4ee794a9eb4a6eb0c3f32f75e2b5eb <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/spar/pwo/hasStep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/pwo> <http://purl.org/dc/elements/1.1/rights> "This work is distributed under a Creative Commons Attribution License (http://creativecommons.org/licenses/by/4.0/)."@en .
+<http://purl.org/spar/pwo/happened> <http://www.w3.org/2000/01/rdf-schema#label> "happened"@en .
+_:N7d4ee794a9eb4a6eb0c3f32f75e2b5eb <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/pwo/hasPreviousStep> .
+<http://purl.org/spar/pwo/isProducedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is produced by"@en .
+_:Ned7d98a394a7429baab8a1867c315b4f <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:N7b4994cac402403f93eb759831d2dacc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:Nf4c2e301d1204e589a452ac7dcaf2c08 <http://www.w3.org/2002/07/owl#onProperty> <http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#isTaskDefinedIn> .
+<http://purl.org/spar/pwo/isStepOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/pwo/hasPreviousStep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#forEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/pwo/hasNextStep> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/pwo/Step> .
+<http://purl.org/spar/pwo/hasNextStep> <http://www.w3.org/2000/01/rdf-schema#label> "has next step"@en .
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.semanticweb.org/owlapi#nodeID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/spar/pwo/Step> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Nf4c2e301d1204e589a452ac7dcaf2c08 .
+_:N2c1ffbd8fa414344849074b6b1840f02 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:N0518e3bc47384910b68a76db27e92aee <http://www.w3.org/2003/11/swrl#argument2> "A step cannot need a resource that will be produced by a following step"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:Ncb4463576a644d8f814d404d47a13857 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+<http://www.ontologydesignpatterns.org/cp/owl/basicplanexecution.owl#PlanExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/pwo> <http://purl.org/dc/elements/1.1/creator> "David Shotton"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/spar/pwo/hasFirstStep> <http://www.w3.org/2000/01/rdf-schema#label> "has first step"@en .
+_:N7d4ee794a9eb4a6eb0c3f32f75e2b5eb <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/pwo/Step> .
+_:N5bc049bd1b22412ea68fe3efeac62e4a <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/pwo/executes> .
+<http://purl.org/spar/pwo/hasPreviousStep> <http://www.w3.org/2000/01/rdf-schema#comment> "A property linking a step in a workflow with the step that directly precedes it."@en .
+_:N92296d39d057467ea4d3e6f329f3a601 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/pwo/Step> .
+<http://www.w3.org/2000/01/rdf-schema#comment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#isTaskDefinedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/pwo> <http://purl.org/dc/elements/1.1/date> "2017-06-01"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#atTime> <http://www.w3.org/2000/01/rdf-schema#comment> "A step is performed within a time interval."@en .
+<http://purl.org/spar/pwo> <http://purl.org/dc/elements/1.1/creator> "Silvio Peroni"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://www.w3.org/2002/07/owl#versionInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.ontologydesignpatterns.org/cp/owl/participation.owl#isParticipantIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:Nbcc6dc6fb9ab410c93c96104ea036af6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:N3c214e2040cd4c38a85e76aacaa73641 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://purl.org/spar/pwo/Step> <http://www.w3.org/2000/01/rdf-schema#comment> "An atomic unit of a workflow, that may be characterized by a starting time and an ending time, and may be associated with one or more events.  A workflow step usually involves some input information, material or energy needed to complete the step, and some output information, material or energy produced by that step.  In the case of a publishing workflow, a step typically results in the creation of a publication entity, usually by the modification of another pre-existing publication entity, e.g. the creation of an edited paper from a rough draft, or of an HTML representation from an XML mark-up."@en .
+_:Ncb4463576a644d8f814d404d47a13857 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#precedes> .
+_:Ne46f8ca925f24b428bfa33ff124a9338 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/spar/pwo/Workflow> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#Plan> .
+<http://purl.org/spar/pwo/executes> <http://www.w3.org/2000/01/rdf-schema#comment> "This property allows to link a workflow execution to the related workflow description."@en .
+<http://purl.org/spar/pwo/isActionInvolvedIn> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:N4352e0a929714870ae40ee8a4d8a07b9 .
+<http://purl.org/spar/pwo/Workflow> <http://www.w3.org/2000/01/rdf-schema#label> "workflow"@en .
+<http://purl.org/spar/pwo/Action> <http://www.w3.org/2000/01/rdf-schema#label> "action" .
+_:N3c214e2040cd4c38a85e76aacaa73641 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:N0d08a46e087a46919b07b4166e052a3d <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:N2ea7193ee6894193acb2719ade3cfb97 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:Na5d491bcce9544d594ec75d8b2478e83 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/pwo/happened> .
+_:N50fc0e9b34324397bb5d882524d42f77 <http://www.w3.org/2003/11/swrl#body> _:Ned7d98a394a7429baab8a1867c315b4f .
+_:N57dbda277c3642ae9916f766976fa42c <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#isExecutedIn> .
+<http://purl.org/spar/pwo/Step> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Nb82a8654a5ec4697a92448d1121f1cfb .
+_:Nf4c2e301d1204e589a452ac7dcaf2c08 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://purl.org/spar/pwo/Workflow> .
+_:Ne46f8ca925f24b428bfa33ff124a9338 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/pwo/Step> .
+<http://purl.org/spar/pwo/hasStep> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#definesTask> .
+<http://purl.org/spar/pwo/isIntervalFor> <http://www.w3.org/2000/01/rdf-schema#label> "is interval for"@en .
+<http://purl.org/spar/pwo/hasStep> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/pwo/Step> .
+<http://purl.org/spar/pwo/executes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/pwo/involvesAction> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:N05ddc186441d48259afcc7e6668453f6 .
+_:Nf4c2e301d1204e589a452ac7dcaf2c08 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.ontologydesignpatterns.org/cp/owl/participation.owl#Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:Nf4f7ca1611ad413ab880a56a2fe8a137 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:Nf4f7ca1611ad413ab880a56a2fe8a137 <http://www.w3.org/2003/11/swrl#classPredicate> <http://purl.org/spar/pwo/Step> .
+<http://purl.org/spar/pwo/happened> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/elements/1.1/rights> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+_:N13b5aaef649c44c680bf9cf46406ccc9 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/pwo/involvesAction> .
+<http://purl.org/spar/pwo/isIntervalFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/pwo/produces> <http://www.w3.org/2000/01/rdf-schema#label> "produces"@en .
+<http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#hasIntervalDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/spar/pwo/isActionInvolvedIn> <http://www.w3.org/2000/01/rdf-schema#label> "is action involved in"@en .
+_:N13b5aaef649c44c680bf9cf46406ccc9 <http://www.w3.org/2002/07/owl#someValuesFrom> _:N0d08a46e087a46919b07b4166e052a3d .
+<http://purl.org/spar/pwo/happened> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/pwo/isIntervalFor> .
+<http://purl.org/spar/pwo/executes> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/cp/owl/basicplan.owl#satisfies> .
+<http://purl.org/spar/pwo/Action> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Na5d491bcce9544d594ec75d8b2478e83 .
+<http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#directlyFollows> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/pwo/hasNextStep> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#directlyPrecedes> .
+<http://purl.org/spar/pwo/isProducedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The property linking something to the workflow step or an event (e.g. an action executing a workflow step) that produces, creates or results in that thing."@en .
+_:Nb82a8654a5ec4697a92448d1121f1cfb <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.essepuntato.it/2009/10/error/hasError> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/spar/pwo/hasFirstStep> <http://www.w3.org/2000/01/rdf-schema#range> _:N1e881d0432f9433e90af7f7f9705b1d0 .
+_:N9ecb6cd399c241a3bf734502755f099b <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:Ne46f8ca925f24b428bfa33ff124a9338 .
+<http://purl.org/spar/pwo/hasNextStep> <http://www.w3.org/2000/01/rdf-schema#comment> "A property linking a step in a workflow with the step that directly follows it."@en .
+_:N0518e3bc47384910b68a76db27e92aee <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.essepuntato.it/2009/10/error/hasError> .
+_:N2ea7193ee6894193acb2719ade3cfb97 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://purl.org/spar/pwo/Action> .
+_:N4352e0a929714870ae40ee8a4d8a07b9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Nb70217229f4f49398f456510c5396860 .
+<http://purl.org/spar/pwo/hasFirstStep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:N3388f707636240cfaaf6aeff5ae1657a <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#Action> .
+_:Nc1a39746c1eb4cbfbe1618f0bf728ef5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:N19515e31b7bb4d55bfb936d4fd30cf8f .
+<http://purl.org/spar/pwo> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2006/time> .
+_:Ne46f8ca925f24b428bfa33ff124a9338 <http://www.w3.org/2002/07/owl#onProperty> <http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#executesTask> .
+_:N2af3b15aa8984c879fe8c7efaa2bf21f <http://www.w3.org/2003/11/swrl#classPredicate> <http://purl.org/spar/pwo/Step> .
+<http://purl.org/spar/pwo/involvesAction> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/pwo/Action> .
+_:Nb82a8654a5ec4697a92448d1121f1cfb <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://purl.org/spar/pwo/Step> <http://www.w3.org/2000/01/rdf-schema#label> "step"@en .
+<http://purl.org/spar/pwo> <http://www.w3.org/2002/07/owl#imports> <http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl> .
+_:Na5d491bcce9544d594ec75d8b2478e83 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#TimeInterval> .
+_:Ned7d98a394a7429baab8a1867c315b4f <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:Nf4f7ca1611ad413ab880a56a2fe8a137 .
+<http://www.ontologydesignpatterns.org/cp/owl/participation.owl#hasParticipant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:N13b5aaef649c44c680bf9cf46406ccc9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 

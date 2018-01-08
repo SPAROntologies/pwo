@@ -44,9 +44,19 @@ dc:title a owl:AnnotationProperty .
     dc:date "2017-06-01"^^xsd:string ;
     dc:description :pwo.png,
         "The Publishing Workflow Ontology (PWO) is a simple ontology written in OWL 2 DL for the characterization of the main stages in the workflow associated with the publication of a document (e.g. being written, under review, XML capture, page design, publication to the Web)."@en ;
-    dc:rights "This work is distributed under a Creative Commons Attribution License (http://creativecommons.org/licenses/by/3.0/)."@en ;
+    dc:rights "This work is distributed under a Creative Commons Attribution License (http://creativecommons.org/licenses/by/4.0/)."@en ;
     dc:title "The Publishing Workflow Ontology (PWO)"^^xsd:string ;
-    rdfs:comment "The Publishing Workflow Ontology (PWO) is an ontology for describing the workflow associated with the publication of a document.  It forms part of SPAR, a suite of Semantic Publishing and Referencing Ontologies."@en ;
+    rdfs:comment """The Publishing Workflow Ontology (PWO) is a simple ontology for describing the steps in the workflow associated with the publication of a document or other publication entity.
+
+**URL:** http://purl.org/spar/pwo
+
+**Creators**: [Aldo Gangemi](https://orcid.org/0000-0001-5568-2684), [David Shotton](http://orcid.org/0000-0001-5506-523X), [Silvio Peroni](http://orcid.org/0000-0003-0530-4305)
+
+**License:** [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/legalcode)
+
+**Website:** http://www.sparontologies.net/ontologies/pwo
+
+**Cite as:** Gangemi, A., Peroni, S., Shotton, D., Vitali, F. (2014). The Publishing Workflow Ontology (PWO). In Semantic Web, 8 (5): 703-718. DOI: https://doi.org/10.3233/SW-160230. Open Access at: http://www.semantic-web-journal.net/system/files/swj1301.pdf"""@en ;
     owl:imports <http://www.essepuntato.it/2009/10/error>,
         <http://www.ontologydesignpatterns.org/cp/owl/basicplan.owl>,
         <http://www.ontologydesignpatterns.org/cp/owl/controlflow.owl>,
@@ -224,11 +234,11 @@ timeint:TimeInterval a owl:Class .
 :Action a owl:Class ;
     rdfs:label "action" ;
     rdfs:comment "An event with at least one agent that is participant in it and that is linked to a workflow execution and to a step of the related workflow description." ;
-    rdfs:subClassOf [ a owl:Class ;
-            owl:intersectionOf ( planex:Action taskex:Action ) ],
-        [ a owl:Restriction ;
+    rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty :happened ;
-            owl:someValuesFrom timeint:TimeInterval ] .
+            owl:someValuesFrom timeint:TimeInterval ],
+        [ a owl:Class ;
+            owl:intersectionOf ( planex:Action taskex:Action ) ] .
 
 :Workflow a owl:Class ;
     rdfs:label "workflow"@en ;
@@ -248,15 +258,15 @@ part:Event a owl:Class .
     rdfs:label "step"@en ;
     rdfs:comment "An atomic unit of a workflow, that may be characterized by a starting time and an ending time, and may be associated with one or more events.  A workflow step usually involves some input information, material or energy needed to complete the step, and some output information, material or energy produced by that step.  In the case of a publishing workflow, a step typically results in the creation of a publication entity, usually by the modification of another pre-existing publication entity, e.g. the creation of an edited paper from a rough draft, or of an HTML representation from an XML mark-up."@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom :Workflow ;
-            owl:onProperty plandesc:isTaskDefinedIn ],
-        [ a owl:Restriction ;
             owl:allValuesFrom :Action ;
             owl:onProperty taskex:isExecutedIn ],
         [ a owl:Restriction ;
             owl:onClass time:DurationDescription ;
             owl:onProperty parameter:hasParameter ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom :Workflow ;
+            owl:onProperty plandesc:isTaskDefinedIn ],
         <http://www.ontologydesignpatterns.org/cp/owl/taskrole.owl#Task> .
 
 [] a swrl:Imp ;
