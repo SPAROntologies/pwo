@@ -1056,7 +1056,7 @@
         "@id": "http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl"
       },
       {
-        "@id": "http://www.essepuntato.it/2009/10/error"
+        "@id": "http://purl.org/spar/error"
       }
     ],
     "http://www.w3.org/2002/07/owl#priorVersion": [

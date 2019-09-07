@@ -57,7 +57,7 @@ dc:title a owl:AnnotationProperty .
 **Website:** http://www.sparontologies.net/ontologies/pwo
 
 **Cite as:** Gangemi, A., Peroni, S., Shotton, D., Vitali, F. (2014). The Publishing Workflow Ontology (PWO). In Semantic Web, 8 (5): 703-718. DOI: https://doi.org/10.3233/SW-160230. Open Access at: http://www.semantic-web-journal.net/system/files/swj1301.pdf"""@en ;
-    owl:imports <http://www.essepuntato.it/2009/10/error>,
+    owl:imports <http://purl.org/spar/error>,
         <http://www.ontologydesignpatterns.org/cp/owl/basicplan.owl>,
         <http://www.ontologydesignpatterns.org/cp/owl/controlflow.owl>,
         <http://www.ontologydesignpatterns.org/cp/owl/participation.owl>,

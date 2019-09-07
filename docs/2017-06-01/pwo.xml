@@ -66,7 +66,7 @@
     <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Shotton</dc:creator>
     <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl"/>
     <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Publishing Workflow Ontology (PWO)</dc:title>
-    <owl:imports rdf:resource="http://www.essepuntato.it/2009/10/error"/>
+    <owl:imports rdf:resource="http://purl.org/spar/error"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="Nd010c281869447748d17e987c00fa225">
     <rdf:first rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/basicplanexecution.owl#Action"/>

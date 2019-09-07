@@ -27,7 +27,7 @@ _:N5bc049bd1b22412ea68fe3efeac62e4a <http://www.w3.org/1999/02/22-rdf-syntax-ns#
 _:N92296d39d057467ea4d3e6f329f3a601 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://www.ontologydesignpatterns.org/cp/owl/taskrole.owl#Task> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 _:Nb63b3acd086746d1b001b97c4bac8b5c <http://www.w3.org/2002/07/owl#unionOf> _:N7f0f8d401db94573828c2f76b0e62efe .
-<http://purl.org/spar/pwo> <http://www.w3.org/2002/07/owl#imports> <http://www.essepuntato.it/2009/10/error> .
+<http://purl.org/spar/pwo> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/spar/error> .
 <http://purl.org/spar/pwo/hasStep> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/pwo/Workflow> .
 _:N62f6ae99cece42b8a13efc8d0df8c8c7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:N9ecb6cd399c241a3bf734502755f099b .
 <http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#atTime> <http://www.w3.org/2000/01/rdf-schema#label> "at time"@en .
