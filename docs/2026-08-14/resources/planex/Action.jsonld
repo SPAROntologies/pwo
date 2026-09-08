@@ -1,0 +1,24 @@
+[
+  {
+    "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplanexecution.owl#Action",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "An event with at least one agent that participates in it, and that executes a task."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "hhttp://www.ontologydesignpatterns.org/cp/owl/basicplanexecution.owl#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "action"
+      }
+    ]
+  }
+]

@@ -1,0 +1,20 @@
+_:n4b8df063b2af456380c02fda53b59223b26 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://purl.org/spar/pwo/Action> .
+<http://purl.org/spar/pwo/Step> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:n4b8df063b2af456380c02fda53b59223b27 .
+<http://purl.org/spar/pwo/Step> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/cp/owl/taskrole.owl#Task> .
+_:n4b8df063b2af456380c02fda53b59223b26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/spar/pwo/Step> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/pwo/> .
+_:n4b8df063b2af456380c02fda53b59223b27 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://purl.org/spar/pwo/Step> <http://purl.org/vocab/vann/example> "\n    :step-one a pwo:Step ;\n        pwo:hasNextStep :step-two ;\n        taskex:isExecutedIn :my-action ;\n        pwo:needs :my-draft ;\n        pwo:produces :my-output .\n    " .
+<http://purl.org/spar/pwo/Step> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:n4b8df063b2af456380c02fda53b59223b28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/spar/pwo/Step> <http://www.w3.org/2000/01/rdf-schema#comment> "An atomic unit of a workflow, that may be characterized by a starting time and an ending time, and may be associated with one or more events.  A workflow step usually involves some input information, material or energy needed to complete the step, and some output information, material or energy produced by that step.  In the case of a publishing workflow, a step typically results in the creation of a publication entity, usually by the modification of another pre-existing publication entity, e.g. the creation of an edited paper from a rough draft, or of an HTML representation from an XML mark-up."@en .
+_:n4b8df063b2af456380c02fda53b59223b27 <http://www.w3.org/2002/07/owl#onClass> <http://www.w3.org/2006/time#DurationDescription> .
+_:n4b8df063b2af456380c02fda53b59223b26 <http://www.w3.org/2002/07/owl#onProperty> <http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#isExecutedIn> .
+_:n4b8df063b2af456380c02fda53b59223b27 <http://www.w3.org/2002/07/owl#onProperty> <http://www.ontologydesignpatterns.org/cp/owl/parameter.owl#hasParameter> .
+_:n4b8df063b2af456380c02fda53b59223b28 <http://www.w3.org/2002/07/owl#onProperty> <http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#isTaskDefinedIn> .
+<http://purl.org/spar/pwo/Step> <http://www.w3.org/2000/01/rdf-schema#label> "step"@en .
+_:n4b8df063b2af456380c02fda53b59223b27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:n4b8df063b2af456380c02fda53b59223b28 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://purl.org/spar/pwo/Workflow> .
+<http://purl.org/spar/pwo/Step> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/pwo/Step> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:n4b8df063b2af456380c02fda53b59223b26 .
+<http://purl.org/spar/pwo/Step> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:n4b8df063b2af456380c02fda53b59223b28 .

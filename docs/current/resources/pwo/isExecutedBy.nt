@@ -1,0 +1,7 @@
+<http://purl.org/spar/pwo/isExecutedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The relation between a workflow description and the related workflow execution." .
+<http://purl.org/spar/pwo/isExecutedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/cp/owl/basicplan.owl#isSatisfiedBy> .
+<http://purl.org/spar/pwo/isExecutedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is executed by" .
+<http://purl.org/spar/pwo/isExecutedBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/pwo/> .
+<http://purl.org/spar/pwo/isExecutedBy> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/pwo/isExecutedBy> <http://purl.org/vocab/vann/example> "\n    :my-workflow a pwo:Workflow ;\n        pwo:isExecutedBy :my-workflow-execution .\n    " .
+<http://purl.org/spar/pwo/isExecutedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .

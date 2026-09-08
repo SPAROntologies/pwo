@@ -1,0 +1,8 @@
+<http://purl.org/spar/pwo/isStepOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/pwo/isStepOf> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/pwo/isStepOf> <http://purl.org/vocab/vann/example> "\n    :my-workflow a pwo:Workflow .\n\n    :step-one \n        pwo:isStepOf :my-workflow .\n    " .
+<http://purl.org/spar/pwo/isStepOf> <http://www.w3.org/2000/01/rdf-schema#comment> "The relation between a step in a workflow and the workflow of which it is a component."@en .
+<http://purl.org/spar/pwo/isStepOf> <http://www.w3.org/2000/01/rdf-schema#label> "is step of"@en .
+<http://purl.org/spar/pwo/isStepOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/pwo/> .
+<http://purl.org/spar/pwo/isStepOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#isTaskDefinedIn> .
+<http://purl.org/spar/pwo/isStepOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .

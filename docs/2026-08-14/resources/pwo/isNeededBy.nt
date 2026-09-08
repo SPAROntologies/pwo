@@ -1,0 +1,7 @@
+<http://purl.org/spar/pwo/isNeededBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/pwo/needs> .
+<http://purl.org/spar/pwo/isNeededBy> <http://purl.org/vocab/vann/example> "\n    :step-one a pwo:Step ;\n        pwo:hasNextStep :step-two ;\n        taskex:isExecutedIn :my-action .\n    \n    :my-draft \n        pwo:isNeededBy :step-one . \n    " .
+<http://purl.org/spar/pwo/isNeededBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/pwo/isNeededBy> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/pwo/isNeededBy> <http://www.w3.org/2000/01/rdf-schema#label> "is needed by"@en .
+<http://purl.org/spar/pwo/isNeededBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/pwo/> .
+<http://purl.org/spar/pwo/isNeededBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The relation between a thing required to undertake a workflow step or an event (e.g. an action executing a workflow step) and the step/event itself."@en .

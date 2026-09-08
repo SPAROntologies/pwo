@@ -1,0 +1,4 @@
+<http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#directlyFollows> <http://www.w3.org/2000/01/rdf-schema#label> "directly follows"@en .
+<http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#directlyFollows> <http://www.w3.org/2000/01/rdf-schema#comment> "The intransitive follows relation. For example, Wednesday directly precedes Thursday. Directness of precedence depends on the designer conceptualization."@en .
+<http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#directlyFollows> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#directlyFollows> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#> .

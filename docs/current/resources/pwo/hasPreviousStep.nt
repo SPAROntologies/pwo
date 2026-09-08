@@ -1,0 +1,7 @@
+<http://purl.org/spar/pwo/hasPreviousStep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/pwo/hasPreviousStep> <http://www.w3.org/2000/01/rdf-schema#label> "has previous step"@en .
+<http://purl.org/spar/pwo/hasPreviousStep> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/pwo/hasPreviousStep> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between a step in a workflow and the step that directly precedes it."@en .
+<http://purl.org/spar/pwo/hasPreviousStep> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#directlyFollows> .
+<http://purl.org/spar/pwo/hasPreviousStep> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/pwo/> .
+<http://purl.org/spar/pwo/hasPreviousStep> <http://purl.org/vocab/vann/example> "\n    :step-two a pwo:Step ;\n        pwo:hasPreviousStep :step-one .\n    " .

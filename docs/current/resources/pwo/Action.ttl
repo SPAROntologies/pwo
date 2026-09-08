@@ -1,0 +1,35 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix planex: <http://www.ontologydesignpatterns.org/cp/owl/basicplanexecution.owl#> .
+@prefix pwo: <http://purl.org/spar/pwo/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix taskex: <http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#> .
+@prefix ti: <http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+pwo:Action a owl:Class ;
+    rdfs:label "action" ;
+    vann:example """
+    :my-workflow-execution a pwo:WorkflowExecution ;
+        pwo:executes :my-workflow ;
+        pwo:involvesAction 
+            :my-action .
+
+    :my-action a pwo:Action ;
+        dcterms:description 'John Doe submits the paper' ;
+        tisit:atTime :my-action-time ;
+        part:hasParticipant
+            :my-person ,
+            :my-draft .
+    """ ;
+    rdfs:comment "An event with at least one agent that is participant in it and that is linked to a workflow execution and to a step of the related workflow description." ;
+    rdfs:isDefinedBy pwo: ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty pwo:happened ;
+            owl:someValuesFrom ti:TimeInterval ],
+        [ a owl:Class ;
+            owl:intersectionOf ( planex:Action taskex:Action ) ] ;
+    vs:term_status reg:statusStable .
+

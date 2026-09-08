@@ -1,0 +1,11 @@
+@prefix error: <http://www.essepuntato.it/2009/10/error/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+error:hasError a owl:DatatypeProperty ;
+    rdfs:label "has error"@en ;
+    rdfs:comment "A kind of error resulting from a resource." ;
+    rdfs:isDefinedBy <http://purl.org/spar/error/> ;
+    rdfs:range xsd:string .
+

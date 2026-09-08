@@ -1,0 +1,26 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix plandesc: <http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#> .
+@prefix pwo: <http://purl.org/spar/pwo/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+pwo:Workflow a owl:Class ;
+    rdfs:label "workflow"@en ;
+    vann:example """
+    :my-workflow a pwo:Workflow ;
+        pwo:hasFirstStep :step-one ;
+        pwo:hasStep
+            :step-one ,
+            :step-two ,
+            :step-three .
+    """ ;
+    rdfs:comment "A sequence of connected steps, representing a sequence of publishing operations undertaken by agents. A workflow may be seen as an abstract model of real work."@en ;
+    rdfs:isDefinedBy pwo: ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty pwo:hasFirstStep ;
+            owl:someValuesFrom pwo:Step ],
+        plandesc:Plan ;
+    vs:term_status reg:statusStable .
+

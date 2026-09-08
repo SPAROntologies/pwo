@@ -1,0 +1,9 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix taskrole: <http://www.ontologydesignpatterns.org/cp/owl/taskrole.owl#> .
+
+taskrole:Task a owl:Class ;
+    rdfs:label "task"@en ;
+    rdfs:comment "A piece of work to be done or undertaken." ;
+    rdfs:isDefinedBy taskrole: .
+

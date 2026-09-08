@@ -1,0 +1,9 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix parameter: <http://www.ontologydesignpatterns.org/cp/owl/parameter.owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+parameter:hasParameter a owl:ObjectProperty ;
+    rdfs:label "has parameter"@en ;
+    rdfs:comment "A relation between a concept and a parameter." ;
+    rdfs:isDefinedBy parameter: .
+

@@ -1,0 +1,24 @@
+[
+  {
+    "@id": "http://www.w3.org/2006/time#DurationDescription",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Description of temporal extent structured with separate values for the various elements of a calendar-clock system."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/2006/time#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "duration description"
+      }
+    ]
+  }
+]

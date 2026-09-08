@@ -1,0 +1,10 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix taskex: <http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#> .
+
+taskex:isExecutedIn a owl:ObjectProperty ;
+    rdfs:label "is executed in"@en ;
+    rdfs:comment "The relation between a task and an action."@en ;
+    rdfs:isDefinedBy taskex: ;
+    owl:inverseOf taskex:executesTask .
+

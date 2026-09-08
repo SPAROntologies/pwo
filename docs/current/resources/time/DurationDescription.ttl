@@ -1,0 +1,9 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+
+time:DurationDescription a owl:Class ;
+    rdfs:label "duration description"@en ;
+    rdfs:comment "Description of temporal extent structured with separate values for the various elements of a calendar-clock system." ;
+    rdfs:isDefinedBy time: .
+
