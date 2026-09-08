@@ -1,0 +1,10 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix plan: <http://www.ontologydesignpatterns.org/cp/owl/basicplan.owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+plan:isSatisfiedBy a owl:ObjectProperty ;
+    rdfs:label "satisfies"@en ;
+    rdfs:comment "A relation between a description and a situation." ;
+    rdfs:isDefinedBy plan: ;
+    owl:inverseOf plan:satisfies .
+

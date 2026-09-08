@@ -1,0 +1,9 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix planex: <http://www.ontologydesignpatterns.org/cp/owl/basicplanexecution.owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+planex:PlanExecution a owl:Class ;
+    rdfs:label "plan execution"@en ;
+    rdfs:comment "An event with at least one agent participating in it, and that executes a task." ;
+    rdfs:isDefinedBy planex: .
+

@@ -1,0 +1,16 @@
+_:n4b8df063b2af456380c02fda53b59223b10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n4b8df063b2af456380c02fda53b59223b11 .
+<http://purl.org/spar/pwo/involvesAction> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/pwo/WorkflowExecution> .
+_:n4b8df063b2af456380c02fda53b59223b11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#isExecutedIn> .
+<http://purl.org/spar/pwo/involvesAction> <http://www.w3.org/2000/01/rdf-schema#comment> "The relation between a particular execution of a workflow and an action."@en .
+<http://purl.org/spar/pwo/involvesAction> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/pwo/Action> .
+<http://purl.org/spar/pwo/involvesAction> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/pwo/isActionInvolvedIn> .
+_:n4b8df063b2af456380c02fda53b59223b9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n4b8df063b2af456380c02fda53b59223b10 .
+<http://purl.org/spar/pwo/involvesAction> <http://www.w3.org/2000/01/rdf-schema#label> "involves action"@en .
+<http://purl.org/spar/pwo/involvesAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/pwo/involvesAction> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:n4b8df063b2af456380c02fda53b59223b9 .
+<http://purl.org/spar/pwo/involvesAction> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+_:n4b8df063b2af456380c02fda53b59223b9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/pwo/executes> .
+_:n4b8df063b2af456380c02fda53b59223b11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://purl.org/spar/pwo/involvesAction> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/pwo/> .
+<http://purl.org/spar/pwo/involvesAction> <http://purl.org/vocab/vann/example> "\n    :my-workflow-execution a pwo:WorkflowExecution ;\n        pwo:executes :my-workflow ;\n        pwo:involvesAction \n            :my-action ,\n            :my-another-action .\n    " .
+_:n4b8df063b2af456380c02fda53b59223b10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/pwo/hasStep> .

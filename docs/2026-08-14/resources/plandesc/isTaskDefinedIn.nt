@@ -1,0 +1,5 @@
+<http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#isTaskDefinedIn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#> .
+<http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#isTaskDefinedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#isTaskDefinedIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ontologydesignpatterns.org/cp/owl/taskrole.owl#Task> .
+<http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#isTaskDefinedIn> <http://www.w3.org/2000/01/rdf-schema#label> "is task defined in"@en .
+<http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#isTaskDefinedIn> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between a task and its description."@en .

@@ -1,0 +1,37 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix parameter: <http://www.ontologydesignpatterns.org/cp/owl/parameter.owl#> .
+@prefix plandesc: <http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#> .
+@prefix pwo: <http://purl.org/spar/pwo/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix taskex: <http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#> .
+@prefix taskrole: <http://www.ontologydesignpatterns.org/cp/owl/taskrole.owl#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+pwo:Step a owl:Class ;
+    rdfs:label "step"@en ;
+    vann:example """
+    :step-one a pwo:Step ;
+        pwo:hasNextStep :step-two ;
+        taskex:isExecutedIn :my-action ;
+        pwo:needs :my-draft ;
+        pwo:produces :my-output .
+    """ ;
+    rdfs:comment "An atomic unit of a workflow, that may be characterized by a starting time and an ending time, and may be associated with one or more events.  A workflow step usually involves some input information, material or energy needed to complete the step, and some output information, material or energy produced by that step.  In the case of a publishing workflow, a step typically results in the creation of a publication entity, usually by the modification of another pre-existing publication entity, e.g. the creation of an edited paper from a rough draft, or of an HTML representation from an XML mark-up."@en ;
+    rdfs:isDefinedBy pwo: ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom pwo:Action ;
+            owl:onProperty taskex:isExecutedIn ],
+        [ a owl:Restriction ;
+            owl:onClass time:DurationDescription ;
+            owl:onProperty parameter:hasParameter ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom pwo:Workflow ;
+            owl:onProperty plandesc:isTaskDefinedIn ],
+        taskrole:Task ;
+    vs:term_status reg:statusStable .
+

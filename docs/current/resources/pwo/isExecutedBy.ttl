@@ -1,0 +1,19 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix plan: <http://www.ontologydesignpatterns.org/cp/owl/basicplan.owl#> .
+@prefix pwo: <http://purl.org/spar/pwo/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+pwo:isExecutedBy a owl:ObjectProperty ;
+    rdfs:label "is executed by" ;
+    vann:example """
+    :my-workflow a pwo:Workflow ;
+        pwo:isExecutedBy :my-workflow-execution .
+    """ ;
+    rdfs:comment "The relation between a workflow description and the related workflow execution." ;
+    rdfs:isDefinedBy pwo: ;
+    rdfs:subPropertyOf plan:isSatisfiedBy ;
+    vs:term_status reg:statusStable .
+

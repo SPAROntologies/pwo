@@ -1,0 +1,25 @@
+_:n4b8df063b2af456380c02fda53b59223b2 <http://www.w3.org/2002/07/owl#intersectionOf> _:n4b8df063b2af456380c02fda53b59223b4 .
+<http://purl.org/spar/pwo/WorkflowExecution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/cp/owl/basicplanexecution.owl#PlanExecution> .
+_:n4b8df063b2af456380c02fda53b59223b1 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/pwo/involvesAction> .
+<http://purl.org/spar/pwo/WorkflowExecution> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/pwo/WorkflowExecution> <http://www.w3.org/2000/01/rdf-schema#label> "workflow execution"@en .
+<http://purl.org/spar/pwo/WorkflowExecution> <http://www.w3.org/2000/01/rdf-schema#comment> "The aggregate of actions executed in the steps defined in a workflow."@en .
+_:n4b8df063b2af456380c02fda53b59223b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:n4b8df063b2af456380c02fda53b59223b1 <http://www.w3.org/2002/07/owl#someValuesFrom> _:n4b8df063b2af456380c02fda53b59223b2 .
+_:n4b8df063b2af456380c02fda53b59223b4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n4b8df063b2af456380c02fda53b59223b5 .
+<http://purl.org/spar/pwo/WorkflowExecution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#TimeIndexedSituation> .
+_:n4b8df063b2af456380c02fda53b59223b3 <http://www.w3.org/2002/07/owl#onProperty> <http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#executesTask> .
+_:n4b8df063b2af456380c02fda53b59223b5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n4b8df063b2af456380c02fda53b59223b3 .
+<http://purl.org/spar/pwo/WorkflowExecution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:n4b8df063b2af456380c02fda53b59223b1 .
+_:n4b8df063b2af456380c02fda53b59223b6 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/pwo/executes> .
+<http://purl.org/spar/pwo/WorkflowExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:n4b8df063b2af456380c02fda53b59223b2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:n4b8df063b2af456380c02fda53b59223b5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:n4b8df063b2af456380c02fda53b59223b6 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/pwo/Workflow> .
+_:n4b8df063b2af456380c02fda53b59223b3 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/pwo/Step> .
+<http://purl.org/spar/pwo/WorkflowExecution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:n4b8df063b2af456380c02fda53b59223b6 .
+<http://purl.org/spar/pwo/WorkflowExecution> <http://purl.org/vocab/vann/example> "\n    :my-workflow-execution a pwo:WorkflowExecution ;\n        pwo:executes :my-workflow ;\n        pwo:involvesAction \n            :my-action ,\n            :my-another-action .\n    " .
+_:n4b8df063b2af456380c02fda53b59223b3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/spar/pwo/WorkflowExecution> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/pwo/> .
+_:n4b8df063b2af456380c02fda53b59223b6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:n4b8df063b2af456380c02fda53b59223b4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/pwo/Action> .

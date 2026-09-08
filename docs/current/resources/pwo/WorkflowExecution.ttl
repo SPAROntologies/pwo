@@ -1,0 +1,35 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix planex: <http://www.ontologydesignpatterns.org/cp/owl/basicplanexecution.owl#> .
+@prefix pwo: <http://purl.org/spar/pwo/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix taskex: <http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#> .
+@prefix tisit: <http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+pwo:WorkflowExecution a owl:Class ;
+    rdfs:label "workflow execution"@en ;
+    vann:example """
+    :my-workflow-execution a pwo:WorkflowExecution ;
+        pwo:executes :my-workflow ;
+        pwo:involvesAction 
+            :my-action ,
+            :my-another-action .
+    """ ;
+    rdfs:comment "The aggregate of actions executed in the steps defined in a workflow."@en ;
+    rdfs:isDefinedBy pwo: ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty pwo:involvesAction ;
+            owl:someValuesFrom [ a owl:Class ;
+                    owl:intersectionOf ( pwo:Action [ a owl:Restriction ;
+                                owl:onProperty taskex:executesTask ;
+                                owl:someValuesFrom pwo:Step ] ) ] ],
+        [ a owl:Restriction ;
+            owl:onProperty pwo:executes ;
+            owl:someValuesFrom pwo:Workflow ],
+        planex:PlanExecution,
+        tisit:TimeIndexedSituation ;
+    vs:term_status reg:statusStable .
+

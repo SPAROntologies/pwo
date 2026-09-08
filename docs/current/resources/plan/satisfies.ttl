@@ -1,0 +1,11 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix plan: <http://www.ontologydesignpatterns.org/cp/owl/basicplan.owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sit: <http://www.ontologydesignpatterns.org/cp/owl/situation.owl#> .
+
+plan:satisfies a owl:ObjectProperty ;
+    rdfs:label "satisfies"@en ;
+    rdfs:comment "A relation between a situation and a description." ;
+    rdfs:domain sit:Situation ;
+    rdfs:isDefinedBy plan: .
+

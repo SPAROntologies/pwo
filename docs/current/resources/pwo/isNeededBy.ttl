@@ -1,0 +1,22 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pwo: <http://purl.org/spar/pwo/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+pwo:isNeededBy a owl:ObjectProperty ;
+    rdfs:label "is needed by"@en ;
+    vann:example """
+    :step-one a pwo:Step ;
+        pwo:hasNextStep :step-two ;
+        taskex:isExecutedIn :my-action .
+    
+    :my-draft 
+        pwo:isNeededBy :step-one . 
+    """ ;
+    rdfs:comment "The relation between a thing required to undertake a workflow step or an event (e.g. an action executing a workflow step) and the step/event itself."@en ;
+    rdfs:isDefinedBy pwo: ;
+    owl:inverseOf pwo:needs ;
+    vs:term_status reg:statusStable .
+

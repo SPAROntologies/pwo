@@ -1,0 +1,23 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix part: <http://www.ontologydesignpatterns.org/cp/owl/participation.owl#> .
+@prefix pwo: <http://purl.org/spar/pwo/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+pwo:needs a owl:ObjectProperty ;
+    rdfs:label "needs"@en ;
+    vann:example """
+    :step-one a pwo:Step ;
+        pwo:hasNextStep :step-two ;
+        taskex:isExecutedIn :my-action ;
+        pwo:needs :my-draft . 
+    """ ;
+    rdfs:comment "The relation between a workflow step or an event (e.g. an action executing a workflow step) and anything required to undertake that step/event."@en ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( pwo:Step part:Event ) ] ;
+    rdfs:isDefinedBy pwo: ;
+    vs:term_status reg:statusStable .
+

@@ -1,0 +1,9 @@
+<http://purl.org/spar/pwo/happened> <http://www.w3.org/2000/01/rdf-schema#label> "happened"@en .
+<http://purl.org/spar/pwo/happened> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#TimeInterval> .
+<http://purl.org/spar/pwo/happened> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/pwo/happened> <http://www.w3.org/2000/01/rdf-schema#comment> "The relation between an event and the interval when it happened."@en .
+<http://purl.org/spar/pwo/happened> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/pwo/isIntervalFor> .
+<http://purl.org/spar/pwo/happened> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ontologydesignpatterns.org/cp/owl/participation.owl#Event> .
+<http://purl.org/spar/pwo/happened> <http://purl.org/vocab/vann/example> "\n    :my-event \n        pwo:happened :my-event-time .\n    " .
+<http://purl.org/spar/pwo/happened> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/pwo/> .
+<http://purl.org/spar/pwo/happened> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .

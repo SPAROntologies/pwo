@@ -1,0 +1,22 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pwo: <http://purl.org/spar/pwo/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+pwo:hasFirstStep a owl:ObjectProperty ;
+    rdfs:label "has first step"@en ;
+    vann:example """
+    :my-workflow a pwo:Workflow ;
+        pwo:hasFirstStep :step-one .
+    """ ;
+    rdfs:comment "The relation between a workflow and its first step."@en ;
+    rdfs:isDefinedBy pwo: ;
+    rdfs:range [ a owl:Class ;
+            owl:complementOf [ a owl:Restriction ;
+                    owl:onProperty pwo:hasPreviousStep ;
+                    owl:someValuesFrom pwo:Step ] ] ;
+    rdfs:subPropertyOf pwo:hasStep ;
+    vs:term_status reg:statusStable .
+

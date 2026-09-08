@@ -1,0 +1,9 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix plandesc: <http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+plandesc:Plan a owl:Class ;
+    rdfs:label "plan"@en ;
+    rdfs:comment "A description having an explicit goal to be achieved by executing tasks."@en ;
+    rdfs:isDefinedBy plandesc: .
+

@@ -1,0 +1,75 @@
+[
+  {
+    "@id": "http://purl.org/spar/pwo/Action",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n    :my-workflow-execution a pwo:WorkflowExecution ;\n        pwo:executes :my-workflow ;\n        pwo:involvesAction \n            :my-action .\n\n    :my-action a pwo:Action ;\n        dcterms:description 'John Doe submits the paper' ;\n        tisit:atTime :my-action-time ;\n        part:hasParticipant\n            :my-person ,\n            :my-draft .\n    "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "An event with at least one agent that is participant in it and that is linked to a workflow execution and to a step of the related workflow description."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/pwo/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "action"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:n4b8df063b2af456380c02fda53b59223b21"
+      },
+      {
+        "@id": "_:n4b8df063b2af456380c02fda53b59223b22"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  },
+  {
+    "@id": "_:n4b8df063b2af456380c02fda53b59223b21",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://purl.org/spar/pwo/happened"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#TimeInterval"
+      }
+    ]
+  },
+  {
+    "@id": "_:n4b8df063b2af456380c02fda53b59223b22",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplanexecution.owl#Action"
+          },
+          {
+            "@id": "http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#Action"
+          }
+        ]
+      }
+    ]
+  }
+]

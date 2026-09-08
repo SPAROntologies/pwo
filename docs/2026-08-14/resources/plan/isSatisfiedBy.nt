@@ -1,0 +1,5 @@
+<http://www.ontologydesignpatterns.org/cp/owl/basicplan.owl#isSatisfiedBy> <http://www.w3.org/2000/01/rdf-schema#label> "satisfies"@en .
+<http://www.ontologydesignpatterns.org/cp/owl/basicplan.owl#isSatisfiedBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.ontologydesignpatterns.org/cp/owl/basicplan.owl#> .
+<http://www.ontologydesignpatterns.org/cp/owl/basicplan.owl#isSatisfiedBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.ontologydesignpatterns.org/cp/owl/basicplan.owl#satisfies> .
+<http://www.ontologydesignpatterns.org/cp/owl/basicplan.owl#isSatisfiedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between a description and a situation." .
+<http://www.ontologydesignpatterns.org/cp/owl/basicplan.owl#isSatisfiedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
