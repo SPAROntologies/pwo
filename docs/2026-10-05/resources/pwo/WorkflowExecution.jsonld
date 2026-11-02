@@ -28,16 +28,16 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#TimeIndexedSituation"
-      },
-      {
         "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplanexecution.owl#PlanExecution"
       },
       {
-        "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb6"
+        "@id": "_:nec6db8b92ea1452eadb52214435a22d7b1"
       },
       {
-        "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb1"
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#TimeIndexedSituation"
+      },
+      {
+        "@id": "_:nec6db8b92ea1452eadb52214435a22d7b6"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -47,23 +47,7 @@
     ]
   },
   {
-    "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb6",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://purl.org/spar/pwo/executes"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "http://purl.org/spar/pwo/Workflow"
-      }
-    ]
-  },
-  {
-    "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb1",
+    "@id": "_:nec6db8b92ea1452eadb52214435a22d7b1",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -74,12 +58,12 @@
     ],
     "http://www.w3.org/2002/07/owl#someValuesFrom": [
       {
-        "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb2"
+        "@id": "_:nec6db8b92ea1452eadb52214435a22d7b2"
       }
     ]
   },
   {
-    "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb2",
+    "@id": "_:nec6db8b92ea1452eadb52214435a22d7b2",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -90,14 +74,14 @@
             "@id": "http://purl.org/spar/pwo/Action"
           },
           {
-            "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb3"
+            "@id": "_:nec6db8b92ea1452eadb52214435a22d7b3"
           }
         ]
       }
     ]
   },
   {
-    "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb3",
+    "@id": "_:nec6db8b92ea1452eadb52214435a22d7b3",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -109,6 +93,22 @@
     "http://www.w3.org/2002/07/owl#someValuesFrom": [
       {
         "@id": "http://purl.org/spar/pwo/Step"
+      }
+    ]
+  },
+  {
+    "@id": "_:nec6db8b92ea1452eadb52214435a22d7b6",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://purl.org/spar/pwo/executes"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://purl.org/spar/pwo/Workflow"
       }
     ]
   }

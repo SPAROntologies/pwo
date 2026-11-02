@@ -28,7 +28,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb25"
+        "@id": "_:nec6db8b92ea1452eadb52214435a22d7b25"
       },
       {
         "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#Plan"
@@ -41,7 +41,7 @@
     ]
   },
   {
-    "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb25",
+    "@id": "_:nec6db8b92ea1452eadb52214435a22d7b25",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
