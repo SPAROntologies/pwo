@@ -1,6 +1,12 @@
 # Publishing Workflow Ontology (PWO)
 
-The Publishing Workflow Ontology (PWO) is a simple ontology for describing the steps in the workflow associated with the publication of a document or other publication entity.
+[![License](https://img.shields.io/github/license/SPAROntologies/pwo)](LICENSE.md)
+[![Release](https://img.shields.io/github/v/release/SPAROntologies/pwo)](https://github.com/SPAROntologies/pwo/releases/latest)
+[![Tests](https://img.shields.io/github/actions/workflow/status/SPAROntologies/pwo/validation.yml?label=tests)](https://github.com/SPAROntologies/pwo/actions/workflows/validation.yml)
+[![Documentation](https://img.shields.io/badge/docs-sparontologies.net-blue)](http://www.sparontologies.net/ontologies/pwo)
+[![IRI](https://img.shields.io/badge/IRI-purl.org%2Fspar%2Fpwo-blue)](http://purl.org/spar/pwo)
+
+The **_Publishing Workflow Ontology (PWO)_** is a simple ontology for describing the steps in the workflow associated with the publication of a document or other publication entity.
 
 **URL:** http://purl.org/spar/pwo
 
