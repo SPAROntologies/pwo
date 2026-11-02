@@ -1,0 +1,13 @@
+_:nb6503e602e7041b297f9cdb0fc8ae89eb12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#executesTask> .
+<http://purl.org/spar/pwo/isActionInvolvedIn> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/pwo/isActionInvolvedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/pwo/isActionInvolvedIn> <http://www.w3.org/2000/01/rdf-schema#comment> "The relation between an event and a particular execution of a workflow description."@en .
+<http://purl.org/spar/pwo/isActionInvolvedIn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/pwo/> .
+_:nb6503e602e7041b297f9cdb0fc8ae89eb14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:nb6503e602e7041b297f9cdb0fc8ae89eb13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/pwo/isStepOf> .
+<http://purl.org/spar/pwo/isActionInvolvedIn> <http://www.w3.org/2000/01/rdf-schema#label> "is action involved in"@en .
+_:nb6503e602e7041b297f9cdb0fc8ae89eb12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nb6503e602e7041b297f9cdb0fc8ae89eb13 .
+_:nb6503e602e7041b297f9cdb0fc8ae89eb14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/pwo/isExecutedBy> .
+<http://purl.org/spar/pwo/isActionInvolvedIn> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:nb6503e602e7041b297f9cdb0fc8ae89eb12 .
+<http://purl.org/spar/pwo/isActionInvolvedIn> <http://purl.org/vocab/vann/example> "\n    :my-workflow-execution a pwo:WorkflowExecution ;\n        pwo:execute :my-workflow .\n\n    :my-action \n        pwo:isActionInvolvedIn :my-workflow-execution .\n    " .
+_:nb6503e602e7041b297f9cdb0fc8ae89eb13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nb6503e602e7041b297f9cdb0fc8ae89eb14 .

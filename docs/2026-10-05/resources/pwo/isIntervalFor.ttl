@@ -1,0 +1,15 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pwo: <http://purl.org/spar/pwo/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+pwo:isIntervalFor a owl:ObjectProperty ;
+    rdfs:label "is interval for"@en ;
+    vann:example """
+    """ ;
+    rdfs:comment "The relation between an interval describing when an event happened and the related event."@en ;
+    rdfs:isDefinedBy pwo: ;
+    vs:term_status reg:statusStable .
+

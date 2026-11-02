@@ -1,0 +1,30 @@
+[
+  {
+    "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#definesTask",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A relation between a description and a task."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "defines task"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/taskrole.owl#Task"
+      }
+    ]
+  }
+]
