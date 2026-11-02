@@ -4,9 +4,9 @@
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 >
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#Plan">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">A description having an explicit goal to be achieved by executing tasks.</rdfs:comment>
-    <rdfs:label xml:lang="en">plan</rdfs:label>
     <rdfs:isDefinedBy rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#"/>
+    <rdfs:label xml:lang="en">plan</rdfs:label>
+    <rdfs:comment xml:lang="en">A description having an explicit goal to be achieved by executing tasks.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
 </rdf:RDF>

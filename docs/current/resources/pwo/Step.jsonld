@@ -28,16 +28,16 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
+        "@id": "_:nec6db8b92ea1452eadb52214435a22d7b27"
+      },
+      {
+        "@id": "_:nec6db8b92ea1452eadb52214435a22d7b28"
+      },
+      {
         "@id": "http://www.ontologydesignpatterns.org/cp/owl/taskrole.owl#Task"
       },
       {
-        "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb27"
-      },
-      {
-        "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb26"
-      },
-      {
-        "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb28"
+        "@id": "_:nec6db8b92ea1452eadb52214435a22d7b26"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -47,7 +47,7 @@
     ]
   },
   {
-    "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb27",
+    "@id": "_:nec6db8b92ea1452eadb52214435a22d7b27",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -69,23 +69,7 @@
     ]
   },
   {
-    "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb26",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "http://purl.org/spar/pwo/Action"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#isExecutedIn"
-      }
-    ]
-  },
-  {
-    "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb28",
+    "@id": "_:nec6db8b92ea1452eadb52214435a22d7b28",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -97,6 +81,22 @@
     "http://www.w3.org/2002/07/owl#onProperty": [
       {
         "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#isTaskDefinedIn"
+      }
+    ]
+  },
+  {
+    "@id": "_:nec6db8b92ea1452eadb52214435a22d7b26",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://purl.org/spar/pwo/Action"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#isExecutedIn"
       }
     ]
   }
