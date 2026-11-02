@@ -1,11 +1,7 @@
 [project]
 name = "pwo"
-version = "0.1.0"
-description = "Add your description here"
+version = "2.5.1"
+description = "The Publishing Workflow Ontology (PWO) is a simple ontology for describing the steps in the workflow associated with the publication of a document or other publication entity."
 readme = "README.md"
 requires-python = ">=3.13"
-dependencies = [
-    "codespell>=2.4.3",
-    "rdflib>=7.6.0",
-    "requests>=2.34.2",
-]
+dependencies = []
