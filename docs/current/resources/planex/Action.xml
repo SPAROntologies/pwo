@@ -5,8 +5,8 @@
 >
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/basicplanexecution.owl#Action">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment>An event with at least one agent that participates in it, and that executes a task.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/basicplanexecution.owl#"/>
     <rdfs:label xml:lang="en">action</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/basicplanexecution.owl#"/>
+    <rdfs:comment>An event with at least one agent that participates in it, and that executes a task.</rdfs:comment>
   </rdf:Description>
 </rdf:RDF>
