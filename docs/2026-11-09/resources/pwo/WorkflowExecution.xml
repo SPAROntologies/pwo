@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+   xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+>
+  <rdf:Description rdf:about="http://purl.org/spar/pwo/WorkflowExecution">
+    <rdfs:subClassOf rdf:nodeID="ncf215d4b28ff4f8580db686b3c83d994b6"/>
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/basicplanexecution.owl#PlanExecution"/>
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#TimeIndexedSituation"/>
+    <rdfs:subClassOf rdf:nodeID="ncf215d4b28ff4f8580db686b3c83d994b1"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/pwo/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">The aggregate of actions executed in the steps defined in a workflow.</rdfs:comment>
+    <vann:example>
+    :my-workflow-execution a pwo:WorkflowExecution ;
+        pwo:executes :my-workflow ;
+        pwo:involvesAction 
+            :my-action ,
+            :my-another-action .
+    </vann:example>
+    <rdfs:label xml:lang="en">workflow execution</rdfs:label>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ncf215d4b28ff4f8580db686b3c83d994b6">
+    <owl:someValuesFrom rdf:resource="http://purl.org/spar/pwo/Workflow"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://purl.org/spar/pwo/executes"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ncf215d4b28ff4f8580db686b3c83d994b1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://purl.org/spar/pwo/involvesAction"/>
+    <owl:someValuesFrom rdf:nodeID="ncf215d4b28ff4f8580db686b3c83d994b2"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ncf215d4b28ff4f8580db686b3c83d994b2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="ncf215d4b28ff4f8580db686b3c83d994b4"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ncf215d4b28ff4f8580db686b3c83d994b3">
+    <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#executesTask"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:someValuesFrom rdf:resource="http://purl.org/spar/pwo/Step"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ncf215d4b28ff4f8580db686b3c83d994b4">
+    <rdf:first rdf:resource="http://purl.org/spar/pwo/Action"/>
+    <rdf:rest rdf:nodeID="ncf215d4b28ff4f8580db686b3c83d994b5"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ncf215d4b28ff4f8580db686b3c83d994b5">
+    <rdf:first rdf:nodeID="ncf215d4b28ff4f8580db686b3c83d994b3"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+</rdf:RDF>

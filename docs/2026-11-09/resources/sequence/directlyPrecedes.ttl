@@ -1,0 +1,9 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sequence: <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#> .
+
+sequence:directlyPrecedes a owl:ObjectProperty ;
+    rdfs:label "directly precedes"@en ;
+    rdfs:comment "The intransitive precedes relation. For example, Monday directly precedes Tuesday. Directness of precedence depends on the designer conceptualization."@en ;
+    rdfs:isDefinedBy sequence: .
+

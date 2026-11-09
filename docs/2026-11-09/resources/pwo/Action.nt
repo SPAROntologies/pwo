@@ -1,0 +1,17 @@
+<http://purl.org/spar/pwo/Action> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ncf215d4b28ff4f8580db686b3c83d994b22 .
+_:ncf215d4b28ff4f8580db686b3c83d994b22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:ncf215d4b28ff4f8580db686b3c83d994b22 <http://www.w3.org/2002/07/owl#intersectionOf> _:ncf215d4b28ff4f8580db686b3c83d994b23 .
+_:ncf215d4b28ff4f8580db686b3c83d994b21 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#TimeInterval> .
+_:ncf215d4b28ff4f8580db686b3c83d994b21 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/pwo/happened> .
+<http://purl.org/spar/pwo/Action> <http://purl.org/vocab/vann/example> "\n    :my-workflow-execution a pwo:WorkflowExecution ;\n        pwo:executes :my-workflow ;\n        pwo:involvesAction \n            :my-action .\n\n    :my-action a pwo:Action ;\n        dcterms:description 'John Doe submits the paper' ;\n        tisit:atTime :my-action-time ;\n        part:hasParticipant\n            :my-person ,\n            :my-draft .\n    " .
+<http://purl.org/spar/pwo/Action> <http://www.w3.org/2000/01/rdf-schema#label> "action" .
+<http://purl.org/spar/pwo/Action> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:ncf215d4b28ff4f8580db686b3c83d994b23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.ontologydesignpatterns.org/cp/owl/basicplanexecution.owl#Action> .
+_:ncf215d4b28ff4f8580db686b3c83d994b21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/spar/pwo/Action> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ncf215d4b28ff4f8580db686b3c83d994b21 .
+_:ncf215d4b28ff4f8580db686b3c83d994b23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:ncf215d4b28ff4f8580db686b3c83d994b24 .
+<http://purl.org/spar/pwo/Action> <http://www.w3.org/2000/01/rdf-schema#comment> "An event with at least one agent that is participant in it and that is linked to a workflow execution and to a step of the related workflow description." .
+_:ncf215d4b28ff4f8580db686b3c83d994b24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#Action> .
+_:ncf215d4b28ff4f8580db686b3c83d994b24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://purl.org/spar/pwo/Action> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/pwo/Action> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/pwo/> .

@@ -1,0 +1,11 @@
+<http://purl.org/spar/pwo/Workflow> <http://www.w3.org/2000/01/rdf-schema#label> "workflow"@en .
+<http://purl.org/spar/pwo/Workflow> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ncf215d4b28ff4f8580db686b3c83d994b25 .
+<http://purl.org/spar/pwo/Workflow> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#Plan> .
+<http://purl.org/spar/pwo/Workflow> <http://purl.org/vocab/vann/example> "\n    :my-workflow a pwo:Workflow ;\n        pwo:hasFirstStep :step-one ;\n        pwo:hasStep\n            :step-one ,\n            :step-two ,\n            :step-three .\n    " .
+_:ncf215d4b28ff4f8580db686b3c83d994b25 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/pwo/hasFirstStep> .
+_:ncf215d4b28ff4f8580db686b3c83d994b25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/spar/pwo/Workflow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/pwo/Workflow> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/pwo/> .
+_:ncf215d4b28ff4f8580db686b3c83d994b25 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/pwo/Step> .
+<http://purl.org/spar/pwo/Workflow> <http://www.w3.org/2000/01/rdf-schema#comment> "A sequence of connected steps, representing a sequence of publishing operations undertaken by agents. A workflow may be seen as an abstract model of real work."@en .
+<http://purl.org/spar/pwo/Workflow> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
