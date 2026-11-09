@@ -7,29 +7,29 @@
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
   <rdf:Description rdf:about="http://purl.org/spar/pwo/produces">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/pwo"/>
     <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
-    <rdfs:comment xml:lang="en">The relation between a workflow step or an event (e.g. an action executing a workflow step) and the thing that the step/event produces, creates or results in.</rdfs:comment>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:domain rdf:nodeID="nbd84bf33f5544f16a57c30d2846feb1fb18"/>
-    <rdfs:label xml:lang="en">produces</rdfs:label>
     <vann:example>
     :step-one a pwo:Step ;
         pwo:hasNextStep :step-two ;
         taskex:isExecutedIn :my-action ;
         pwo:produces :my-output . 
     </vann:example>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/pwo/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">produces</rdfs:label>
+    <rdfs:comment xml:lang="en">The relation between a workflow step or an event (e.g. an action executing a workflow step) and the thing that the step/event produces, creates or results in.</rdfs:comment>
+    <rdfs:domain rdf:nodeID="n9392a4abbb364d5799b37d690f0f9757b18"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="nbd84bf33f5544f16a57c30d2846feb1fb20">
-    <rdf:first rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/participation.owl#Event"/>
+  <rdf:Description rdf:nodeID="n9392a4abbb364d5799b37d690f0f9757b20">
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/participation.owl#Event"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="nbd84bf33f5544f16a57c30d2846feb1fb18">
+  <rdf:Description rdf:nodeID="n9392a4abbb364d5799b37d690f0f9757b18">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="nbd84bf33f5544f16a57c30d2846feb1fb19"/>
+    <owl:unionOf rdf:nodeID="n9392a4abbb364d5799b37d690f0f9757b19"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="nbd84bf33f5544f16a57c30d2846feb1fb19">
+  <rdf:Description rdf:nodeID="n9392a4abbb364d5799b37d690f0f9757b19">
     <rdf:first rdf:resource="http://purl.org/spar/pwo/Step"/>
-    <rdf:rest rdf:nodeID="nbd84bf33f5544f16a57c30d2846feb1fb20"/>
+    <rdf:rest rdf:nodeID="n9392a4abbb364d5799b37d690f0f9757b20"/>
   </rdf:Description>
 </rdf:RDF>

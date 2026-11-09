@@ -5,6 +5,6 @@
 plan:isSatisfiedBy a owl:ObjectProperty ;
     rdfs:label "satisfies"@en ;
     rdfs:comment "A relation between a description and a situation." ;
-    rdfs:isDefinedBy plan: ;
+    rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/cp/owl/basicplan.owl> ;
     owl:inverseOf plan:satisfies .
 

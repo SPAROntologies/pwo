@@ -5,5 +5,5 @@
 sequence:directlyPrecedes a owl:ObjectProperty ;
     rdfs:label "directly precedes"@en ;
     rdfs:comment "The intransitive precedes relation. For example, Monday directly precedes Tuesday. Directness of precedence depends on the designer conceptualization."@en ;
-    rdfs:isDefinedBy sequence: .
+    rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl> .
 

@@ -5,5 +5,5 @@
 time:DurationDescription a owl:Class ;
     rdfs:label "duration description"@en ;
     rdfs:comment "Description of temporal extent structured with separate values for the various elements of a calendar-clock system." ;
-    rdfs:isDefinedBy time: .
+    rdfs:isDefinedBy <http://www.w3.org/2006/time> .
 

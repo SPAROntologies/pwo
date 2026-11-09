@@ -10,6 +10,6 @@ pwo:isIntervalFor a owl:ObjectProperty ;
     vann:example """
     """ ;
     rdfs:comment "The relation between an interval describing when an event happened and the related event."@en ;
-    rdfs:isDefinedBy pwo: ;
+    rdfs:isDefinedBy <http://purl.org/spar/pwo> ;
     vs:term_status reg:statusStable .
 

@@ -7,5 +7,5 @@ plan:satisfies a owl:ObjectProperty ;
     rdfs:label "satisfies"@en ;
     rdfs:comment "A relation between a situation and a description." ;
     rdfs:domain sit:Situation ;
-    rdfs:isDefinedBy plan: .
+    rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/cp/owl/basicplan.owl> .
 

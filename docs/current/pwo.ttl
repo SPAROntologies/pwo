@@ -449,7 +449,7 @@ pwo:hasNextStep a owl:ObjectProperty ;
     """ ;
     rdfs:comment "The relation between a step in a workflow and the step that directly follows it."@en ;
     rdfs:domain pwo:Step ;
-    rdfs:isDefinedBy pwo: ;
+    rdfs:isDefinedBy <http://purl.org/spar/pwo> ;
     rdfs:range pwo:Step ;
     rdfs:subPropertyOf sequence:directlyPrecedes ;
     owl:inverseOf pwo:hasPreviousStep ;
@@ -466,7 +466,7 @@ pwo:isNeededBy a owl:ObjectProperty ;
         pwo:isNeededBy :step-one . 
     """ ;
     rdfs:comment "The relation between a thing required to undertake a workflow step or an event (e.g. an action executing a workflow step) and the step/event itself."@en ;
-    rdfs:isDefinedBy pwo: ;
+    rdfs:isDefinedBy <http://purl.org/spar/pwo> ;
     owl:inverseOf pwo:needs ;
     vs:term_status reg:statusStable .
 
@@ -480,47 +480,47 @@ pwo:isProducedBy a owl:ObjectProperty ;
         pwo:isProducedBy :step-one .
     """ ;
     rdfs:comment "The relation between something and the workflow step or an event (e.g. an action executing a workflow step) that produces, creates or results in that thing."@en ;
-    rdfs:isDefinedBy pwo: ;
+    rdfs:isDefinedBy <http://purl.org/spar/pwo> ;
     owl:inverseOf pwo:produces ;
     vs:term_status reg:statusStable .
 
 part:isParticipantIn a owl:ObjectProperty ;
     rdfs:label "has participant"@en ;
     rdfs:comment "The relation between an event and an object participating in that event."@en ;
-    rdfs:isDefinedBy part: ;
+    rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/cp/owl/participation.owl> ;
     owl:inverseOf part:hasParticipant .
 
 sit:isSettingFor a owl:ObjectProperty ;
     rdfs:label "is setting for"@en ;
     rdfs:comment "The relation between a situation and something that situation is a setting for."@en ;
     rdfs:domain sit:Situation ;
-    rdfs:isDefinedBy sit: .
+    rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/cp/owl/situation.owl> .
 
 tisit:atTime a owl:FunctionalProperty,
         owl:ObjectProperty ;
     rdfs:label "at time"@en ;
     rdfs:comment "A time interval during which something is happening."@en ;
     rdfs:domain tisit:TimeIndexedSituation ;
-    rdfs:isDefinedBy tisit: ;
+    rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl> ;
     rdfs:range ti:TimeInterval .
 
 tisit:forEntity a owl:ObjectProperty ;
     rdfs:label "for entity"@en ;
     rdfs:comment "The relation between a time-indexed situation and an entity involved in it."@en ;
     rdfs:domain tisit:TimeIndexedSituation ;
-    rdfs:isDefinedBy tisit: .
+    rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl> .
 
 tisit:hasTimeIndexedSetting a owl:ObjectProperty ;
     rdfs:label "has time indexed setting"@en ;
     rdfs:comment "The relation between an entity and a time-indexed situation it is involved in."@en ;
-    rdfs:isDefinedBy tisit: ;
+    rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl> ;
     rdfs:range tisit:TimeIndexedSituation .
 
 ti:hasIntervalDate a owl:DatatypeProperty ;
     rdfs:label "has interval date"@en ;
     rdfs:comment "A date value assigned to a time interval."@en ;
     rdfs:domain ti:TimeInterval ;
-    rdfs:isDefinedBy ti: .
+    rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl> .
 
 pwo:WorkflowExecution a owl:Class ;
     rdfs:label "workflow execution"@en ;
@@ -532,7 +532,7 @@ pwo:WorkflowExecution a owl:Class ;
             :my-another-action .
     """ ;
     rdfs:comment "The aggregate of actions executed in the steps defined in a workflow."@en ;
-    rdfs:isDefinedBy pwo: ;
+    rdfs:isDefinedBy <http://purl.org/spar/pwo> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty pwo:involvesAction ;
             owl:someValuesFrom [ a owl:Class ;
@@ -554,7 +554,7 @@ pwo:happened a owl:ObjectProperty ;
     """ ;
     rdfs:comment "The relation between an event and the interval when it happened."@en ;
     rdfs:domain part:Event ;
-    rdfs:isDefinedBy pwo: ;
+    rdfs:isDefinedBy <http://purl.org/spar/pwo> ;
     rdfs:range ti:TimeInterval ;
     owl:inverseOf pwo:isIntervalFor ;
     vs:term_status reg:statusStable .
@@ -566,7 +566,7 @@ pwo:hasFirstStep a owl:ObjectProperty ;
         pwo:hasFirstStep :step-one .
     """ ;
     rdfs:comment "The relation between a workflow and its first step."@en ;
-    rdfs:isDefinedBy pwo: ;
+    rdfs:isDefinedBy <http://purl.org/spar/pwo> ;
     rdfs:range [ a owl:Class ;
             owl:complementOf [ a owl:Restriction ;
                     owl:onProperty pwo:hasPreviousStep ;
@@ -585,7 +585,7 @@ pwo:involvesAction a owl:ObjectProperty ;
     """ ;
     rdfs:comment "The relation between a particular execution of a workflow and an action."@en ;
     rdfs:domain pwo:WorkflowExecution ;
-    rdfs:isDefinedBy pwo: ;
+    rdfs:isDefinedBy <http://purl.org/spar/pwo> ;
     rdfs:range pwo:Action ;
     owl:inverseOf pwo:isActionInvolvedIn ;
     owl:propertyChainAxiom ( pwo:executes pwo:hasStep taskex:isExecutedIn ) ;
@@ -601,7 +601,7 @@ pwo:isActionInvolvedIn a owl:ObjectProperty ;
         pwo:isActionInvolvedIn :my-workflow-execution .
     """ ;
     rdfs:comment "The relation between an event and a particular execution of a workflow description."@en ;
-    rdfs:isDefinedBy pwo: ;
+    rdfs:isDefinedBy <http://purl.org/spar/pwo> ;
     owl:propertyChainAxiom ( taskex:executesTask pwo:isStepOf pwo:isExecutedBy ) ;
     vs:term_status reg:statusStable .
 
@@ -610,7 +610,7 @@ pwo:isIntervalFor a owl:ObjectProperty ;
     vann:example """
     """ ;
     rdfs:comment "The relation between an interval describing when an event happened and the related event."@en ;
-    rdfs:isDefinedBy pwo: ;
+    rdfs:isDefinedBy <http://purl.org/spar/pwo> ;
     vs:term_status reg:statusStable .
 
 error:hasError a owl:DatatypeProperty ;
@@ -622,18 +622,18 @@ error:hasError a owl:DatatypeProperty ;
 plan:isSatisfiedBy a owl:ObjectProperty ;
     rdfs:label "satisfies"@en ;
     rdfs:comment "A relation between a description and a situation." ;
-    rdfs:isDefinedBy plan: ;
+    rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/cp/owl/basicplan.owl> ;
     owl:inverseOf plan:satisfies .
 
 plandesc:Plan a owl:Class ;
     rdfs:label "plan"@en ;
     rdfs:comment "A description having an explicit goal to be achieved by executing tasks."@en ;
-    rdfs:isDefinedBy plandesc: .
+    rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl> .
 
 plandesc:definesTask a owl:ObjectProperty ;
     rdfs:label "defines task"@en ;
     rdfs:comment "A relation between a description and a task."@en ;
-    rdfs:isDefinedBy plandesc: ;
+    rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl> ;
     rdfs:range taskrole:Task .
 
 planex:Action a owl:Class ;
@@ -644,44 +644,44 @@ planex:Action a owl:Class ;
 planex:PlanExecution a owl:Class ;
     rdfs:label "plan execution"@en ;
     rdfs:comment "An event with at least one agent participating in it, and that executes a task." ;
-    rdfs:isDefinedBy planex: .
+    rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/cp/owl/basicplanexecution.owl> .
 
 parameter:hasParameter a owl:ObjectProperty ;
     rdfs:label "has parameter"@en ;
     rdfs:comment "A relation between a concept and a parameter." ;
-    rdfs:isDefinedBy parameter: .
+    rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/cp/owl/parameter.owl> .
 
 part:Object a owl:Class ;
     rdfs:label "object"@en ;
     rdfs:comment "Any physical, social, or mental object, or substance."@en ;
-    rdfs:isDefinedBy part: .
+    rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/cp/owl/participation.owl> .
 
 part:hasParticipant a owl:ObjectProperty ;
     rdfs:label "has participant"@en ;
     rdfs:comment "The relation between an event and an object participating in that event."@en ;
     rdfs:domain part:Event ;
-    rdfs:isDefinedBy part: ;
+    rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/cp/owl/participation.owl> ;
     rdfs:range part:Object .
 
 sequence:directlyFollows a owl:ObjectProperty ;
     rdfs:label "directly follows"@en ;
     rdfs:comment "The intransitive follows relation. For example, Wednesday directly precedes Thursday. Directness of precedence depends on the designer conceptualization."@en ;
-    rdfs:isDefinedBy sequence: .
+    rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl> .
 
 sequence:directlyPrecedes a owl:ObjectProperty ;
     rdfs:label "directly precedes"@en ;
     rdfs:comment "The intransitive precedes relation. For example, Monday directly precedes Tuesday. Directness of precedence depends on the designer conceptualization."@en ;
-    rdfs:isDefinedBy sequence: .
+    rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl> .
 
 sequence:precedes a owl:ObjectProperty ;
     rdfs:label "precedes"@en ;
     rdfs:comment "A relation between entities, expressing a 'sequence' schema. E.g. 'year 1999 precedes 2000', 'deciding what coffee to use' precedes 'preparing coffee', 'World War II follows World War I', 'in the Milan to Rome autoroute, Bologna precedes Florence', etc. It can then be used between tasks, processes, time intervals, spatially locate objects, situations, etc. Subproperties can be defined in order to distinguish the different uses."@en ;
-    rdfs:isDefinedBy sequence: .
+    rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl> .
 
 time:DurationDescription a owl:Class ;
     rdfs:label "duration description"@en ;
     rdfs:comment "Description of temporal extent structured with separate values for the various elements of a calendar-clock system." ;
-    rdfs:isDefinedBy time: .
+    rdfs:isDefinedBy <http://www.w3.org/2006/time> .
 
 pwo:executes a owl:ObjectProperty ;
     rdfs:label "executes"@en ;
@@ -690,7 +690,7 @@ pwo:executes a owl:ObjectProperty ;
         pwo:executes :my-workflow .
     """ ;
     rdfs:comment "This property allows to link a workflow execution to the related workflow description."@en ;
-    rdfs:isDefinedBy pwo: ;
+    rdfs:isDefinedBy <http://purl.org/spar/pwo> ;
     rdfs:subPropertyOf plan:satisfies ;
     owl:inverseOf pwo:isExecutedBy ;
     vs:term_status reg:statusStable .
@@ -702,7 +702,7 @@ pwo:hasPreviousStep a owl:ObjectProperty ;
         pwo:hasPreviousStep :step-one .
     """ ;
     rdfs:comment "A relation between a step in a workflow and the step that directly precedes it."@en ;
-    rdfs:isDefinedBy pwo: ;
+    rdfs:isDefinedBy <http://purl.org/spar/pwo> ;
     rdfs:subPropertyOf sequence:directlyFollows ;
     vs:term_status reg:statusStable .
 
@@ -718,7 +718,7 @@ pwo:hasStep a owl:ObjectProperty ;
     """ ;
     rdfs:comment "The relation between a workflow and a component step."@en ;
     rdfs:domain pwo:Workflow ;
-    rdfs:isDefinedBy pwo: ;
+    rdfs:isDefinedBy <http://purl.org/spar/pwo> ;
     rdfs:range pwo:Step ;
     rdfs:subPropertyOf plandesc:definesTask ;
     owl:inverseOf pwo:isStepOf ;
@@ -731,7 +731,7 @@ pwo:isExecutedBy a owl:ObjectProperty ;
         pwo:isExecutedBy :my-workflow-execution .
     """ ;
     rdfs:comment "The relation between a workflow description and the related workflow execution." ;
-    rdfs:isDefinedBy pwo: ;
+    rdfs:isDefinedBy <http://purl.org/spar/pwo> ;
     rdfs:subPropertyOf plan:isSatisfiedBy ;
     vs:term_status reg:statusStable .
 
@@ -745,7 +745,7 @@ pwo:isStepOf a owl:FunctionalProperty,
         pwo:isStepOf :my-workflow .
     """ ;
     rdfs:comment "The relation between a step in a workflow and the workflow of which it is a component."@en ;
-    rdfs:isDefinedBy pwo: ;
+    rdfs:isDefinedBy <http://purl.org/spar/pwo> ;
     rdfs:subPropertyOf plandesc:isTaskDefinedIn ;
     vs:term_status reg:statusStable .
 
@@ -760,7 +760,7 @@ pwo:needs a owl:ObjectProperty ;
     rdfs:comment "The relation between a workflow step or an event (e.g. an action executing a workflow step) and anything required to undertake that step/event."@en ;
     rdfs:domain [ a owl:Class ;
             owl:unionOf ( pwo:Step part:Event ) ] ;
-    rdfs:isDefinedBy pwo: ;
+    rdfs:isDefinedBy <http://purl.org/spar/pwo> ;
     vs:term_status reg:statusStable .
 
 pwo:produces a owl:ObjectProperty ;
@@ -774,35 +774,35 @@ pwo:produces a owl:ObjectProperty ;
     rdfs:comment "The relation between a workflow step or an event (e.g. an action executing a workflow step) and the thing that the step/event produces, creates or results in."@en ;
     rdfs:domain [ a owl:Class ;
             owl:unionOf ( pwo:Step part:Event ) ] ;
-    rdfs:isDefinedBy pwo: ;
+    rdfs:isDefinedBy <http://purl.org/spar/pwo> ;
     vs:term_status reg:statusStable .
 
 plan:satisfies a owl:ObjectProperty ;
     rdfs:label "satisfies"@en ;
     rdfs:comment "A relation between a situation and a description." ;
     rdfs:domain sit:Situation ;
-    rdfs:isDefinedBy plan: .
+    rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/cp/owl/basicplan.owl> .
 
 plandesc:isTaskDefinedIn a owl:ObjectProperty ;
     rdfs:label "is task defined in"@en ;
     rdfs:comment "A relation between a task and its description."@en ;
     rdfs:domain taskrole:Task ;
-    rdfs:isDefinedBy taskex: .
+    rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl> .
 
 sit:Situation a owl:Class ;
     rdfs:label "situation"@en ;
     rdfs:comment "A view on a set of entities. It can be seen as a 'relational context', reifying a relation."@en ;
-    rdfs:isDefinedBy sit: .
+    rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/cp/owl/situation.owl> .
 
 taskex:Action a owl:Class ;
     rdfs:label "action"@en ;
     rdfs:comment "An event with at least one agent participating in it, and that executes a task." ;
-    rdfs:isDefinedBy taskex: .
+    rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl> .
 
 taskex:isExecutedIn a owl:ObjectProperty ;
     rdfs:label "is executed in"@en ;
     rdfs:comment "The relation between a task and an action."@en ;
-    rdfs:isDefinedBy taskex: ;
+    rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl> ;
     owl:inverseOf taskex:executesTask .
 
 <urn:swrl#r> a swrl:Variable .
@@ -823,7 +823,7 @@ pwo:Action a owl:Class ;
             :my-draft .
     """ ;
     rdfs:comment "An event with at least one agent that is participant in it and that is linked to a workflow execution and to a step of the related workflow description." ;
-    rdfs:isDefinedBy pwo: ;
+    rdfs:isDefinedBy <http://purl.org/spar/pwo> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty pwo:happened ;
             owl:someValuesFrom ti:TimeInterval ],
@@ -842,7 +842,7 @@ pwo:Workflow a owl:Class ;
             :step-three .
     """ ;
     rdfs:comment "A sequence of connected steps, representing a sequence of publishing operations undertaken by agents. A workflow may be seen as an abstract model of real work."@en ;
-    rdfs:isDefinedBy pwo: ;
+    rdfs:isDefinedBy <http://purl.org/spar/pwo> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty pwo:hasFirstStep ;
             owl:someValuesFrom pwo:Step ],
@@ -853,7 +853,7 @@ taskex:executesTask a owl:ObjectProperty ;
     rdfs:label "executes task"@en ;
     rdfs:comment "The relation between an action and a task."@en ;
     rdfs:domain taskex:Action ;
-    rdfs:isDefinedBy taskex: ;
+    rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl> ;
     rdfs:range taskrole:Task .
 
 <urn:swrl#sj> a swrl:Variable .
@@ -861,22 +861,22 @@ taskex:executesTask a owl:ObjectProperty ;
 part:Event a owl:Class ;
     rdfs:label "event"@en ;
     rdfs:comment "An event that may happen during a publishing process, such as writing a draft, sending a preprint, publishing a paper, etc." ;
-    rdfs:isDefinedBy part: .
+    rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/cp/owl/participation.owl> .
 
 taskrole:Task a owl:Class ;
     rdfs:label "task"@en ;
     rdfs:comment "A piece of work to be done or undertaken." ;
-    rdfs:isDefinedBy taskrole: .
+    rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/cp/owl/taskrole.owl> .
 
 tisit:TimeIndexedSituation a owl:Class ;
     rdfs:label "time indexed situation"@en ;
     rdfs:comment "A situation that is explicitly indexed at some time for at least one entity." ;
-    rdfs:isDefinedBy tisit: .
+    rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl> .
 
 ti:TimeInterval a owl:Class ;
     rdfs:label "time interval"@en ;
     rdfs:comment "Two (starting and ending) points in time that define a particular period of time." ;
-    rdfs:isDefinedBy ti: .
+    rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl> .
 
 <urn:swrl#si> a swrl:Variable .
 
@@ -890,7 +890,7 @@ pwo:Step a owl:Class ;
         pwo:produces :my-output .
     """ ;
     rdfs:comment "An atomic unit of a workflow, that may be characterized by a starting time and an ending time, and may be associated with one or more events.  A workflow step usually involves some input information, material or energy needed to complete the step, and some output information, material or energy produced by that step.  In the case of a publishing workflow, a step typically results in the creation of a publication entity, usually by the modification of another pre-existing publication entity, e.g. the creation of an edited paper from a rough draft, or of an HTML representation from an XML mark-up."@en ;
-    rdfs:isDefinedBy pwo: ;
+    rdfs:isDefinedBy <http://purl.org/spar/pwo> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:allValuesFrom pwo:Action ;
             owl:onProperty taskex:isExecutedIn ],

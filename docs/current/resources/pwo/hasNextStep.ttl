@@ -17,7 +17,7 @@ pwo:hasNextStep a owl:ObjectProperty ;
     """ ;
     rdfs:comment "The relation between a step in a workflow and the step that directly follows it."@en ;
     rdfs:domain pwo:Step ;
-    rdfs:isDefinedBy pwo: ;
+    rdfs:isDefinedBy <http://purl.org/spar/pwo> ;
     rdfs:range pwo:Step ;
     rdfs:subPropertyOf sequence:directlyPrecedes ;
     owl:inverseOf pwo:hasPreviousStep ;

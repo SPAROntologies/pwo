@@ -25,7 +25,7 @@ pwo:Action a owl:Class ;
             :my-draft .
     """ ;
     rdfs:comment "An event with at least one agent that is participant in it and that is linked to a workflow execution and to a step of the related workflow description." ;
-    rdfs:isDefinedBy pwo: ;
+    rdfs:isDefinedBy <http://purl.org/spar/pwo> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty pwo:happened ;
             owl:someValuesFrom ti:TimeInterval ],

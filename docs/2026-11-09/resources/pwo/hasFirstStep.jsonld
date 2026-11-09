@@ -17,7 +17,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@id": "http://purl.org/spar/pwo/"
+        "@id": "http://purl.org/spar/pwo"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -28,7 +28,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:nbd84bf33f5544f16a57c30d2846feb1fb7"
+        "@id": "_:n9392a4abbb364d5799b37d690f0f9757b7"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
@@ -43,18 +43,18 @@
     ]
   },
   {
-    "@id": "_:nbd84bf33f5544f16a57c30d2846feb1fb7",
+    "@id": "_:n9392a4abbb364d5799b37d690f0f9757b7",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2002/07/owl#complementOf": [
       {
-        "@id": "_:nbd84bf33f5544f16a57c30d2846feb1fb8"
+        "@id": "_:n9392a4abbb364d5799b37d690f0f9757b8"
       }
     ]
   },
   {
-    "@id": "_:nbd84bf33f5544f16a57c30d2846feb1fb8",
+    "@id": "_:n9392a4abbb364d5799b37d690f0f9757b8",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],

@@ -6,6 +6,6 @@
 plandesc:definesTask a owl:ObjectProperty ;
     rdfs:label "defines task"@en ;
     rdfs:comment "A relation between a description and a task."@en ;
-    rdfs:isDefinedBy plandesc: ;
+    rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl> ;
     rdfs:range taskrole:Task .
 
