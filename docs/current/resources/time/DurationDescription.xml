@@ -4,9 +4,9 @@
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 >
   <rdf:Description rdf:about="http://www.w3.org/2006/time#DurationDescription">
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2006/time#"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment>Description of temporal extent structured with separate values for the various elements of a calendar-clock system.</rdfs:comment>
     <rdfs:label xml:lang="en">duration description</rdfs:label>
+    <rdfs:comment>Description of temporal extent structured with separate values for the various elements of a calendar-clock system.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2006/time#"/>
   </rdf:Description>
 </rdf:RDF>

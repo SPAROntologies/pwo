@@ -7,9 +7,6 @@
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
   <rdf:Description rdf:about="http://purl.org/spar/pwo/isNeededBy">
-    <rdfs:comment xml:lang="en">The relation between a thing required to undertake a workflow step or an event (e.g. an action executing a workflow step) and the step/event itself.</rdfs:comment>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <owl:inverseOf rdf:resource="http://purl.org/spar/pwo/needs"/>
     <vann:example>
     :step-one a pwo:Step ;
         pwo:hasNextStep :step-two ;
@@ -19,7 +16,10 @@
         pwo:isNeededBy :step-one . 
     </vann:example>
     <rdfs:label xml:lang="en">is needed by</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/pwo/"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/pwo/needs"/>
+    <rdfs:comment xml:lang="en">The relation between a thing required to undertake a workflow step or an event (e.g. an action executing a workflow step) and the step/event itself.</rdfs:comment>
     <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/pwo/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
 </rdf:RDF>

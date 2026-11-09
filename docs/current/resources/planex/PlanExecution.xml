@@ -4,9 +4,9 @@
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 >
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/basicplanexecution.owl#PlanExecution">
-    <rdfs:isDefinedBy rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/basicplanexecution.owl#"/>
-    <rdfs:comment>An event with at least one agent participating in it, and that executes a task.</rdfs:comment>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:label xml:lang="en">plan execution</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/basicplanexecution.owl#"/>
+    <rdfs:comment>An event with at least one agent participating in it, and that executes a task.</rdfs:comment>
   </rdf:Description>
 </rdf:RDF>

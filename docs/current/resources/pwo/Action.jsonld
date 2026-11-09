@@ -26,10 +26,10 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb21"
+        "@id": "_:ncf215d4b28ff4f8580db686b3c83d994b22"
       },
       {
-        "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb22"
+        "@id": "_:ncf215d4b28ff4f8580db686b3c83d994b21"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -39,23 +39,7 @@
     ]
   },
   {
-    "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb21",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://purl.org/spar/pwo/happened"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#TimeInterval"
-      }
-    ]
-  },
-  {
-    "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb22",
+    "@id": "_:ncf215d4b28ff4f8580db686b3c83d994b22",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -69,6 +53,22 @@
             "@id": "http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#Action"
           }
         ]
+      }
+    ]
+  },
+  {
+    "@id": "_:ncf215d4b28ff4f8580db686b3c83d994b21",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://purl.org/spar/pwo/happened"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#TimeInterval"
       }
     ]
   }

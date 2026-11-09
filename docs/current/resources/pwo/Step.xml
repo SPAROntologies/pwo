@@ -6,22 +6,19 @@
    xmlns:vann="http://purl.org/vocab/vann/"
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
-  <rdf:Description rdf:nodeID="nb6503e602e7041b297f9cdb0fc8ae89eb27">
+  <rdf:Description rdf:nodeID="ncf215d4b28ff4f8580db686b3c83d994b27">
     <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/parameter.owl#hasParameter"/>
     <owl:onClass rdf:resource="http://www.w3.org/2006/time#DurationDescription"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="nb6503e602e7041b297f9cdb0fc8ae89eb26">
-    <owl:allValuesFrom rdf:resource="http://purl.org/spar/pwo/Action"/>
-    <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#isExecutedIn"/>
+    <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/parameter.owl#hasParameter"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/spar/pwo/Step">
+    <rdfs:subClassOf rdf:nodeID="ncf215d4b28ff4f8580db686b3c83d994b26"/>
+    <rdfs:subClassOf rdf:nodeID="ncf215d4b28ff4f8580db686b3c83d994b27"/>
     <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/taskrole.owl#Task"/>
-    <rdfs:subClassOf rdf:nodeID="nb6503e602e7041b297f9cdb0fc8ae89eb27"/>
-    <rdfs:subClassOf rdf:nodeID="nb6503e602e7041b297f9cdb0fc8ae89eb26"/>
-    <rdfs:subClassOf rdf:nodeID="nb6503e602e7041b297f9cdb0fc8ae89eb28"/>
+    <rdfs:subClassOf rdf:nodeID="ncf215d4b28ff4f8580db686b3c83d994b28"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/pwo/"/>
     <vann:example>
     :step-one a pwo:Step ;
         pwo:hasNextStep :step-two ;
@@ -32,12 +29,15 @@
     <rdfs:label xml:lang="en">step</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">An atomic unit of a workflow, that may be characterized by a starting time and an ending time, and may be associated with one or more events.  A workflow step usually involves some input information, material or energy needed to complete the step, and some output information, material or energy produced by that step.  In the case of a publishing workflow, a step typically results in the creation of a publication entity, usually by the modification of another pre-existing publication entity, e.g. the creation of an edited paper from a rough draft, or of an HTML representation from an XML mark-up.</rdfs:comment>
-    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/pwo/"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="nb6503e602e7041b297f9cdb0fc8ae89eb28">
+  <rdf:Description rdf:nodeID="ncf215d4b28ff4f8580db686b3c83d994b28">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:allValuesFrom rdf:resource="http://purl.org/spar/pwo/Workflow"/>
     <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#isTaskDefinedIn"/>
+    <owl:allValuesFrom rdf:resource="http://purl.org/spar/pwo/Workflow"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ncf215d4b28ff4f8580db686b3c83d994b26">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#isExecutedIn"/>
+    <owl:allValuesFrom rdf:resource="http://purl.org/spar/pwo/Action"/>
   </rdf:Description>
 </rdf:RDF>

@@ -6,30 +6,30 @@
    xmlns:vann="http://purl.org/vocab/vann/"
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
-  <rdf:Description rdf:nodeID="nb6503e602e7041b297f9cdb0fc8ae89eb15">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="nb6503e602e7041b297f9cdb0fc8ae89eb16"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="nb6503e602e7041b297f9cdb0fc8ae89eb16">
-    <rdf:first rdf:resource="http://purl.org/spar/pwo/Step"/>
-    <rdf:rest rdf:nodeID="nb6503e602e7041b297f9cdb0fc8ae89eb17"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/spar/pwo/needs">
-    <rdfs:comment xml:lang="en">The relation between a workflow step or an event (e.g. an action executing a workflow step) and anything required to undertake that step/event.</rdfs:comment>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:nodeID="ncf215d4b28ff4f8580db686b3c83d994b15"/>
     <vann:example>
     :step-one a pwo:Step ;
         pwo:hasNextStep :step-two ;
         taskex:isExecutedIn :my-action ;
         pwo:needs :my-draft . 
     </vann:example>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/pwo/"/>
-    <rdfs:domain rdf:nodeID="nb6503e602e7041b297f9cdb0fc8ae89eb15"/>
     <rdfs:label xml:lang="en">needs</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/pwo/"/>
+    <rdfs:comment xml:lang="en">The relation between a workflow step or an event (e.g. an action executing a workflow step) and anything required to undertake that step/event.</rdfs:comment>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="nb6503e602e7041b297f9cdb0fc8ae89eb17">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  <rdf:Description rdf:nodeID="ncf215d4b28ff4f8580db686b3c83d994b17">
     <rdf:first rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/participation.owl#Event"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ncf215d4b28ff4f8580db686b3c83d994b16">
+    <rdf:first rdf:resource="http://purl.org/spar/pwo/Step"/>
+    <rdf:rest rdf:nodeID="ncf215d4b28ff4f8580db686b3c83d994b17"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ncf215d4b28ff4f8580db686b3c83d994b15">
+    <owl:unionOf rdf:nodeID="ncf215d4b28ff4f8580db686b3c83d994b16"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
 </rdf:RDF>

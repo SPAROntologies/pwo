@@ -4,10 +4,10 @@
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 >
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#definesTask">
-    <rdfs:comment xml:lang="en">A relation between a description and a task.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/taskrole.owl#Task"/>
-    <rdfs:label xml:lang="en">defines task</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/taskrole.owl#Task"/>
+    <rdfs:comment xml:lang="en">A relation between a description and a task.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#"/>
+    <rdfs:label xml:lang="en">defines task</rdfs:label>
   </rdf:Description>
 </rdf:RDF>
