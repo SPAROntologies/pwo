@@ -19,7 +19,7 @@ pwo:WorkflowExecution a owl:Class ;
             :my-another-action .
     """ ;
     rdfs:comment "The aggregate of actions executed in the steps defined in a workflow."@en ;
-    rdfs:isDefinedBy pwo: ;
+    rdfs:isDefinedBy <http://purl.org/spar/pwo> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty pwo:involvesAction ;
             owl:someValuesFrom [ a owl:Class ;

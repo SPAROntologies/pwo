@@ -5,6 +5,6 @@
 part:isParticipantIn a owl:ObjectProperty ;
     rdfs:label "has participant"@en ;
     rdfs:comment "The relation between an event and an object participating in that event."@en ;
-    rdfs:isDefinedBy part: ;
+    rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/cp/owl/participation.owl> ;
     owl:inverseOf part:hasParticipant .
 

@@ -18,7 +18,7 @@ pwo:involvesAction a owl:ObjectProperty ;
     """ ;
     rdfs:comment "The relation between a particular execution of a workflow and an action."@en ;
     rdfs:domain pwo:WorkflowExecution ;
-    rdfs:isDefinedBy pwo: ;
+    rdfs:isDefinedBy <http://purl.org/spar/pwo> ;
     rdfs:range pwo:Action ;
     owl:inverseOf pwo:isActionInvolvedIn ;
     owl:propertyChainAxiom ( pwo:executes pwo:hasStep taskex:isExecutedIn ) ;

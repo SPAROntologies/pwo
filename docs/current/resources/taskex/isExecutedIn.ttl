@@ -5,6 +5,6 @@
 taskex:isExecutedIn a owl:ObjectProperty ;
     rdfs:label "is executed in"@en ;
     rdfs:comment "The relation between a task and an action."@en ;
-    rdfs:isDefinedBy taskex: ;
+    rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl> ;
     owl:inverseOf taskex:executesTask .
 

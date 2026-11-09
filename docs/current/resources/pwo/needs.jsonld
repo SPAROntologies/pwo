@@ -17,12 +17,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:nbd84bf33f5544f16a57c30d2846feb1fb15"
+        "@id": "_:n9392a4abbb364d5799b37d690f0f9757b15"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@id": "http://purl.org/spar/pwo/"
+        "@id": "http://purl.org/spar/pwo"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -38,7 +38,7 @@
     ]
   },
   {
-    "@id": "_:nbd84bf33f5544f16a57c30d2846feb1fb15",
+    "@id": "_:n9392a4abbb364d5799b37d690f0f9757b15",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],

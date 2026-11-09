@@ -6,7 +6,7 @@
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#TimeInterval">
     <rdfs:label xml:lang="en">time interval</rdfs:label>
     <rdfs:comment>Two (starting and ending) points in time that define a particular period of time.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl"/>
   </rdf:Description>
 </rdf:RDF>

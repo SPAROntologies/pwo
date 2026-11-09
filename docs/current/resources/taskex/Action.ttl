@@ -5,5 +5,5 @@
 taskex:Action a owl:Class ;
     rdfs:label "action"@en ;
     rdfs:comment "An event with at least one agent participating in it, and that executes a task." ;
-    rdfs:isDefinedBy taskex: .
+    rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl> .
 

@@ -13,7 +13,7 @@ pwo:executes a owl:ObjectProperty ;
         pwo:executes :my-workflow .
     """ ;
     rdfs:comment "This property allows to link a workflow execution to the related workflow description."@en ;
-    rdfs:isDefinedBy pwo: ;
+    rdfs:isDefinedBy <http://purl.org/spar/pwo> ;
     rdfs:subPropertyOf plan:satisfies ;
     owl:inverseOf pwo:isExecutedBy ;
     vs:term_status reg:statusStable .

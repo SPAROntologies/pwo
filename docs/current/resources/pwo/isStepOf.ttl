@@ -16,7 +16,7 @@ pwo:isStepOf a owl:FunctionalProperty,
         pwo:isStepOf :my-workflow .
     """ ;
     rdfs:comment "The relation between a step in a workflow and the workflow of which it is a component."@en ;
-    rdfs:isDefinedBy pwo: ;
+    rdfs:isDefinedBy <http://purl.org/spar/pwo> ;
     rdfs:subPropertyOf plandesc:isTaskDefinedIn ;
     vs:term_status reg:statusStable .
 

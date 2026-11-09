@@ -11,7 +11,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@id": "http://www.w3.org/2006/time#"
+        "@id": "http://www.w3.org/2006/time"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [

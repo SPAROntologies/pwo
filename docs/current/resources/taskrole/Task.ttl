@@ -5,5 +5,5 @@
 taskrole:Task a owl:Class ;
     rdfs:label "task"@en ;
     rdfs:comment "A piece of work to be done or undertaken." ;
-    rdfs:isDefinedBy taskrole: .
+    rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/cp/owl/taskrole.owl> .
 

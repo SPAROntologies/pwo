@@ -16,7 +16,7 @@ pwo:isNeededBy a owl:ObjectProperty ;
         pwo:isNeededBy :step-one . 
     """ ;
     rdfs:comment "The relation between a thing required to undertake a workflow step or an event (e.g. an action executing a workflow step) and the step/event itself."@en ;
-    rdfs:isDefinedBy pwo: ;
+    rdfs:isDefinedBy <http://purl.org/spar/pwo> ;
     owl:inverseOf pwo:needs ;
     vs:term_status reg:statusStable .
 

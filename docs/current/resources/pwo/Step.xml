@@ -6,15 +6,19 @@
    xmlns:vann="http://purl.org/vocab/vann/"
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
-  <rdf:Description rdf:nodeID="nbd84bf33f5544f16a57c30d2846feb1fb27">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  <rdf:Description rdf:nodeID="n9392a4abbb364d5799b37d690f0f9757b27">
     <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onClass rdf:resource="http://www.w3.org/2006/time#DurationDescription"/>
     <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/parameter.owl#hasParameter"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/spar/pwo/Step">
-    <rdfs:label xml:lang="en">step</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/taskrole.owl#Task"/>
+    <rdfs:subClassOf rdf:nodeID="n9392a4abbb364d5799b37d690f0f9757b26"/>
+    <rdfs:subClassOf rdf:nodeID="n9392a4abbb364d5799b37d690f0f9757b27"/>
+    <rdfs:subClassOf rdf:nodeID="n9392a4abbb364d5799b37d690f0f9757b28"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/pwo"/>
     <vann:example>
     :step-one a pwo:Step ;
         pwo:hasNextStep :step-two ;
@@ -22,22 +26,18 @@
         pwo:needs :my-draft ;
         pwo:produces :my-output .
     </vann:example>
-    <rdfs:subClassOf rdf:nodeID="nbd84bf33f5544f16a57c30d2846feb1fb28"/>
-    <rdfs:subClassOf rdf:nodeID="nbd84bf33f5544f16a57c30d2846feb1fb26"/>
-    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/taskrole.owl#Task"/>
-    <rdfs:subClassOf rdf:nodeID="nbd84bf33f5544f16a57c30d2846feb1fb27"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">step</rdfs:label>
     <rdfs:comment xml:lang="en">An atomic unit of a workflow, that may be characterized by a starting time and an ending time, and may be associated with one or more events.  A workflow step usually involves some input information, material or energy needed to complete the step, and some output information, material or energy produced by that step.  In the case of a publishing workflow, a step typically results in the creation of a publication entity, usually by the modification of another pre-existing publication entity, e.g. the creation of an edited paper from a rough draft, or of an HTML representation from an XML mark-up.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/pwo/"/>
-    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="nbd84bf33f5544f16a57c30d2846feb1fb28">
-    <owl:allValuesFrom rdf:resource="http://purl.org/spar/pwo/Workflow"/>
+  <rdf:Description rdf:nodeID="n9392a4abbb364d5799b37d690f0f9757b26">
+    <owl:allValuesFrom rdf:resource="http://purl.org/spar/pwo/Action"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#isExecutedIn"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n9392a4abbb364d5799b37d690f0f9757b28">
     <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#isTaskDefinedIn"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="nbd84bf33f5544f16a57c30d2846feb1fb26">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:allValuesFrom rdf:resource="http://purl.org/spar/pwo/Action"/>
-    <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#isExecutedIn"/>
+    <owl:allValuesFrom rdf:resource="http://purl.org/spar/pwo/Workflow"/>
   </rdf:Description>
 </rdf:RDF>

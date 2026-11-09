@@ -18,6 +18,6 @@ pwo:needs a owl:ObjectProperty ;
     rdfs:comment "The relation between a workflow step or an event (e.g. an action executing a workflow step) and anything required to undertake that step/event."@en ;
     rdfs:domain [ a owl:Class ;
             owl:unionOf ( pwo:Step part:Event ) ] ;
-    rdfs:isDefinedBy pwo: ;
+    rdfs:isDefinedBy <http://purl.org/spar/pwo> ;
     vs:term_status reg:statusStable .
 
