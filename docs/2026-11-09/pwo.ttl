@@ -34,9 +34,61 @@ dc:date a owl:AnnotationProperty .
 
 dc:description a owl:AnnotationProperty .
 
+dc:language a owl:AnnotationProperty .
+
 dc:rights a owl:AnnotationProperty .
 
 dc:title a owl:AnnotationProperty .
+
+bibo:doi a owl:AnnotationProperty .
+
+bibo:status a owl:AnnotationProperty .
+
+dcterms:bibliographicCitation a owl:AnnotationProperty .
+
+dcterms:created a owl:AnnotationProperty .
+
+dcterms:issued a owl:AnnotationProperty .
+
+dcterms:license a owl:AnnotationProperty .
+
+dcterms:modified a owl:AnnotationProperty .
+
+dcterms:publisher a owl:AnnotationProperty .
+
+dcterms:source a owl:AnnotationProperty .
+
+foaf:logo a owl:AnnotationProperty .
+
+owl:backwardCompatibleWith a owl:AnnotationProperty .
+
+owl:priorVersion a owl:AnnotationProperty .
+
+owl:versionInfo a owl:AnnotationProperty .
+
+rdfs:comment a owl:AnnotationProperty .
+
+rdfs:isDefinedBy a owl:AnnotationProperty .
+
+rdfs:label a owl:AnnotationProperty .
+
+rdfs:seeAlso a owl:AnnotationProperty .
+
+schema:codeRepository a owl:AnnotationProperty .
+
+schema:image a owl:AnnotationProperty .
+
+schema:includedInDataCatalog a owl:AnnotationProperty .
+
+schema:keywords a owl:AnnotationProperty .
+
+vann:changes a owl:AnnotationProperty .
+
+vann:example a owl:AnnotationProperty .
+
+vann:preferredNamespacePrefix a owl:AnnotationProperty .
+
+vann:preferredNamespaceUri a owl:AnnotationProperty .
 
 <http://purl.org/spar/pwo> a owl:Ontology ;
     rdfs:label "Publishing Workflow Ontology (PWO)"@en ;
@@ -469,12 +521,6 @@ ti:hasIntervalDate a owl:DatatypeProperty ;
     rdfs:comment "A date value assigned to a time interval."@en ;
     rdfs:domain ti:TimeInterval ;
     rdfs:isDefinedBy ti: .
-
-rdfs:comment a owl:AnnotationProperty .
-
-rdfs:label a owl:AnnotationProperty .
-
-owl:versionInfo a owl:AnnotationProperty .
 
 pwo:WorkflowExecution a owl:Class ;
     rdfs:label "workflow execution"@en ;

@@ -341,17 +341,17 @@ What are the start and end times of actions involved in a workflow execution?
         rdfs:isDefinedBy pwo: ;
         rdfs:range pwo:Action ;
         owl:inverseOf pwo:isActionInvolvedIn ;
-        owl:propertyChainAxiom _:ncf215d4b28ff4f8580db686b3c83d994b9 ;
+        owl:propertyChainAxiom _:nbd84bf33f5544f16a57c30d2846feb1fb9 ;
         vs:term_status reg:statusStable .
 
-    _:ncf215d4b28ff4f8580db686b3c83d994b10 rdf:first pwo:hasStep ;
-        rdf:rest _:ncf215d4b28ff4f8580db686b3c83d994b11 .
+    _:nbd84bf33f5544f16a57c30d2846feb1fb10 rdf:first pwo:hasStep ;
+        rdf:rest _:nbd84bf33f5544f16a57c30d2846feb1fb11 .
 
-    _:ncf215d4b28ff4f8580db686b3c83d994b11 rdf:first taskex:isExecutedIn ;
+    _:nbd84bf33f5544f16a57c30d2846feb1fb11 rdf:first taskex:isExecutedIn ;
         rdf:rest () .
 
-    _:ncf215d4b28ff4f8580db686b3c83d994b9 rdf:first pwo:executes ;
-        rdf:rest _:ncf215d4b28ff4f8580db686b3c83d994b10 .
+    _:nbd84bf33f5544f16a57c30d2846feb1fb9 rdf:first pwo:executes ;
+        rdf:rest _:nbd84bf33f5544f16a57c30d2846feb1fb10 .
 }
 
 </code></pre></div><div class="tab-pane fade" id=id_4ce10c6113635df848e2060049f8aa5b_Relation_prov_2 role=tabpanel><pre class="mb-0 small"><code>[
@@ -423,22 +423,22 @@ What are the start and end times of actions involved in a workflow execution?
     ],
     "@id": "http://purl.org/spar/pwo"
   }
-]</code></pre></div><div class="tab-pane fade" id=id_4ce10c6113635df848e2060049f8aa5b_Relation_prov_3 role=tabpanel><pre class="mb-0 small"><code>&lt;http://purl.org/spar/pwo/involvesAction> &lt;http://www.w3.org/2000/01/rdf-schema#label> "involves action"@en &lt;http://purl.org/spar/pwo> .
-&lt;http://purl.org/spar/pwo/involvesAction> &lt;http://www.w3.org/2000/01/rdf-schema#isDefinedBy> &lt;http://purl.org/spar/pwo/> &lt;http://purl.org/spar/pwo> .
-_:ncf215d4b28ff4f8580db686b3c83d994b11 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#first> &lt;http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#isExecutedIn> &lt;http://purl.org/spar/pwo> .
-_:ncf215d4b28ff4f8580db686b3c83d994b11 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> &lt;http://purl.org/spar/pwo> .
-_:ncf215d4b28ff4f8580db686b3c83d994b9 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:ncf215d4b28ff4f8580db686b3c83d994b10 &lt;http://purl.org/spar/pwo> .
-&lt;http://purl.org/spar/pwo/involvesAction> &lt;http://www.w3.org/2000/01/rdf-schema#range> &lt;http://purl.org/spar/pwo/Action> &lt;http://purl.org/spar/pwo> .
-&lt;http://purl.org/spar/pwo/involvesAction> &lt;http://www.w3.org/2002/07/owl#inverseOf> &lt;http://purl.org/spar/pwo/isActionInvolvedIn> &lt;http://purl.org/spar/pwo> .
-_:ncf215d4b28ff4f8580db686b3c83d994b10 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:ncf215d4b28ff4f8580db686b3c83d994b11 &lt;http://purl.org/spar/pwo> .
-&lt;http://purl.org/spar/pwo/involvesAction> &lt;http://www.w3.org/2000/01/rdf-schema#comment> "The relation between a particular execution of a workflow and an action."@en &lt;http://purl.org/spar/pwo> .
+]</code></pre></div><div class="tab-pane fade" id=id_4ce10c6113635df848e2060049f8aa5b_Relation_prov_3 role=tabpanel><pre class="mb-0 small"><code>&lt;http://purl.org/spar/pwo/involvesAction> &lt;http://www.w3.org/2000/01/rdf-schema#comment> "The relation between a particular execution of a workflow and an action."@en &lt;http://purl.org/spar/pwo> .
 &lt;http://purl.org/spar/pwo/involvesAction> &lt;http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> &lt;http://purl.org/linked-data/registry#statusStable> &lt;http://purl.org/spar/pwo> .
-&lt;http://purl.org/spar/pwo/involvesAction> &lt;http://purl.org/vocab/vann/example> "\n    :my-workflow-execution a pwo:WorkflowExecution ;\n        pwo:executes :my-workflow ;\n        pwo:involvesAction \n            :my-action ,\n            :my-another-action .\n    " &lt;http://purl.org/spar/pwo> .
-_:ncf215d4b28ff4f8580db686b3c83d994b9 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#first> &lt;http://purl.org/spar/pwo/executes> &lt;http://purl.org/spar/pwo> .
+_:nbd84bf33f5544f16a57c30d2846feb1fb10 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nbd84bf33f5544f16a57c30d2846feb1fb11 &lt;http://purl.org/spar/pwo> .
+_:nbd84bf33f5544f16a57c30d2846feb1fb9 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nbd84bf33f5544f16a57c30d2846feb1fb10 &lt;http://purl.org/spar/pwo> .
+&lt;http://purl.org/spar/pwo/involvesAction> &lt;http://www.w3.org/2000/01/rdf-schema#isDefinedBy> &lt;http://purl.org/spar/pwo/> &lt;http://purl.org/spar/pwo> .
 &lt;http://purl.org/spar/pwo/involvesAction> &lt;http://www.w3.org/2000/01/rdf-schema#domain> &lt;http://purl.org/spar/pwo/WorkflowExecution> &lt;http://purl.org/spar/pwo> .
 &lt;http://purl.org/spar/pwo/involvesAction> &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> &lt;http://www.w3.org/2002/07/owl#ObjectProperty> &lt;http://purl.org/spar/pwo> .
-_:ncf215d4b28ff4f8580db686b3c83d994b10 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#first> &lt;http://purl.org/spar/pwo/hasStep> &lt;http://purl.org/spar/pwo> .
-&lt;http://purl.org/spar/pwo/involvesAction> &lt;http://www.w3.org/2002/07/owl#propertyChainAxiom> _:ncf215d4b28ff4f8580db686b3c83d994b9 &lt;http://purl.org/spar/pwo> .
+&lt;http://purl.org/spar/pwo/involvesAction> &lt;http://www.w3.org/2002/07/owl#propertyChainAxiom> _:nbd84bf33f5544f16a57c30d2846feb1fb9 &lt;http://purl.org/spar/pwo> .
+&lt;http://purl.org/spar/pwo/involvesAction> &lt;http://purl.org/vocab/vann/example> "\n    :my-workflow-execution a pwo:WorkflowExecution ;\n        pwo:executes :my-workflow ;\n        pwo:involvesAction \n            :my-action ,\n            :my-another-action .\n    " &lt;http://purl.org/spar/pwo> .
+_:nbd84bf33f5544f16a57c30d2846feb1fb11 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#first> &lt;http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#isExecutedIn> &lt;http://purl.org/spar/pwo> .
+_:nbd84bf33f5544f16a57c30d2846feb1fb11 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> &lt;http://purl.org/spar/pwo> .
+_:nbd84bf33f5544f16a57c30d2846feb1fb9 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#first> &lt;http://purl.org/spar/pwo/executes> &lt;http://purl.org/spar/pwo> .
+&lt;http://purl.org/spar/pwo/involvesAction> &lt;http://www.w3.org/2000/01/rdf-schema#range> &lt;http://purl.org/spar/pwo/Action> &lt;http://purl.org/spar/pwo> .
+&lt;http://purl.org/spar/pwo/involvesAction> &lt;http://www.w3.org/2000/01/rdf-schema#label> "involves action"@en &lt;http://purl.org/spar/pwo> .
+_:nbd84bf33f5544f16a57c30d2846feb1fb10 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#first> &lt;http://purl.org/spar/pwo/hasStep> &lt;http://purl.org/spar/pwo> .
+&lt;http://purl.org/spar/pwo/involvesAction> &lt;http://www.w3.org/2002/07/owl#inverseOf> &lt;http://purl.org/spar/pwo/isActionInvolvedIn> &lt;http://purl.org/spar/pwo> .
 
 </code></pre></div></div></div></div></div></div></div></div></div></div><div><a class="btn btn-outline-secondary" href=../../pwo.html>← Back to full documentation</a></div><script src=https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js></script><script src=https://cdn.jsdelivr.net/npm/marked/marked.min.js></script><script src=https://cdn.jsdelivr.net/npm/dompurify/dist/purify.min.js></script><script>document.addEventListener("DOMContentLoaded", function() {
 
