@@ -1,5 +1,7 @@
 # Changelog
 
+* **v2.5.2**:
+Added explicit declarations of annotation properties used.
 * **v2.5.1**:
 Added new documentation files to the repository (e.g., the `CITATION.cff` file) and refactored some components.
 * **v2.5.0**: 

@@ -1,13 +1,13 @@
-_:nec6db8b92ea1452eadb52214435a22d7b7 <http://www.w3.org/2002/07/owl#complementOf> _:nec6db8b92ea1452eadb52214435a22d7b8 .
-<http://purl.org/spar/pwo/hasFirstStep> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
-<http://purl.org/spar/pwo/hasFirstStep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:nec6db8b92ea1452eadb52214435a22d7b8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://purl.org/spar/pwo/hasFirstStep> <http://www.w3.org/2000/01/rdf-schema#comment> "The relation between a workflow and its first step."@en .
-<http://purl.org/spar/pwo/hasFirstStep> <http://www.w3.org/2000/01/rdf-schema#label> "has first step"@en .
 <http://purl.org/spar/pwo/hasFirstStep> <http://purl.org/vocab/vann/example> "\n    :my-workflow a pwo:Workflow ;\n        pwo:hasFirstStep :step-one .\n    " .
-_:nec6db8b92ea1452eadb52214435a22d7b7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/spar/pwo/hasFirstStep> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/pwo/hasStep> .
 <http://purl.org/spar/pwo/hasFirstStep> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/pwo/> .
-_:nec6db8b92ea1452eadb52214435a22d7b8 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/pwo/Step> .
-_:nec6db8b92ea1452eadb52214435a22d7b8 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/pwo/hasPreviousStep> .
-<http://purl.org/spar/pwo/hasFirstStep> <http://www.w3.org/2000/01/rdf-schema#range> _:nec6db8b92ea1452eadb52214435a22d7b7 .
+_:nbd84bf33f5544f16a57c30d2846feb1fb7 <http://www.w3.org/2002/07/owl#complementOf> _:nbd84bf33f5544f16a57c30d2846feb1fb8 .
+<http://purl.org/spar/pwo/hasFirstStep> <http://www.w3.org/2000/01/rdf-schema#comment> "The relation between a workflow and its first step."@en .
+<http://purl.org/spar/pwo/hasFirstStep> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/pwo/hasStep> .
+<http://purl.org/spar/pwo/hasFirstStep> <http://www.w3.org/2000/01/rdf-schema#label> "has first step"@en .
+<http://purl.org/spar/pwo/hasFirstStep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/pwo/hasFirstStep> <http://www.w3.org/2000/01/rdf-schema#range> _:nbd84bf33f5544f16a57c30d2846feb1fb7 .
+_:nbd84bf33f5544f16a57c30d2846feb1fb8 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/pwo/Step> .
+_:nbd84bf33f5544f16a57c30d2846feb1fb8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/spar/pwo/hasFirstStep> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+_:nbd84bf33f5544f16a57c30d2846feb1fb7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:nbd84bf33f5544f16a57c30d2846feb1fb8 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/pwo/hasPreviousStep> .

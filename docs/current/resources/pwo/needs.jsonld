@@ -17,7 +17,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:nec6db8b92ea1452eadb52214435a22d7b15"
+        "@id": "_:nbd84bf33f5544f16a57c30d2846feb1fb15"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -38,7 +38,7 @@
     ]
   },
   {
-    "@id": "_:nec6db8b92ea1452eadb52214435a22d7b15",
+    "@id": "_:nbd84bf33f5544f16a57c30d2846feb1fb15",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],

@@ -31,13 +31,13 @@
         "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplanexecution.owl#PlanExecution"
       },
       {
-        "@id": "_:nec6db8b92ea1452eadb52214435a22d7b1"
-      },
-      {
         "@id": "http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#TimeIndexedSituation"
       },
       {
-        "@id": "_:nec6db8b92ea1452eadb52214435a22d7b6"
+        "@id": "_:nbd84bf33f5544f16a57c30d2846feb1fb1"
+      },
+      {
+        "@id": "_:nbd84bf33f5544f16a57c30d2846feb1fb6"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -47,7 +47,7 @@
     ]
   },
   {
-    "@id": "_:nec6db8b92ea1452eadb52214435a22d7b1",
+    "@id": "_:nbd84bf33f5544f16a57c30d2846feb1fb1",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -58,12 +58,12 @@
     ],
     "http://www.w3.org/2002/07/owl#someValuesFrom": [
       {
-        "@id": "_:nec6db8b92ea1452eadb52214435a22d7b2"
+        "@id": "_:nbd84bf33f5544f16a57c30d2846feb1fb2"
       }
     ]
   },
   {
-    "@id": "_:nec6db8b92ea1452eadb52214435a22d7b2",
+    "@id": "_:nbd84bf33f5544f16a57c30d2846feb1fb2",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -74,14 +74,14 @@
             "@id": "http://purl.org/spar/pwo/Action"
           },
           {
-            "@id": "_:nec6db8b92ea1452eadb52214435a22d7b3"
+            "@id": "_:nbd84bf33f5544f16a57c30d2846feb1fb3"
           }
         ]
       }
     ]
   },
   {
-    "@id": "_:nec6db8b92ea1452eadb52214435a22d7b3",
+    "@id": "_:nbd84bf33f5544f16a57c30d2846feb1fb3",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -97,7 +97,7 @@
     ]
   },
   {
-    "@id": "_:nec6db8b92ea1452eadb52214435a22d7b6",
+    "@id": "_:nbd84bf33f5544f16a57c30d2846feb1fb6",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],

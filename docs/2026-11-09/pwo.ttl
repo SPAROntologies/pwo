@@ -1,0 +1,938 @@
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix error: <http://www.essepuntato.it/2009/10/error/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix parameter: <http://www.ontologydesignpatterns.org/cp/owl/parameter.owl#> .
+@prefix part: <http://www.ontologydesignpatterns.org/cp/owl/participation.owl#> .
+@prefix plan: <http://www.ontologydesignpatterns.org/cp/owl/basicplan.owl#> .
+@prefix plandesc: <http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#> .
+@prefix planex: <http://www.ontologydesignpatterns.org/cp/owl/basicplanexecution.owl#> .
+@prefix pwo: <http://purl.org/spar/pwo/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix schema: <https://schema.org/> .
+@prefix sequence: <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#> .
+@prefix sit: <http://www.ontologydesignpatterns.org/cp/owl/situation.owl#> .
+@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
+@prefix taskex: <http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#> .
+@prefix taskrole: <http://www.ontologydesignpatterns.org/cp/owl/taskrole.owl#> .
+@prefix ti: <http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix tisit: <http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+dc:contributor a owl:AnnotationProperty .
+
+dc:creator a owl:AnnotationProperty .
+
+dc:date a owl:AnnotationProperty .
+
+dc:description a owl:AnnotationProperty .
+
+dc:language a owl:AnnotationProperty .
+
+dc:rights a owl:AnnotationProperty .
+
+dc:title a owl:AnnotationProperty .
+
+bibo:doi a owl:AnnotationProperty .
+
+bibo:status a owl:AnnotationProperty .
+
+dcterms:bibliographicCitation a owl:AnnotationProperty .
+
+dcterms:created a owl:AnnotationProperty .
+
+dcterms:issued a owl:AnnotationProperty .
+
+dcterms:license a owl:AnnotationProperty .
+
+dcterms:modified a owl:AnnotationProperty .
+
+dcterms:publisher a owl:AnnotationProperty .
+
+dcterms:source a owl:AnnotationProperty .
+
+foaf:logo a owl:AnnotationProperty .
+
+owl:backwardCompatibleWith a owl:AnnotationProperty .
+
+owl:priorVersion a owl:AnnotationProperty .
+
+owl:versionInfo a owl:AnnotationProperty .
+
+rdfs:comment a owl:AnnotationProperty .
+
+rdfs:isDefinedBy a owl:AnnotationProperty .
+
+rdfs:label a owl:AnnotationProperty .
+
+rdfs:seeAlso a owl:AnnotationProperty .
+
+schema:codeRepository a owl:AnnotationProperty .
+
+schema:image a owl:AnnotationProperty .
+
+schema:includedInDataCatalog a owl:AnnotationProperty .
+
+schema:keywords a owl:AnnotationProperty .
+
+vann:changes a owl:AnnotationProperty .
+
+vann:example a owl:AnnotationProperty .
+
+vann:preferredNamespacePrefix a owl:AnnotationProperty .
+
+vann:preferredNamespaceUri a owl:AnnotationProperty .
+
+<http://purl.org/spar/pwo> a owl:Ontology ;
+    rdfs:label "Publishing Workflow Ontology (PWO)"@en ;
+    dc:contributor "Sebastian Barzaghi (https://orcid.org/0000-0002-0799-1527)"^^xsd:string ;
+    dc:creator "Aldo Gangemi (https://orcid.org/0000-0001-5568-2684)"^^xsd:string,
+        "David Shotton (https://orcid.org/0000-0001-5506-523X)"^^xsd:string,
+        "Silvio Peroni (https://orcid.org/0000-0003-0530-4305)"^^xsd:string ;
+    dc:date "2026-11-09"^^xsd:string ;
+    dc:description """
+The **_Publishing Workflow Ontology (PWO)_** is a simple ontology written in OWL 2 DL for the characterization of the main stages in the workflow associated with the publication of a document (e.g. being written, under review, XML capture, page design, publication to the Web).
+
+PWO is based on two main classes: `pwo:Workflow` and `pwo:Step`.
+
+`pwo:Workflow` is a subclass of `plandesc:Plan` and represents a sequence of connected tasks (i.e., steps, by using the property `pwo:hasFirstStep` and `pwo:hasStep`, which are ordered by means of `pwo:hasNextStep`). 
+We can use the class `pwo:WorkflowExecution` to represent the aggregate of the actions (`pwo:Action`) executed in the steps defined in a workflow. 
+We can then abstract from the execution of individual steps, by saying that a certain workflow execution executes a workflow.
+
+![The architecture of PWO.](pwo.png)
+
+The other main class of PWO is `pwo:Step`. 
+A step is an atomic unit of a workflow, and subclass of `taskrole:Task`; it is characterised by (required) temporal parameters (`parameter:hasParameter`) describing the expected duration (`time:DurationDescription`) of executed actions, and it is associated with one or more (time-indexed) executed actions by using the property `pwo:involvesAction`. 
+A workflow step usually involves some input information (i.e., `pwo:needs`), material or energy needed to complete the step, and some output information (i.e., `pwo:produces`), material or energy produced by that step. 
+In the case of a publishing workflow, a step typically results in the creation of a publication entity, usually by the modification of another pre-existing publication entity, e.g. the creation of an edited paper from a rough draft, or of an HTML representation from an XML document.
+
+## Examples of use
+
+In the following subsections, we introduce some examples to showcase how to use PWO. 
+
+The prefixes that are used in all the examples provided below are defined as follows:
+
+    @prefix : <http://www.sparontologies.net/example/> .
+    @prefix pwo: <http://purl.org/spar/pwo/> .
+    @prefix time: <http://www.w3.org/2006/time#> .
+    @prefix fabio: <http://purl.org/spar/fabio/> .
+    @prefix pso: <http://purl.org/spar/pso/> .
+    @prefix c4o: <http://purl.org/spar/c4o/> .
+    @prefix frbr: <http://purl.org/vocab/frbr/core#> .
+    @prefix dcterms: <http://purl.org/dc/terms/> .
+    @prefix tisit: <http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#> .
+    @prefix taskex: <http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#> .
+    @prefix ti: <http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#> .
+    @prefix part: <http://www.ontologydesignpatterns.org/cp/owl/participation.owl#> .
+    @prefix tvc: <http://www.essepuntato.it/2012/04/tvc/> .
+    @prefix swj: <http://semantic-web-journal.com/sejp/> .
+    @prefix swj-node: <http://semantic-web-journal.com/sejp/node/> .
+    @prefix cito: <http://purl.org/spar/cito/> .
+    @prefix parameter: <http://www.ontologydesignpatterns.org/cp/owl/parameter.owl#> .
+    @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+### Describing the publishing workflow
+
+From the publisher's perspective, the first step of any workflow leading to a new journal publication starts with a formal submission of a manuscript written by someone, hereinafter the author. 
+This activity expresses, at the same time, interest on the topics of the journal, and may acknowledge, indirectly, the quality of the journal itself – since authors (usually) would like to publish articles in a venue that they consider respectful and qualitatively worth for different reasons (e.g., appropriateness of topic, quality of reviews, journal impact factor, definite timing of the publishing process). 
+Then, in the next step, i.e., the reviewing phase, the person (designated by the publisher) in charge of the quality of submitted material, hereinafter the editor, invites other people (hereinafter the reviewers) to assess the quality of the submitted manuscript. 
+The opinions returned by the reviewers are the fundamental input that the editor uses to decide upon the fate of the manuscript during the next step, i.e., the decision phase. 
+Finally, if the manuscript has been considered worth of publication in the present form, the editor will acknowledge the author of the acceptance of his/her work – and the next steps of the workflow will be in charge of the publisher itself.
+
+    :workflow a pwo:Workflow ;
+        pwo:hasFirstStep :step-one ;
+        pwo:hasStep
+            :step-one ,
+            :step-two ,
+            :step-three .
+
+    :step-one a pwo:Step ;
+        pwo:hasNextStep :step-two ;
+        taskex:isExecutedIn :submission-action ;
+        pwo:needs swj-node:432 ;
+        pwo:produces :submitted-status .
+
+    :step-two a pwo:Step ;
+        pwo:hasNextStep :step-three ;
+        parameter:hasParameter :review-time-constraint ;
+        taskex:isExecutedIn
+            :reviewing-action ,
+            :reviews-notification-sending-action ;
+        pwo:needs 
+            swj-node:432 , 
+            :submitted-status ;
+        pwo:produces
+            :review-1 ,
+            :review-2 ,
+            :under-review-status ,
+            :reviewed-status.
+
+    :review-time-constraint a time:DurationDescription ;
+        time:weeks "5"^^xsd:decimal .
+
+    :step-three a pwo:Step ;
+        taskex:isExecutedIn
+            :decision-action ,
+            :notification-action ;
+        pwo:needs
+            swj-node:432 ,
+            :review-1 ,
+            :review-2 ;
+        pwo:produces
+            :minor-revision-status ,
+            :decision-letter .
+
+    :workflow-execution a pwo:WorkflowExecution ;
+        pwo:executes :workflow ;
+        pwo:involvesAction 
+            :submission-action ,
+            :reviewing-action ,
+            :reviews-notification-sending-action ,
+            :decision-action ,
+            :notification-action .     
+
+    :submission-action a pwo:Action ;
+        dcterms:description 'Paolo Ciccarese submits the paper' ;
+        tisit:atTime :submission-time ;
+        part:hasParticipant
+            swj:paolo-ciccarese ,
+            swj-node:432 .
+
+    :submission-time a ti:TimeInterval ;
+        ti:hasIntervalStartDate
+            '2013-01-21T10:08:28'^^xsd:dateTime ;
+        ti:hasIntervalEndDate
+            '2013-01-21T10:08:28'^^xsd:dateTime .
+
+    :submitted-status a pso:StatusInTime ;
+        pso:isStatusHeldBy swj-node:432 ;
+        pso:isAcquiredAsConsequenceOf :submission-action ;
+        pso:withStatus pso:submitted ;
+        tvc:atTime :submitted-time .
+
+    :submitted-time a ti:TimeInterval ;
+        ti:hasIntervalStartDate
+            '2013-01-21T10:08:28'^^xsd:dateTime .               
+
+    :reviewing-action a pwo:Action ;
+        dcterms:description 'Reviewers review the manuscript' ;
+        tisit:atTime :reviewing-time ;
+        part:hasParticipant
+            swj:csaba-veres ,
+            swj:fernando-naufel-do-amaral ,
+            swj-node:432 .
+
+    :reviewing-time a ti:TimeInterval ;
+        ti:hasIntervalStartDate
+            '2013-02-26T12:00:07'^^xsd:dateTime ;
+        ti:hasIntervalEndDate
+            '2013-04-01T05:53:24'^^xsd:dateTime .
+
+    :reviews-notification-sending-action a pwo:Action ;
+        dcterms:description
+            'The reviews are sent to the editor, i.e., Giancarlo Guizzardi' ;
+        tisit:atTime :reviews-time ;
+        part:hasParticipant
+            swj:csaba-veres ,
+            swj:fernando-naufel-do-amaral ,
+            :review-1 ,
+            :review-2 ,
+            swj:giancarlo-guizzardi .
+
+    :reviews-time a ti:TimeInterval ;
+        ti:hasIntervalStartDate
+            '2013-03-14T11:16:34'^^xsd:dateTime ;
+        ti:hasIntervalEndDate
+            '2013-04-01T05:53:24'^^xsd:dateTime .
+
+    :review-1 a fabio:Comment ;
+        frbr:realizationOf [ a fabio:Review ] ;
+        cito:reviews swj-node:432 ;
+        frbr:realizer swj:csaba-veres ;
+        c4o:hasContent
+            'The paper addresses a very practical...' .
+
+    :review-2 a fabio:Comment ;
+        frbr:realizationOf [ a fabio:Review ] ;
+        cito:reviews swj-node:432 ;
+        frbr:realizer swj:fernando-naufel-do-amaral ;
+        c4o:hasContent
+            'The paper presents the Collection Ontology (CO)...' .
+
+    :under-review-status a pso:StatusInTime ;
+        pso:isStatusHeldBy swj-node:432 ;
+        pso:isAcquiredAsConsequenceOf :reviewing-action ;
+        pso:isLostAsConsequenceOf
+        :reviews-notification-sending-action ;
+        pso:withStatus pso:under-review ;
+        tvc:atTime :under-review-time .
+
+    :under-review-time a ti:TimeInterval ;
+        ti:hasIntervalStartDate
+            '2013-02-26T12:00:07'^^xsd:dateTime ;
+        ti:hasIntervalEndDate
+            '2013-04-01T05:53:24'^^xsd:dateTime .
+
+    :reviewed-status a pso:StatusInTime ;
+        pso:isStatusHeldBy swj-node:432 ;
+        pso:isAcquiredAsConsequenceOf
+        :reviews-notification-sending-action ;
+        pso:withStatus pso:reviewed ;
+        tvc:atTime :reviewed-time .
+
+    :reviewed-time a ti:TimeInterval ;
+        ti:hasIntervalStartDate
+            '2013-04-01T05:53:24'^^xsd:dateTime .        
+
+    :decision-action a pwo:Action ;
+        dcterms:description 'The editor decides for acceptance or not' ;
+        tisit:atTime :decision-time ;
+        part:hasParticipant
+            swj:giancarlo-guizzardi ,
+            :review-1 ,
+            :review-2 ,
+            swj-node:432 .
+
+    :decision-time a ti:TimeInterval ;
+        ti:hasIntervalStartDate
+            '2013-04-01T05:53:24'^^xsd:dateTime ;
+        ti:hasIntervalEndDate
+            '2013-06-10T17:47:53'^^xsd:dateTime .
+
+    :notification-action a pwo:Action ;
+        dcterms:description
+            'The editor notifies his decision to the corresponding
+            author (i.e., Paolo Ciccarese).' ;
+        tisit:atTime :notification-time ;
+        part:hasParticipant
+            swj:giancarlo-guizzardi ,
+            :decision-letter ,
+            :review-1 ,
+            :review-2 ,
+            swj:paolo-ciccarese ,
+            swj-node:432 .
+
+    :notification-time a ti:TimeInterval ;
+        ti:hasIntervalStartDate
+            '2013-06-10T17:47:53'^^xsd:dateTime ;
+        ti:hasIntervalEndDate
+            '2013-06-10T17:47:53'^^xsd:dateTime .
+
+    :decision-letter a fabio:Letter , fabio:Email ;
+        frbr:realizationOf [ a fabio:Opinion ] ;
+        cito:citesAsRelated swj-node:432 ;
+        frbr:realizer swj:giancarlo-guizzardi ;
+        c4o:hasContent
+            'Dear authors, Thank you for your interest in...' .
+
+    :minor-revision-status a pso:StatusInTime ;
+        pso:isStatusHeldBy swj-node:432 ;
+        pso:isAcquiredAsConsequenceOf :decision-action ;
+        pso:withStatus swj:minorRevision ;
+        tvc:atTime :minor-revision-time .
+
+    :minor-revision-time a ti:TimeInterval ;
+        ti:hasIntervalStartDate
+            '2013-06-10T17:47:53'^^xsd:dateTime .
+
+## Competency Questions
+
+PWO can be used for answering several questions related to publication workflows.
+In the following subsections, some of them are introduced together with their respective SPARQL queries. 
+
+The prefixes that are used in all the SPARQL queries provided below are defined as follows:
+
+    PREFIX pwo: <http://purl.org/spar/pwo/>
+    PREFIX taskex: <http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#>
+    PREFIX part: <http://www.ontologydesignpatterns.org/cp/owl/participation.owl#>
+    PREFIX dcterms: <http://purl.org/dc/terms/>
+    PREFIX frbr: <http://purl.org/vocab/frbr/core#>
+    PREFIX tisit: <http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#>
+    PREFIX ti: <http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#>
+
+### CQ1
+
+What is the ordered sequence of steps in a workflow, including their required inputs and produced outputs?
+
+    SELECT ?workflow ?step ?nextStep ?requiredInput ?producedOutput
+    WHERE {
+        ?workflow a pwo:Workflow ;
+            pwo:hasStep ?step .
+        ?step a pwo:Step .
+        OPTIONAL { ?step pwo:hasNextStep ?nextStep . }
+        OPTIONAL { ?step pwo:needs ?requiredInput . }
+        OPTIONAL { ?step pwo:produces ?producedOutput . }
+    }
+
+### CQ2
+
+Which actions execute a workflow step, and who or what participates in them?
+
+    SELECT ?step ?action ?actionDescription ?participant
+    WHERE {
+        ?step a pwo:Step ;
+            taskex:isExecutedIn ?action .
+        ?action a pwo:Action .
+        OPTIONAL { ?action dcterms:description ?actionDescription . }
+        OPTIONAL { ?action part:hasParticipant ?participant . }
+    }
+
+### CQ3
+
+What are the start and end times of actions involved in a workflow execution?
+
+    SELECT ?workflowExecution ?action ?startDate ?endDate
+    WHERE {
+        ?workflowExecution a pwo:WorkflowExecution ;
+            pwo:involvesAction ?action .
+        ?action tisit:atTime ?timeInterval .
+        OPTIONAL { ?timeInterval ti:hasIntervalStartDate ?startDate . }
+        OPTIONAL { ?timeInterval ti:hasIntervalEndDate ?endDate . }
+    }
+
+"""@en ;
+    dc:title "The Publishing Workflow Ontology (PWO)"^^xsd:string ;
+    dcterms:bibliographicCitation "Gangemi, A., Peroni, S., Shotton, D., Vitali, F. (2014). The Publishing Workflow Ontology (PWO). In Semantic Web, 8 (5): 703-718. DOI: https://doi.org/10.3233/SW-160230. Open Access at: http://www.semantic-web-journal.net/system/files/swj1301.pdf" ;
+    dcterms:created "2016-03-14" ;
+    dcterms:issued "2017-06-01" ;
+    dcterms:license <http://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:modified "2026-11-09" ;
+    dcterms:publisher <https://ror.org/00wb4mk85> ;
+    dcterms:source <https://github.com/sparontologies/pwo/docs/cq.md> ;
+    bibo:doi "https://doi.org/10.25504/FAIRsharing.c4e46c" ;
+    bibo:status <http://purl.org/ontology/bibo/status/published> ;
+    vann:changes <https://github.com/SPAROntologies/pwo/blob/master/CHANGELOG.md> ;
+    vann:preferredNamespacePrefix "pwo"@en ;
+    vann:preferredNamespaceUri "http://purl.org/spar/pwo"@en ;
+    rdfs:seeAlso <http://www.sparontologies.net/ontologies/pwo> ;
+    owl:backwardCompatibleWith pwo:2026-10-05 ;
+    owl:imports <http://purl.org/spar/error>,
+        <http://www.ontologydesignpatterns.org/cp/owl/basicplan.owl>,
+        <http://www.ontologydesignpatterns.org/cp/owl/controlflow.owl>,
+        <http://www.ontologydesignpatterns.org/cp/owl/participation.owl>,
+        <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl>,
+        <http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl>,
+        <http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl>,
+        <http://www.w3.org/2006/time> ;
+    owl:priorVersion pwo:2026-10-05 ;
+    owl:versionIRI pwo:2026-11-09 ;
+    owl:versionInfo "2.5.2"^^xsd:string ;
+    foaf:logo <https://github.com/SPAROntologies/sparontologies.github.io/blob/master/static/img/spar/spar-logo.png> ;
+    schema:codeRepository <https://github.com/SPAROntologies/pwo> ;
+    schema:image <https://github.com/SPAROntologies/pwo/blob/master/docs/current/pwo.png> ;
+    schema:includedInDataCatalog <https://fairsharing.org/> ;
+    dc:language <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    schema:keywords 
+        "SPAR Ontologies"@en ,
+        "OWL ontology"@en ,
+        "bibliometrics"@en,
+        "publishing workflows"@en,
+        "scholarly communication"@en,
+        "scientometrics"@en,
+        "semantic publishing"@en .
+
+pwo:hasNextStep a owl:ObjectProperty ;
+    rdfs:label "has next step"@en ;
+    vann:example """
+    :step-one a pwo:Step ;
+        pwo:hasNextStep :step-two .
+
+    :step-two a pwo:Step ;
+        pwo:hasNextStep :step-three .
+    """ ;
+    rdfs:comment "The relation between a step in a workflow and the step that directly follows it."@en ;
+    rdfs:domain pwo:Step ;
+    rdfs:isDefinedBy pwo: ;
+    rdfs:range pwo:Step ;
+    rdfs:subPropertyOf sequence:directlyPrecedes ;
+    owl:inverseOf pwo:hasPreviousStep ;
+    vs:term_status reg:statusStable .
+
+pwo:isNeededBy a owl:ObjectProperty ;
+    rdfs:label "is needed by"@en ;
+    vann:example """
+    :step-one a pwo:Step ;
+        pwo:hasNextStep :step-two ;
+        taskex:isExecutedIn :my-action .
+    
+    :my-draft 
+        pwo:isNeededBy :step-one . 
+    """ ;
+    rdfs:comment "The relation between a thing required to undertake a workflow step or an event (e.g. an action executing a workflow step) and the step/event itself."@en ;
+    rdfs:isDefinedBy pwo: ;
+    owl:inverseOf pwo:needs ;
+    vs:term_status reg:statusStable .
+
+pwo:isProducedBy a owl:ObjectProperty ;
+    rdfs:label "is produced by"@en ;
+    vann:example """
+    :step-one a pwo:Step ;
+        pwo:hasNextStep :step-two .
+
+    :my-output 
+        pwo:isProducedBy :step-one .
+    """ ;
+    rdfs:comment "The relation between something and the workflow step or an event (e.g. an action executing a workflow step) that produces, creates or results in that thing."@en ;
+    rdfs:isDefinedBy pwo: ;
+    owl:inverseOf pwo:produces ;
+    vs:term_status reg:statusStable .
+
+part:isParticipantIn a owl:ObjectProperty ;
+    rdfs:label "has participant"@en ;
+    rdfs:comment "The relation between an event and an object participating in that event."@en ;
+    rdfs:isDefinedBy part: ;
+    owl:inverseOf part:hasParticipant .
+
+sit:isSettingFor a owl:ObjectProperty ;
+    rdfs:label "is setting for"@en ;
+    rdfs:comment "The relation between a situation and something that situation is a setting for."@en ;
+    rdfs:domain sit:Situation ;
+    rdfs:isDefinedBy sit: .
+
+tisit:atTime a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "at time"@en ;
+    rdfs:comment "A time interval during which something is happening."@en ;
+    rdfs:domain tisit:TimeIndexedSituation ;
+    rdfs:isDefinedBy tisit: ;
+    rdfs:range ti:TimeInterval .
+
+tisit:forEntity a owl:ObjectProperty ;
+    rdfs:label "for entity"@en ;
+    rdfs:comment "The relation between a time-indexed situation and an entity involved in it."@en ;
+    rdfs:domain tisit:TimeIndexedSituation ;
+    rdfs:isDefinedBy tisit: .
+
+tisit:hasTimeIndexedSetting a owl:ObjectProperty ;
+    rdfs:label "has time indexed setting"@en ;
+    rdfs:comment "The relation between an entity and a time-indexed situation it is involved in."@en ;
+    rdfs:isDefinedBy tisit: ;
+    rdfs:range tisit:TimeIndexedSituation .
+
+ti:hasIntervalDate a owl:DatatypeProperty ;
+    rdfs:label "has interval date"@en ;
+    rdfs:comment "A date value assigned to a time interval."@en ;
+    rdfs:domain ti:TimeInterval ;
+    rdfs:isDefinedBy ti: .
+
+pwo:WorkflowExecution a owl:Class ;
+    rdfs:label "workflow execution"@en ;
+    vann:example """
+    :my-workflow-execution a pwo:WorkflowExecution ;
+        pwo:executes :my-workflow ;
+        pwo:involvesAction 
+            :my-action ,
+            :my-another-action .
+    """ ;
+    rdfs:comment "The aggregate of actions executed in the steps defined in a workflow."@en ;
+    rdfs:isDefinedBy pwo: ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty pwo:involvesAction ;
+            owl:someValuesFrom [ a owl:Class ;
+                    owl:intersectionOf ( pwo:Action [ a owl:Restriction ;
+                                owl:onProperty taskex:executesTask ;
+                                owl:someValuesFrom pwo:Step ] ) ] ],
+        [ a owl:Restriction ;
+            owl:onProperty pwo:executes ;
+            owl:someValuesFrom pwo:Workflow ],
+        planex:PlanExecution,
+        tisit:TimeIndexedSituation ;
+    vs:term_status reg:statusStable .
+
+pwo:happened a owl:ObjectProperty ;
+    rdfs:label "happened"@en ;
+    vann:example """
+    :my-event 
+        pwo:happened :my-event-time .
+    """ ;
+    rdfs:comment "The relation between an event and the interval when it happened."@en ;
+    rdfs:domain part:Event ;
+    rdfs:isDefinedBy pwo: ;
+    rdfs:range ti:TimeInterval ;
+    owl:inverseOf pwo:isIntervalFor ;
+    vs:term_status reg:statusStable .
+
+pwo:hasFirstStep a owl:ObjectProperty ;
+    rdfs:label "has first step"@en ;
+    vann:example """
+    :my-workflow a pwo:Workflow ;
+        pwo:hasFirstStep :step-one .
+    """ ;
+    rdfs:comment "The relation between a workflow and its first step."@en ;
+    rdfs:isDefinedBy pwo: ;
+    rdfs:range [ a owl:Class ;
+            owl:complementOf [ a owl:Restriction ;
+                    owl:onProperty pwo:hasPreviousStep ;
+                    owl:someValuesFrom pwo:Step ] ] ;
+    rdfs:subPropertyOf pwo:hasStep ;
+    vs:term_status reg:statusStable .
+
+pwo:involvesAction a owl:ObjectProperty ;
+    rdfs:label "involves action"@en ;
+    vann:example """
+    :my-workflow-execution a pwo:WorkflowExecution ;
+        pwo:executes :my-workflow ;
+        pwo:involvesAction 
+            :my-action ,
+            :my-another-action .
+    """ ;
+    rdfs:comment "The relation between a particular execution of a workflow and an action."@en ;
+    rdfs:domain pwo:WorkflowExecution ;
+    rdfs:isDefinedBy pwo: ;
+    rdfs:range pwo:Action ;
+    owl:inverseOf pwo:isActionInvolvedIn ;
+    owl:propertyChainAxiom ( pwo:executes pwo:hasStep taskex:isExecutedIn ) ;
+    vs:term_status reg:statusStable .
+
+pwo:isActionInvolvedIn a owl:ObjectProperty ;
+    rdfs:label "is action involved in"@en ;
+    vann:example """
+    :my-workflow-execution a pwo:WorkflowExecution ;
+        pwo:execute :my-workflow .
+
+    :my-action 
+        pwo:isActionInvolvedIn :my-workflow-execution .
+    """ ;
+    rdfs:comment "The relation between an event and a particular execution of a workflow description."@en ;
+    rdfs:isDefinedBy pwo: ;
+    owl:propertyChainAxiom ( taskex:executesTask pwo:isStepOf pwo:isExecutedBy ) ;
+    vs:term_status reg:statusStable .
+
+pwo:isIntervalFor a owl:ObjectProperty ;
+    rdfs:label "is interval for"@en ;
+    vann:example """
+    """ ;
+    rdfs:comment "The relation between an interval describing when an event happened and the related event."@en ;
+    rdfs:isDefinedBy pwo: ;
+    vs:term_status reg:statusStable .
+
+error:hasError a owl:DatatypeProperty ;
+    rdfs:label "has error"@en ;
+    rdfs:comment "A kind of error resulting from a resource." ;
+    rdfs:isDefinedBy <http://purl.org/spar/error/> ;
+    rdfs:range xsd:string .
+
+plan:isSatisfiedBy a owl:ObjectProperty ;
+    rdfs:label "satisfies"@en ;
+    rdfs:comment "A relation between a description and a situation." ;
+    rdfs:isDefinedBy plan: ;
+    owl:inverseOf plan:satisfies .
+
+plandesc:Plan a owl:Class ;
+    rdfs:label "plan"@en ;
+    rdfs:comment "A description having an explicit goal to be achieved by executing tasks."@en ;
+    rdfs:isDefinedBy plandesc: .
+
+plandesc:definesTask a owl:ObjectProperty ;
+    rdfs:label "defines task"@en ;
+    rdfs:comment "A relation between a description and a task."@en ;
+    rdfs:isDefinedBy plandesc: ;
+    rdfs:range taskrole:Task .
+
+planex:Action a owl:Class ;
+    rdfs:label "action"@en ;
+    rdfs:comment "An event with at least one agent that participates in it, and that executes a task." ;
+    rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/cp/owl/basicplanexecution.owl#> .
+
+planex:PlanExecution a owl:Class ;
+    rdfs:label "plan execution"@en ;
+    rdfs:comment "An event with at least one agent participating in it, and that executes a task." ;
+    rdfs:isDefinedBy planex: .
+
+parameter:hasParameter a owl:ObjectProperty ;
+    rdfs:label "has parameter"@en ;
+    rdfs:comment "A relation between a concept and a parameter." ;
+    rdfs:isDefinedBy parameter: .
+
+part:Object a owl:Class ;
+    rdfs:label "object"@en ;
+    rdfs:comment "Any physical, social, or mental object, or substance."@en ;
+    rdfs:isDefinedBy part: .
+
+part:hasParticipant a owl:ObjectProperty ;
+    rdfs:label "has participant"@en ;
+    rdfs:comment "The relation between an event and an object participating in that event."@en ;
+    rdfs:domain part:Event ;
+    rdfs:isDefinedBy part: ;
+    rdfs:range part:Object .
+
+sequence:directlyFollows a owl:ObjectProperty ;
+    rdfs:label "directly follows"@en ;
+    rdfs:comment "The intransitive follows relation. For example, Wednesday directly precedes Thursday. Directness of precedence depends on the designer conceptualization."@en ;
+    rdfs:isDefinedBy sequence: .
+
+sequence:directlyPrecedes a owl:ObjectProperty ;
+    rdfs:label "directly precedes"@en ;
+    rdfs:comment "The intransitive precedes relation. For example, Monday directly precedes Tuesday. Directness of precedence depends on the designer conceptualization."@en ;
+    rdfs:isDefinedBy sequence: .
+
+sequence:precedes a owl:ObjectProperty ;
+    rdfs:label "precedes"@en ;
+    rdfs:comment "A relation between entities, expressing a 'sequence' schema. E.g. 'year 1999 precedes 2000', 'deciding what coffee to use' precedes 'preparing coffee', 'World War II follows World War I', 'in the Milan to Rome autoroute, Bologna precedes Florence', etc. It can then be used between tasks, processes, time intervals, spatially locate objects, situations, etc. Subproperties can be defined in order to distinguish the different uses."@en ;
+    rdfs:isDefinedBy sequence: .
+
+time:DurationDescription a owl:Class ;
+    rdfs:label "duration description"@en ;
+    rdfs:comment "Description of temporal extent structured with separate values for the various elements of a calendar-clock system." ;
+    rdfs:isDefinedBy time: .
+
+pwo:executes a owl:ObjectProperty ;
+    rdfs:label "executes"@en ;
+    vann:example """
+    :my-workflow-execution a pwo:WorkflowExecution ;
+        pwo:executes :my-workflow .
+    """ ;
+    rdfs:comment "This property allows to link a workflow execution to the related workflow description."@en ;
+    rdfs:isDefinedBy pwo: ;
+    rdfs:subPropertyOf plan:satisfies ;
+    owl:inverseOf pwo:isExecutedBy ;
+    vs:term_status reg:statusStable .
+
+pwo:hasPreviousStep a owl:ObjectProperty ;
+    rdfs:label "has previous step"@en ;
+    vann:example """
+    :step-two a pwo:Step ;
+        pwo:hasPreviousStep :step-one .
+    """ ;
+    rdfs:comment "A relation between a step in a workflow and the step that directly precedes it."@en ;
+    rdfs:isDefinedBy pwo: ;
+    rdfs:subPropertyOf sequence:directlyFollows ;
+    vs:term_status reg:statusStable .
+
+pwo:hasStep a owl:ObjectProperty ;
+    rdfs:label "has step"@en ;
+    vann:example """
+    :my-workflow a pwo:Workflow ;
+        pwo:hasFirstStep :step-one ;
+        pwo:hasStep
+            :step-one ,
+            :step-two ,
+            :step-three .
+    """ ;
+    rdfs:comment "The relation between a workflow and a component step."@en ;
+    rdfs:domain pwo:Workflow ;
+    rdfs:isDefinedBy pwo: ;
+    rdfs:range pwo:Step ;
+    rdfs:subPropertyOf plandesc:definesTask ;
+    owl:inverseOf pwo:isStepOf ;
+    vs:term_status reg:statusStable .
+
+pwo:isExecutedBy a owl:ObjectProperty ;
+    rdfs:label "is executed by" ;
+    vann:example """
+    :my-workflow a pwo:Workflow ;
+        pwo:isExecutedBy :my-workflow-execution .
+    """ ;
+    rdfs:comment "The relation between a workflow description and the related workflow execution." ;
+    rdfs:isDefinedBy pwo: ;
+    rdfs:subPropertyOf plan:isSatisfiedBy ;
+    vs:term_status reg:statusStable .
+
+pwo:isStepOf a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "is step of"@en ;
+    vann:example """
+    :my-workflow a pwo:Workflow .
+
+    :step-one 
+        pwo:isStepOf :my-workflow .
+    """ ;
+    rdfs:comment "The relation between a step in a workflow and the workflow of which it is a component."@en ;
+    rdfs:isDefinedBy pwo: ;
+    rdfs:subPropertyOf plandesc:isTaskDefinedIn ;
+    vs:term_status reg:statusStable .
+
+pwo:needs a owl:ObjectProperty ;
+    rdfs:label "needs"@en ;
+    vann:example """
+    :step-one a pwo:Step ;
+        pwo:hasNextStep :step-two ;
+        taskex:isExecutedIn :my-action ;
+        pwo:needs :my-draft . 
+    """ ;
+    rdfs:comment "The relation between a workflow step or an event (e.g. an action executing a workflow step) and anything required to undertake that step/event."@en ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( pwo:Step part:Event ) ] ;
+    rdfs:isDefinedBy pwo: ;
+    vs:term_status reg:statusStable .
+
+pwo:produces a owl:ObjectProperty ;
+    rdfs:label "produces"@en ;
+    vann:example """
+    :step-one a pwo:Step ;
+        pwo:hasNextStep :step-two ;
+        taskex:isExecutedIn :my-action ;
+        pwo:produces :my-output . 
+    """ ;
+    rdfs:comment "The relation between a workflow step or an event (e.g. an action executing a workflow step) and the thing that the step/event produces, creates or results in."@en ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( pwo:Step part:Event ) ] ;
+    rdfs:isDefinedBy pwo: ;
+    vs:term_status reg:statusStable .
+
+plan:satisfies a owl:ObjectProperty ;
+    rdfs:label "satisfies"@en ;
+    rdfs:comment "A relation between a situation and a description." ;
+    rdfs:domain sit:Situation ;
+    rdfs:isDefinedBy plan: .
+
+plandesc:isTaskDefinedIn a owl:ObjectProperty ;
+    rdfs:label "is task defined in"@en ;
+    rdfs:comment "A relation between a task and its description."@en ;
+    rdfs:domain taskrole:Task ;
+    rdfs:isDefinedBy taskex: .
+
+sit:Situation a owl:Class ;
+    rdfs:label "situation"@en ;
+    rdfs:comment "A view on a set of entities. It can be seen as a 'relational context', reifying a relation."@en ;
+    rdfs:isDefinedBy sit: .
+
+taskex:Action a owl:Class ;
+    rdfs:label "action"@en ;
+    rdfs:comment "An event with at least one agent participating in it, and that executes a task." ;
+    rdfs:isDefinedBy taskex: .
+
+taskex:isExecutedIn a owl:ObjectProperty ;
+    rdfs:label "is executed in"@en ;
+    rdfs:comment "The relation between a task and an action."@en ;
+    rdfs:isDefinedBy taskex: ;
+    owl:inverseOf taskex:executesTask .
+
+<urn:swrl#r> a swrl:Variable .
+
+pwo:Action a owl:Class ;
+    rdfs:label "action" ;
+    vann:example """
+    :my-workflow-execution a pwo:WorkflowExecution ;
+        pwo:executes :my-workflow ;
+        pwo:involvesAction 
+            :my-action .
+
+    :my-action a pwo:Action ;
+        dcterms:description 'John Doe submits the paper' ;
+        tisit:atTime :my-action-time ;
+        part:hasParticipant
+            :my-person ,
+            :my-draft .
+    """ ;
+    rdfs:comment "An event with at least one agent that is participant in it and that is linked to a workflow execution and to a step of the related workflow description." ;
+    rdfs:isDefinedBy pwo: ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty pwo:happened ;
+            owl:someValuesFrom ti:TimeInterval ],
+        [ a owl:Class ;
+            owl:intersectionOf ( planex:Action taskex:Action ) ] ;
+    vs:term_status reg:statusStable .
+
+pwo:Workflow a owl:Class ;
+    rdfs:label "workflow"@en ;
+    vann:example """
+    :my-workflow a pwo:Workflow ;
+        pwo:hasFirstStep :step-one ;
+        pwo:hasStep
+            :step-one ,
+            :step-two ,
+            :step-three .
+    """ ;
+    rdfs:comment "A sequence of connected steps, representing a sequence of publishing operations undertaken by agents. A workflow may be seen as an abstract model of real work."@en ;
+    rdfs:isDefinedBy pwo: ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty pwo:hasFirstStep ;
+            owl:someValuesFrom pwo:Step ],
+        plandesc:Plan ;
+    vs:term_status reg:statusStable .
+
+taskex:executesTask a owl:ObjectProperty ;
+    rdfs:label "executes task"@en ;
+    rdfs:comment "The relation between an action and a task."@en ;
+    rdfs:domain taskex:Action ;
+    rdfs:isDefinedBy taskex: ;
+    rdfs:range taskrole:Task .
+
+<urn:swrl#sj> a swrl:Variable .
+
+part:Event a owl:Class ;
+    rdfs:label "event"@en ;
+    rdfs:comment "An event that may happen during a publishing process, such as writing a draft, sending a preprint, publishing a paper, etc." ;
+    rdfs:isDefinedBy part: .
+
+taskrole:Task a owl:Class ;
+    rdfs:label "task"@en ;
+    rdfs:comment "A piece of work to be done or undertaken." ;
+    rdfs:isDefinedBy taskrole: .
+
+tisit:TimeIndexedSituation a owl:Class ;
+    rdfs:label "time indexed situation"@en ;
+    rdfs:comment "A situation that is explicitly indexed at some time for at least one entity." ;
+    rdfs:isDefinedBy tisit: .
+
+ti:TimeInterval a owl:Class ;
+    rdfs:label "time interval"@en ;
+    rdfs:comment "Two (starting and ending) points in time that define a particular period of time." ;
+    rdfs:isDefinedBy ti: .
+
+<urn:swrl#si> a swrl:Variable .
+
+pwo:Step a owl:Class ;
+    rdfs:label "step"@en ;
+    vann:example """
+    :step-one a pwo:Step ;
+        pwo:hasNextStep :step-two ;
+        taskex:isExecutedIn :my-action ;
+        pwo:needs :my-draft ;
+        pwo:produces :my-output .
+    """ ;
+    rdfs:comment "An atomic unit of a workflow, that may be characterized by a starting time and an ending time, and may be associated with one or more events.  A workflow step usually involves some input information, material or energy needed to complete the step, and some output information, material or energy produced by that step.  In the case of a publishing workflow, a step typically results in the creation of a publication entity, usually by the modification of another pre-existing publication entity, e.g. the creation of an edited paper from a rough draft, or of an HTML representation from an XML mark-up."@en ;
+    rdfs:isDefinedBy pwo: ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom pwo:Action ;
+            owl:onProperty taskex:isExecutedIn ],
+        [ a owl:Restriction ;
+            owl:onClass time:DurationDescription ;
+            owl:onProperty parameter:hasParameter ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom pwo:Workflow ;
+            owl:onProperty plandesc:isTaskDefinedIn ],
+        taskrole:Task ;
+    vs:term_status reg:statusStable .
+
+[] a swrl:Imp ;
+    swrl:body [ a swrl:AtomList ;
+            rdf:first [ a swrl:ClassAtom ;
+                    swrl:argument1 <urn:swrl#si> ;
+                    swrl:classPredicate pwo:Step ] ;
+            rdf:rest [ a swrl:AtomList ;
+                    rdf:first [ a swrl:ClassAtom ;
+                            swrl:argument1 <urn:swrl#sj> ;
+                            swrl:classPredicate pwo:Step ] ;
+                    rdf:rest [ a swrl:AtomList ;
+                            rdf:first [ a swrl:IndividualPropertyAtom ;
+                                    swrl:argument1 <urn:swrl#si> ;
+                                    swrl:argument2 <urn:swrl#r> ;
+                                    swrl:propertyPredicate pwo:needs ] ;
+                            rdf:rest [ a swrl:AtomList ;
+                                    rdf:first [ a swrl:IndividualPropertyAtom ;
+                                            swrl:argument1 <urn:swrl#sj> ;
+                                            swrl:argument2 <urn:swrl#r> ;
+                                            swrl:propertyPredicate pwo:produces ] ;
+                                    rdf:rest [ a swrl:AtomList ;
+                                            rdf:first [ a swrl:IndividualPropertyAtom ;
+                                                    swrl:argument1 <urn:swrl#si> ;
+                                                    swrl:argument2 <urn:swrl#sj> ;
+                                                    swrl:propertyPredicate sequence:precedes ] ;
+                                            rdf:rest () ] ] ] ] ] ;
+    swrl:head [ a swrl:AtomList ;
+            rdf:first [ a swrl:DatavaluedPropertyAtom ;
+                    swrl:argument1 <urn:swrl#si> ;
+                    swrl:argument2 "A step cannot need a resource that will be produced by a following step"^^xsd:string ;
+                    swrl:propertyPredicate error:hasError ] ;
+            rdf:rest () ] .
+

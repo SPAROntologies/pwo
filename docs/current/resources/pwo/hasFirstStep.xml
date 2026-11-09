@@ -6,26 +6,26 @@
    xmlns:vann="http://purl.org/vocab/vann/"
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
-  <rdf:Description rdf:nodeID="nec6db8b92ea1452eadb52214435a22d7b7">
-    <owl:complementOf rdf:nodeID="nec6db8b92ea1452eadb52214435a22d7b8"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/spar/pwo/hasFirstStep">
-    <rdfs:range rdf:nodeID="nec6db8b92ea1452eadb52214435a22d7b7"/>
-    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:comment xml:lang="en">The relation between a workflow and its first step.</rdfs:comment>
     <vann:example>
     :my-workflow a pwo:Workflow ;
         pwo:hasFirstStep :step-one .
     </vann:example>
+    <rdfs:comment xml:lang="en">The relation between a workflow and its first step.</rdfs:comment>
     <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/pwo/hasStep"/>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/pwo/"/>
     <rdfs:label xml:lang="en">has first step</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:nodeID="nbd84bf33f5544f16a57c30d2846feb1fb7"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/pwo/"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="nec6db8b92ea1452eadb52214435a22d7b8">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:someValuesFrom rdf:resource="http://purl.org/spar/pwo/Step"/>
+  <rdf:Description rdf:nodeID="nbd84bf33f5544f16a57c30d2846feb1fb7">
+    <owl:complementOf rdf:nodeID="nbd84bf33f5544f16a57c30d2846feb1fb8"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd84bf33f5544f16a57c30d2846feb1fb8">
     <owl:onProperty rdf:resource="http://purl.org/spar/pwo/hasPreviousStep"/>
+    <owl:someValuesFrom rdf:resource="http://purl.org/spar/pwo/Step"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
 </rdf:RDF>

@@ -5,8 +5,8 @@
 >
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/basicplan.owl#satisfies">
     <rdfs:comment>A relation between a situation and a description.</rdfs:comment>
-    <rdfs:label xml:lang="en">satisfies</rdfs:label>
     <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation"/>
+    <rdfs:label xml:lang="en">satisfies</rdfs:label>
     <rdfs:isDefinedBy rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/basicplan.owl#"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>

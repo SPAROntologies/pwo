@@ -1,0 +1,13 @@
+_:nbd84bf33f5544f16a57c30d2846feb1fb17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.ontologydesignpatterns.org/cp/owl/participation.owl#Event> .
+<http://purl.org/spar/pwo/needs> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/pwo/> .
+_:nbd84bf33f5544f16a57c30d2846feb1fb15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/pwo/needs> <http://www.w3.org/2000/01/rdf-schema#label> "needs"@en .
+<http://purl.org/spar/pwo/needs> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+_:nbd84bf33f5544f16a57c30d2846feb1fb16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/pwo/Step> .
+_:nbd84bf33f5544f16a57c30d2846feb1fb17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:nbd84bf33f5544f16a57c30d2846feb1fb15 <http://www.w3.org/2002/07/owl#unionOf> _:nbd84bf33f5544f16a57c30d2846feb1fb16 .
+_:nbd84bf33f5544f16a57c30d2846feb1fb16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nbd84bf33f5544f16a57c30d2846feb1fb17 .
+<http://purl.org/spar/pwo/needs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/pwo/needs> <http://www.w3.org/2000/01/rdf-schema#comment> "The relation between a workflow step or an event (e.g. an action executing a workflow step) and anything required to undertake that step/event."@en .
+<http://purl.org/spar/pwo/needs> <http://purl.org/vocab/vann/example> "\n    :step-one a pwo:Step ;\n        pwo:hasNextStep :step-two ;\n        taskex:isExecutedIn :my-action ;\n        pwo:needs :my-draft . \n    " .
+<http://purl.org/spar/pwo/needs> <http://www.w3.org/2000/01/rdf-schema#domain> _:nbd84bf33f5544f16a57c30d2846feb1fb15 .

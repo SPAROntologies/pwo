@@ -6,9 +6,9 @@
 >
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#isExecutedIn">
     <rdfs:label xml:lang="en">is executed in</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#"/>
     <rdfs:comment xml:lang="en">The relation between a task and an action.</rdfs:comment>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <owl:inverseOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#executesTask"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#"/>
   </rdf:Description>
 </rdf:RDF>

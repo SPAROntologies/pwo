@@ -6,14 +6,12 @@
    xmlns:vann="http://purl.org/vocab/vann/"
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
-  <rdf:Description rdf:nodeID="nec6db8b92ea1452eadb52214435a22d7b23">
-    <rdf:rest rdf:nodeID="nec6db8b92ea1452eadb52214435a22d7b24"/>
-    <rdf:first rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/basicplanexecution.owl#Action"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/spar/pwo/Action">
+    <rdfs:subClassOf rdf:nodeID="nbd84bf33f5544f16a57c30d2846feb1fb21"/>
+    <rdfs:subClassOf rdf:nodeID="nbd84bf33f5544f16a57c30d2846feb1fb22"/>
+    <rdfs:label>action</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/pwo/"/>
     <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
-    <rdfs:subClassOf rdf:nodeID="nec6db8b92ea1452eadb52214435a22d7b22"/>
-    <rdfs:subClassOf rdf:nodeID="nec6db8b92ea1452eadb52214435a22d7b21"/>
     <rdfs:comment>An event with at least one agent that is participant in it and that is linked to a workflow execution and to a step of the related workflow description.</rdfs:comment>
     <vann:example>
     :my-workflow-execution a pwo:WorkflowExecution ;
@@ -29,20 +27,22 @@
             :my-draft .
     </vann:example>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>action</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/pwo/"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="nec6db8b92ea1452eadb52214435a22d7b21">
-    <owl:someValuesFrom rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#TimeInterval"/>
-    <owl:onProperty rdf:resource="http://purl.org/spar/pwo/happened"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="nec6db8b92ea1452eadb52214435a22d7b22">
-    <owl:intersectionOf rdf:nodeID="nec6db8b92ea1452eadb52214435a22d7b23"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="nec6db8b92ea1452eadb52214435a22d7b24">
+  <rdf:Description rdf:nodeID="nbd84bf33f5544f16a57c30d2846feb1fb24">
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
     <rdf:first rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#Action"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd84bf33f5544f16a57c30d2846feb1fb21">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://purl.org/spar/pwo/happened"/>
+    <owl:someValuesFrom rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#TimeInterval"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd84bf33f5544f16a57c30d2846feb1fb23">
+    <rdf:first rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/basicplanexecution.owl#Action"/>
+    <rdf:rest rdf:nodeID="nbd84bf33f5544f16a57c30d2846feb1fb24"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd84bf33f5544f16a57c30d2846feb1fb22">
+    <owl:intersectionOf rdf:nodeID="nbd84bf33f5544f16a57c30d2846feb1fb23"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
 </rdf:RDF>

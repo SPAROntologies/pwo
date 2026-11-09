@@ -1,0 +1,26 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pwo: <http://purl.org/spar/pwo/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix taskex: <http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+pwo:involvesAction a owl:ObjectProperty ;
+    rdfs:label "involves action"@en ;
+    vann:example """
+    :my-workflow-execution a pwo:WorkflowExecution ;
+        pwo:executes :my-workflow ;
+        pwo:involvesAction 
+            :my-action ,
+            :my-another-action .
+    """ ;
+    rdfs:comment "The relation between a particular execution of a workflow and an action."@en ;
+    rdfs:domain pwo:WorkflowExecution ;
+    rdfs:isDefinedBy pwo: ;
+    rdfs:range pwo:Action ;
+    owl:inverseOf pwo:isActionInvolvedIn ;
+    owl:propertyChainAxiom ( pwo:executes pwo:hasStep taskex:isExecutedIn ) ;
+    vs:term_status reg:statusStable .
+

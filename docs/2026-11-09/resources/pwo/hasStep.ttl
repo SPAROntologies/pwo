@@ -1,0 +1,26 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix plandesc: <http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#> .
+@prefix pwo: <http://purl.org/spar/pwo/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+pwo:hasStep a owl:ObjectProperty ;
+    rdfs:label "has step"@en ;
+    vann:example """
+    :my-workflow a pwo:Workflow ;
+        pwo:hasFirstStep :step-one ;
+        pwo:hasStep
+            :step-one ,
+            :step-two ,
+            :step-three .
+    """ ;
+    rdfs:comment "The relation between a workflow and a component step."@en ;
+    rdfs:domain pwo:Workflow ;
+    rdfs:isDefinedBy pwo: ;
+    rdfs:range pwo:Step ;
+    rdfs:subPropertyOf plandesc:definesTask ;
+    owl:inverseOf pwo:isStepOf ;
+    vs:term_status reg:statusStable .
+

@@ -7,8 +7,8 @@
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/basicplan.owl#isSatisfiedBy">
     <rdfs:label xml:lang="en">satisfies</rdfs:label>
     <owl:inverseOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/basicplan.owl#satisfies"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:isDefinedBy rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/basicplan.owl#"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment>A relation between a description and a situation.</rdfs:comment>
   </rdf:Description>
 </rdf:RDF>

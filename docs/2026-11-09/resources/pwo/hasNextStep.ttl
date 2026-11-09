@@ -1,0 +1,25 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pwo: <http://purl.org/spar/pwo/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix sequence: <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+pwo:hasNextStep a owl:ObjectProperty ;
+    rdfs:label "has next step"@en ;
+    vann:example """
+    :step-one a pwo:Step ;
+        pwo:hasNextStep :step-two .
+
+    :step-two a pwo:Step ;
+        pwo:hasNextStep :step-three .
+    """ ;
+    rdfs:comment "The relation between a step in a workflow and the step that directly follows it."@en ;
+    rdfs:domain pwo:Step ;
+    rdfs:isDefinedBy pwo: ;
+    rdfs:range pwo:Step ;
+    rdfs:subPropertyOf sequence:directlyPrecedes ;
+    owl:inverseOf pwo:hasPreviousStep ;
+    vs:term_status reg:statusStable .
+

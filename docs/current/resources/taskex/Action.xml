@@ -6,7 +6,7 @@
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#Action">
     <rdfs:label xml:lang="en">action</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment>An event with at least one agent participating in it, and that executes a task.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#"/>
+    <rdfs:comment>An event with at least one agent participating in it, and that executes a task.</rdfs:comment>
   </rdf:Description>
 </rdf:RDF>

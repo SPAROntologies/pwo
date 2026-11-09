@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+   xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+>
+  <rdf:Description rdf:nodeID="nbd84bf33f5544f16a57c30d2846feb1fb17">
+    <rdf:first rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/participation.owl#Event"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pwo/needs">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/pwo/"/>
+    <rdfs:label xml:lang="en">needs</rdfs:label>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">The relation between a workflow step or an event (e.g. an action executing a workflow step) and anything required to undertake that step/event.</rdfs:comment>
+    <vann:example>
+    :step-one a pwo:Step ;
+        pwo:hasNextStep :step-two ;
+        taskex:isExecutedIn :my-action ;
+        pwo:needs :my-draft . 
+    </vann:example>
+    <rdfs:domain rdf:nodeID="nbd84bf33f5544f16a57c30d2846feb1fb15"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd84bf33f5544f16a57c30d2846feb1fb15">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="nbd84bf33f5544f16a57c30d2846feb1fb16"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd84bf33f5544f16a57c30d2846feb1fb16">
+    <rdf:first rdf:resource="http://purl.org/spar/pwo/Step"/>
+    <rdf:rest rdf:nodeID="nbd84bf33f5544f16a57c30d2846feb1fb17"/>
+  </rdf:Description>
+</rdf:RDF>
