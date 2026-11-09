@@ -6,12 +6,12 @@
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
   <rdf:Description rdf:about="http://purl.org/spar/pwo/isIntervalFor">
-    <rdfs:label xml:lang="en">is interval for</rdfs:label>
     <rdfs:comment xml:lang="en">The relation between an interval describing when an event happened and the related event.</rdfs:comment>
     <vann:example>
     </vann:example>
+    <rdfs:label xml:lang="en">is interval for</rdfs:label>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
     <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/pwo/"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
   </rdf:Description>
 </rdf:RDF>

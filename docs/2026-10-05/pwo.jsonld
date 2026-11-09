@@ -1,5 +1,11 @@
 [
   {
+    "@id": "urn:swrl#r",
+    "@type": [
+      "http://www.w3.org/2003/11/swrl#Variable"
+    ]
+  },
+  {
     "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplanexecution.owl#Action",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
@@ -18,6 +24,1842 @@
       {
         "@language": "en",
         "@value": "action"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/spar/pwo/isStepOf",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#FunctionalProperty",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n    :my-workflow a pwo:Workflow .\n\n    :step-one \n        pwo:isStepOf :my-workflow .\n    "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The relation between a step in a workflow and the workflow of which it is a component."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/pwo/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "is step of"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#isTaskDefinedIn"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/spar/pwo/isNeededBy",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n    :step-one a pwo:Step ;\n        pwo:hasNextStep :step-two ;\n        taskex:isExecutedIn :my-action .\n    \n    :my-draft \n        pwo:isNeededBy :step-one . \n    "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The relation between a thing required to undertake a workflow step or an event (e.g. an action executing a workflow step) and the step/event itself."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/pwo/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "is needed by"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "http://purl.org/spar/pwo/needs"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  },
+  {
+    "@id": "urn:swrl#si",
+    "@type": [
+      "http://www.w3.org/2003/11/swrl#Variable"
+    ]
+  },
+  {
+    "@id": "http://purl.org/spar/pwo/involvesAction",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n    :my-workflow-execution a pwo:WorkflowExecution ;\n        pwo:executes :my-workflow ;\n        pwo:involvesAction \n            :my-action ,\n            :my-another-action .\n    "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The relation between a particular execution of a workflow and an action."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/spar/pwo/WorkflowExecution"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/pwo/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "involves action"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://purl.org/spar/pwo/Action"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "http://purl.org/spar/pwo/isActionInvolvedIn"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#propertyChainAxiom": [
+      {
+        "@list": [
+          {
+            "@id": "http://purl.org/spar/pwo/executes"
+          },
+          {
+            "@id": "http://purl.org/spar/pwo/hasStep"
+          },
+          {
+            "@id": "http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#isExecutedIn"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#hasTimeIndexedSetting",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The relation between an entity and a time-indexed situation it is involved in."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has time indexed setting"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#TimeIndexedSituation"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplan.owl#satisfies",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A relation between a situation and a description."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplan.owl#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "satisfies"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/cp/owl/parameter.owl#hasParameter",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A relation between a concept and a parameter."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/parameter.owl#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has parameter"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#precedes",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A relation between entities, expressing a 'sequence' schema. E.g. 'year 1999 precedes 2000', 'deciding what coffee to use' precedes 'preparing coffee', 'World War II follows World War I', 'in the Milan to Rome autoroute, Bologna precedes Florence', etc. It can then be used between tasks, processes, time intervals, spatially locate objects, situations, etc. Subproperties can be defined in order to distinguish the different uses."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "precedes"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/spar/pwo/isExecutedBy",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n    :my-workflow a pwo:Workflow ;\n        pwo:isExecutedBy :my-workflow-execution .\n    "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "The relation between a workflow description and the related workflow execution."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/pwo/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "is executed by"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplan.owl#isSatisfiedBy"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#definesTask",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A relation between a description and a task."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "defines task"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/taskrole.owl#Task"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#directlyFollows",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The intransitive follows relation. For example, Wednesday directly precedes Thursday. Directness of precedence depends on the designer conceptualization."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "directly follows"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2002/07/owl#versionInfo",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://purl.org/spar/pwo/produces",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n    :step-one a pwo:Step ;\n        pwo:hasNextStep :step-two ;\n        taskex:isExecutedIn :my-action ;\n        pwo:produces :my-output . \n    "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The relation between a workflow step or an event (e.g. an action executing a workflow step) and the thing that the step/event produces, creates or results in."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:nec6db8b92ea1452eadb52214435a22d7b18"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/pwo/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "produces"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  },
+  {
+    "@id": "_:nec6db8b92ea1452eadb52214435a22d7b18",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://purl.org/spar/pwo/Step"
+          },
+          {
+            "@id": "http://www.ontologydesignpatterns.org/cp/owl/participation.owl#Event"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#hasIntervalDate",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A date value assigned to a time interval."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#TimeInterval"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has interval date"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/spar/pwo/happened",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n    :my-event \n        pwo:happened :my-event-time .\n    "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The relation between an event and the interval when it happened."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/participation.owl#Event"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/pwo/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "happened"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#TimeInterval"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "http://purl.org/spar/pwo/isIntervalFor"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/spar/pwo/WorkflowExecution",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n    :my-workflow-execution a pwo:WorkflowExecution ;\n        pwo:executes :my-workflow ;\n        pwo:involvesAction \n            :my-action ,\n            :my-another-action .\n    "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The aggregate of actions executed in the steps defined in a workflow."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/pwo/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "workflow execution"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:nec6db8b92ea1452eadb52214435a22d7b1"
+      },
+      {
+        "@id": "_:nec6db8b92ea1452eadb52214435a22d7b6"
+      },
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplanexecution.owl#PlanExecution"
+      },
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#TimeIndexedSituation"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  },
+  {
+    "@id": "_:nec6db8b92ea1452eadb52214435a22d7b1",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://purl.org/spar/pwo/involvesAction"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "_:nec6db8b92ea1452eadb52214435a22d7b2"
+      }
+    ]
+  },
+  {
+    "@id": "_:nec6db8b92ea1452eadb52214435a22d7b2",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://purl.org/spar/pwo/Action"
+          },
+          {
+            "@id": "_:nec6db8b92ea1452eadb52214435a22d7b3"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:nec6db8b92ea1452eadb52214435a22d7b3",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#executesTask"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://purl.org/spar/pwo/Step"
+      }
+    ]
+  },
+  {
+    "@id": "_:nec6db8b92ea1452eadb52214435a22d7b6",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://purl.org/spar/pwo/executes"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://purl.org/spar/pwo/Workflow"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/cp/owl/participation.owl#isParticipantIn",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The relation between an event and an object participating in that event."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/participation.owl#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has participant"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/participation.owl#hasParticipant"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#isExecutedIn",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The relation between a task and an action."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "is executed in"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#executesTask"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#forEntity",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The relation between a time-indexed situation and an entity involved in it."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#TimeIndexedSituation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "for entity"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/spar/pwo/Workflow",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n    :my-workflow a pwo:Workflow ;\n        pwo:hasFirstStep :step-one ;\n        pwo:hasStep\n            :step-one ,\n            :step-two ,\n            :step-three .\n    "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A sequence of connected steps, representing a sequence of publishing operations undertaken by agents. A workflow may be seen as an abstract model of real work."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/pwo/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "workflow"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:nec6db8b92ea1452eadb52214435a22d7b25"
+      },
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#Plan"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  },
+  {
+    "@id": "_:nec6db8b92ea1452eadb52214435a22d7b25",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://purl.org/spar/pwo/hasFirstStep"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://purl.org/spar/pwo/Step"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/cp/owl/participation.owl#Object",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Any physical, social, or mental object, or substance."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/participation.owl#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "object"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplanexecution.owl#PlanExecution",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "An event with at least one agent participating in it, and that executes a task."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplanexecution.owl#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "plan execution"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/elements/1.1/contributor",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "urn:swrl#sj",
+    "@type": [
+      "http://www.w3.org/2003/11/swrl#Variable"
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#Plan",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A description having an explicit goal to be achieved by executing tasks."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "plan"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/cp/owl/participation.owl#Event",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "An event that may happen during a publishing process, such as writing a draft, sending a preprint, publishing a paper, etc."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/participation.owl#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "event"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2006/time#DurationDescription",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Description of temporal extent structured with separate values for the various elements of a calendar-clock system."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.w3.org/2006/time#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "duration description"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/spar/pwo/isIntervalFor",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n    "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The relation between an interval describing when an event happened and the related event."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/pwo/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "is interval for"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  },
+  {
+    "@id": "_:nec6db8b92ea1452eadb52214435a22d7b29",
+    "@type": [
+      "http://www.w3.org/2003/11/swrl#Imp"
+    ],
+    "http://www.w3.org/2003/11/swrl#body": [
+      {
+        "@id": "_:nec6db8b92ea1452eadb52214435a22d7b30"
+      }
+    ],
+    "http://www.w3.org/2003/11/swrl#head": [
+      {
+        "@id": "_:nec6db8b92ea1452eadb52214435a22d7b40"
+      }
+    ]
+  },
+  {
+    "@id": "_:nec6db8b92ea1452eadb52214435a22d7b30",
+    "@type": [
+      "http://www.w3.org/2003/11/swrl#AtomList"
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [
+      {
+        "@id": "_:nec6db8b92ea1452eadb52214435a22d7b31"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [
+      {
+        "@id": "_:nec6db8b92ea1452eadb52214435a22d7b32"
+      }
+    ]
+  },
+  {
+    "@id": "_:nec6db8b92ea1452eadb52214435a22d7b31",
+    "@type": [
+      "http://www.w3.org/2003/11/swrl#ClassAtom"
+    ],
+    "http://www.w3.org/2003/11/swrl#argument1": [
+      {
+        "@id": "urn:swrl#si"
+      }
+    ],
+    "http://www.w3.org/2003/11/swrl#classPredicate": [
+      {
+        "@id": "http://purl.org/spar/pwo/Step"
+      }
+    ]
+  },
+  {
+    "@id": "_:nec6db8b92ea1452eadb52214435a22d7b32",
+    "@type": [
+      "http://www.w3.org/2003/11/swrl#AtomList"
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [
+      {
+        "@id": "_:nec6db8b92ea1452eadb52214435a22d7b33"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [
+      {
+        "@id": "_:nec6db8b92ea1452eadb52214435a22d7b34"
+      }
+    ]
+  },
+  {
+    "@id": "_:nec6db8b92ea1452eadb52214435a22d7b33",
+    "@type": [
+      "http://www.w3.org/2003/11/swrl#ClassAtom"
+    ],
+    "http://www.w3.org/2003/11/swrl#argument1": [
+      {
+        "@id": "urn:swrl#sj"
+      }
+    ],
+    "http://www.w3.org/2003/11/swrl#classPredicate": [
+      {
+        "@id": "http://purl.org/spar/pwo/Step"
+      }
+    ]
+  },
+  {
+    "@id": "_:nec6db8b92ea1452eadb52214435a22d7b34",
+    "@type": [
+      "http://www.w3.org/2003/11/swrl#AtomList"
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [
+      {
+        "@id": "_:nec6db8b92ea1452eadb52214435a22d7b35"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [
+      {
+        "@id": "_:nec6db8b92ea1452eadb52214435a22d7b36"
+      }
+    ]
+  },
+  {
+    "@id": "_:nec6db8b92ea1452eadb52214435a22d7b35",
+    "@type": [
+      "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"
+    ],
+    "http://www.w3.org/2003/11/swrl#argument1": [
+      {
+        "@id": "urn:swrl#si"
+      }
+    ],
+    "http://www.w3.org/2003/11/swrl#argument2": [
+      {
+        "@id": "urn:swrl#r"
+      }
+    ],
+    "http://www.w3.org/2003/11/swrl#propertyPredicate": [
+      {
+        "@id": "http://purl.org/spar/pwo/needs"
+      }
+    ]
+  },
+  {
+    "@id": "_:nec6db8b92ea1452eadb52214435a22d7b36",
+    "@type": [
+      "http://www.w3.org/2003/11/swrl#AtomList"
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [
+      {
+        "@id": "_:nec6db8b92ea1452eadb52214435a22d7b37"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [
+      {
+        "@id": "_:nec6db8b92ea1452eadb52214435a22d7b38"
+      }
+    ]
+  },
+  {
+    "@id": "_:nec6db8b92ea1452eadb52214435a22d7b37",
+    "@type": [
+      "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"
+    ],
+    "http://www.w3.org/2003/11/swrl#argument1": [
+      {
+        "@id": "urn:swrl#sj"
+      }
+    ],
+    "http://www.w3.org/2003/11/swrl#argument2": [
+      {
+        "@id": "urn:swrl#r"
+      }
+    ],
+    "http://www.w3.org/2003/11/swrl#propertyPredicate": [
+      {
+        "@id": "http://purl.org/spar/pwo/produces"
+      }
+    ]
+  },
+  {
+    "@id": "_:nec6db8b92ea1452eadb52214435a22d7b38",
+    "@type": [
+      "http://www.w3.org/2003/11/swrl#AtomList"
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [
+      {
+        "@id": "_:nec6db8b92ea1452eadb52214435a22d7b39"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [
+      {
+        "@list": []
+      }
+    ]
+  },
+  {
+    "@id": "_:nec6db8b92ea1452eadb52214435a22d7b39",
+    "@type": [
+      "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"
+    ],
+    "http://www.w3.org/2003/11/swrl#argument1": [
+      {
+        "@id": "urn:swrl#si"
+      }
+    ],
+    "http://www.w3.org/2003/11/swrl#argument2": [
+      {
+        "@id": "urn:swrl#sj"
+      }
+    ],
+    "http://www.w3.org/2003/11/swrl#propertyPredicate": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#precedes"
+      }
+    ]
+  },
+  {
+    "@id": "_:nec6db8b92ea1452eadb52214435a22d7b40",
+    "@type": [
+      "http://www.w3.org/2003/11/swrl#AtomList"
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [
+      {
+        "@id": "_:nec6db8b92ea1452eadb52214435a22d7b41"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [
+      {
+        "@list": []
+      }
+    ]
+  },
+  {
+    "@id": "_:nec6db8b92ea1452eadb52214435a22d7b41",
+    "@type": [
+      "http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"
+    ],
+    "http://www.w3.org/2003/11/swrl#argument1": [
+      {
+        "@id": "urn:swrl#si"
+      }
+    ],
+    "http://www.w3.org/2003/11/swrl#argument2": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "A step cannot need a resource that will be produced by a following step"
+      }
+    ],
+    "http://www.w3.org/2003/11/swrl#propertyPredicate": [
+      {
+        "@id": "http://www.essepuntato.it/2009/10/error/hasError"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2000/01/rdf-schema#label",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/cp/owl/taskrole.owl#Task",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A piece of work to be done or undertaken."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/taskrole.owl#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "task"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A view on a set of entities. It can be seen as a 'relational context', reifying a relation."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/situation.owl#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "situation"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/spar/pwo/isActionInvolvedIn",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n    :my-workflow-execution a pwo:WorkflowExecution ;\n        pwo:execute :my-workflow .\n\n    :my-action \n        pwo:isActionInvolvedIn :my-workflow-execution .\n    "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The relation between an event and a particular execution of a workflow description."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/pwo/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "is action involved in"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#propertyChainAxiom": [
+      {
+        "@list": [
+          {
+            "@id": "http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#executesTask"
+          },
+          {
+            "@id": "http://purl.org/spar/pwo/isStepOf"
+          },
+          {
+            "@id": "http://purl.org/spar/pwo/isExecutedBy"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/elements/1.1/rights",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplan.owl#isSatisfiedBy",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A relation between a description and a situation."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplan.owl#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "satisfies"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplan.owl#satisfies"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#directlyPrecedes",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The intransitive precedes relation. For example, Monday directly precedes Tuesday. Directness of precedence depends on the designer conceptualization."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "directly precedes"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#executesTask",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The relation between an action and a task."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#Action"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "executes task"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/taskrole.owl#Task"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/elements/1.1/title",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://purl.org/spar/pwo/hasPreviousStep",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n    :step-two a pwo:Step ;\n        pwo:hasPreviousStep :step-one .\n    "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A relation between a step in a workflow and the step that directly precedes it."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/pwo/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has previous step"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#directlyFollows"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/cp/owl/participation.owl#hasParticipant",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The relation between an event and an object participating in that event."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/participation.owl#Event"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/participation.owl#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has participant"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/participation.owl#Object"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/spar/pwo/Action",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n    :my-workflow-execution a pwo:WorkflowExecution ;\n        pwo:executes :my-workflow ;\n        pwo:involvesAction \n            :my-action .\n\n    :my-action a pwo:Action ;\n        dcterms:description 'John Doe submits the paper' ;\n        tisit:atTime :my-action-time ;\n        part:hasParticipant\n            :my-person ,\n            :my-draft .\n    "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "An event with at least one agent that is participant in it and that is linked to a workflow execution and to a step of the related workflow description."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/pwo/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "action"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:nec6db8b92ea1452eadb52214435a22d7b21"
+      },
+      {
+        "@id": "_:nec6db8b92ea1452eadb52214435a22d7b22"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  },
+  {
+    "@id": "_:nec6db8b92ea1452eadb52214435a22d7b21",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://purl.org/spar/pwo/happened"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#TimeInterval"
+      }
+    ]
+  },
+  {
+    "@id": "_:nec6db8b92ea1452eadb52214435a22d7b22",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplanexecution.owl#Action"
+          },
+          {
+            "@id": "http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#Action"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/elements/1.1/creator",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://purl.org/spar/pwo/isProducedBy",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n    :step-one a pwo:Step ;\n        pwo:hasNextStep :step-two .\n\n    :my-output \n        pwo:isProducedBy :step-one .\n    "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The relation between something and the workflow step or an event (e.g. an action executing a workflow step) that produces, creates or results in that thing."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/pwo/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "is produced by"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "http://purl.org/spar/pwo/produces"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/elements/1.1/date",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://purl.org/spar/pwo/hasNextStep",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n    :step-one a pwo:Step ;\n        pwo:hasNextStep :step-two .\n\n    :step-two a pwo:Step ;\n        pwo:hasNextStep :step-three .\n    "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The relation between a step in a workflow and the step that directly follows it."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/spar/pwo/Step"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/pwo/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has next step"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://purl.org/spar/pwo/Step"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#directlyPrecedes"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "http://purl.org/spar/pwo/hasPreviousStep"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/spar/pwo/executes",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n    :my-workflow-execution a pwo:WorkflowExecution ;\n        pwo:executes :my-workflow .\n    "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "This property allows to link a workflow execution to the related workflow description."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/pwo/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "executes"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplan.owl#satisfies"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "http://purl.org/spar/pwo/isExecutedBy"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2000/01/rdf-schema#comment",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#Action",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "An event with at least one agent participating in it, and that executes a task."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "action"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#TimeInterval",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Two (starting and ending) points in time that define a particular period of time."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "time interval"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#atTime",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#FunctionalProperty",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A time interval during which something is happening."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#TimeIndexedSituation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "at time"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#TimeInterval"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/cp/owl/situation.owl#isSettingFor",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The relation between a situation and something that situation is a setting for."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/situation.owl#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "is setting for"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/spar/pwo/Step",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n    :step-one a pwo:Step ;\n        pwo:hasNextStep :step-two ;\n        taskex:isExecutedIn :my-action ;\n        pwo:needs :my-draft ;\n        pwo:produces :my-output .\n    "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "An atomic unit of a workflow, that may be characterized by a starting time and an ending time, and may be associated with one or more events.  A workflow step usually involves some input information, material or energy needed to complete the step, and some output information, material or energy produced by that step.  In the case of a publishing workflow, a step typically results in the creation of a publication entity, usually by the modification of another pre-existing publication entity, e.g. the creation of an edited paper from a rough draft, or of an HTML representation from an XML mark-up."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/pwo/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "step"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:nec6db8b92ea1452eadb52214435a22d7b26"
+      },
+      {
+        "@id": "_:nec6db8b92ea1452eadb52214435a22d7b27"
+      },
+      {
+        "@id": "_:nec6db8b92ea1452eadb52214435a22d7b28"
+      },
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/taskrole.owl#Task"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  },
+  {
+    "@id": "_:nec6db8b92ea1452eadb52214435a22d7b26",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://purl.org/spar/pwo/Action"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#isExecutedIn"
+      }
+    ]
+  },
+  {
+    "@id": "_:nec6db8b92ea1452eadb52214435a22d7b27",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onClass": [
+      {
+        "@id": "http://www.w3.org/2006/time#DurationDescription"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/parameter.owl#hasParameter"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#qualifiedCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ]
+  },
+  {
+    "@id": "_:nec6db8b92ea1452eadb52214435a22d7b28",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://purl.org/spar/pwo/Workflow"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#isTaskDefinedIn"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#isTaskDefinedIn",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A relation between a task and its description."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/taskrole.owl#Task"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "is task defined in"
       }
     ]
   },
@@ -98,720 +1940,6 @@
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
         "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#directlyFollows",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "The intransitive follows relation. For example, Wednesday directly precedes Thursday. Directness of precedence depends on the designer conceptualization."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "directly follows"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/spar/pwo/Action",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/vocab/vann/example": [
-      {
-        "@value": "\n    :my-workflow-execution a pwo:WorkflowExecution ;\n        pwo:executes :my-workflow ;\n        pwo:involvesAction \n            :my-action .\n\n    :my-action a pwo:Action ;\n        dcterms:description 'John Doe submits the paper' ;\n        tisit:atTime :my-action-time ;\n        part:hasParticipant\n            :my-person ,\n            :my-draft .\n    "
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "An event with at least one agent that is participant in it and that is linked to a workflow execution and to a step of the related workflow description."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://purl.org/spar/pwo/"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "action"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb21"
-      },
-      {
-        "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb22"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@id": "http://purl.org/linked-data/registry#statusStable"
-      }
-    ]
-  },
-  {
-    "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb21",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://purl.org/spar/pwo/happened"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#TimeInterval"
-      }
-    ]
-  },
-  {
-    "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb22",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#intersectionOf": [
-      {
-        "@list": [
-          {
-            "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplanexecution.owl#Action"
-          },
-          {
-            "@id": "http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#Action"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/spar/pwo/isStepOf",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#FunctionalProperty",
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://purl.org/vocab/vann/example": [
-      {
-        "@value": "\n    :my-workflow a pwo:Workflow .\n\n    :step-one \n        pwo:isStepOf :my-workflow .\n    "
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "The relation between a step in a workflow and the workflow of which it is a component."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://purl.org/spar/pwo/"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "is step of"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#isTaskDefinedIn"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@id": "http://purl.org/linked-data/registry#statusStable"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/spar/pwo/executes",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://purl.org/vocab/vann/example": [
-      {
-        "@value": "\n    :my-workflow-execution a pwo:WorkflowExecution ;\n        pwo:executes :my-workflow .\n    "
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "This property allows to link a workflow execution to the related workflow description."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://purl.org/spar/pwo/"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "executes"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplan.owl#satisfies"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#inverseOf": [
-      {
-        "@id": "http://purl.org/spar/pwo/isExecutedBy"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@id": "http://purl.org/linked-data/registry#statusStable"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#Action",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "An event with at least one agent participating in it, and that executes a task."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "action"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/spar/pwo/WorkflowExecution",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/vocab/vann/example": [
-      {
-        "@value": "\n    :my-workflow-execution a pwo:WorkflowExecution ;\n        pwo:executes :my-workflow ;\n        pwo:involvesAction \n            :my-action ,\n            :my-another-action .\n    "
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "The aggregate of actions executed in the steps defined in a workflow."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://purl.org/spar/pwo/"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "workflow execution"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb1"
-      },
-      {
-        "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb6"
-      },
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplanexecution.owl#PlanExecution"
-      },
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#TimeIndexedSituation"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@id": "http://purl.org/linked-data/registry#statusStable"
-      }
-    ]
-  },
-  {
-    "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb1",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://purl.org/spar/pwo/involvesAction"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb2"
-      }
-    ]
-  },
-  {
-    "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb2",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#intersectionOf": [
-      {
-        "@list": [
-          {
-            "@id": "http://purl.org/spar/pwo/Action"
-          },
-          {
-            "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb3"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb3",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#executesTask"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "http://purl.org/spar/pwo/Step"
-      }
-    ]
-  },
-  {
-    "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb6",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://purl.org/spar/pwo/executes"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "http://purl.org/spar/pwo/Workflow"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/spar/pwo/hasNextStep",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://purl.org/vocab/vann/example": [
-      {
-        "@value": "\n    :step-one a pwo:Step ;\n        pwo:hasNextStep :step-two .\n\n    :step-two a pwo:Step ;\n        pwo:hasNextStep :step-three .\n    "
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "The relation between a step in a workflow and the step that directly follows it."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://purl.org/spar/pwo/Step"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://purl.org/spar/pwo/"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "has next step"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://purl.org/spar/pwo/Step"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#directlyPrecedes"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#inverseOf": [
-      {
-        "@id": "http://purl.org/spar/pwo/hasPreviousStep"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@id": "http://purl.org/linked-data/registry#statusStable"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#TimeIndexedSituation",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A situation that is explicitly indexed at some time for at least one entity."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "time indexed situation"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "A view on a set of entities. It can be seen as a 'relational context', reifying a relation."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/situation.owl#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "situation"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#hasTimeIndexedSetting",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "The relation between an entity and a time-indexed situation it is involved in."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "has time indexed setting"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#TimeIndexedSituation"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/spar/pwo/isActionInvolvedIn",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://purl.org/vocab/vann/example": [
-      {
-        "@value": "\n    :my-workflow-execution a pwo:WorkflowExecution ;\n        pwo:execute :my-workflow .\n\n    :my-action \n        pwo:isActionInvolvedIn :my-workflow-execution .\n    "
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "The relation between an event and a particular execution of a workflow description."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://purl.org/spar/pwo/"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "is action involved in"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#propertyChainAxiom": [
-      {
-        "@list": [
-          {
-            "@id": "http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#executesTask"
-          },
-          {
-            "@id": "http://purl.org/spar/pwo/isStepOf"
-          },
-          {
-            "@id": "http://purl.org/spar/pwo/isExecutedBy"
-          }
-        ]
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@id": "http://purl.org/linked-data/registry#statusStable"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/spar/pwo/Workflow",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/vocab/vann/example": [
-      {
-        "@value": "\n    :my-workflow a pwo:Workflow ;\n        pwo:hasFirstStep :step-one ;\n        pwo:hasStep\n            :step-one ,\n            :step-two ,\n            :step-three .\n    "
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "A sequence of connected steps, representing a sequence of publishing operations undertaken by agents. A workflow may be seen as an abstract model of real work."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://purl.org/spar/pwo/"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "workflow"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb25"
-      },
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#Plan"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@id": "http://purl.org/linked-data/registry#statusStable"
-      }
-    ]
-  },
-  {
-    "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb25",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://purl.org/spar/pwo/hasFirstStep"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "http://purl.org/spar/pwo/Step"
-      }
-    ]
-  },
-  {
-    "@id": "urn:swrl#r",
-    "@type": [
-      "http://www.w3.org/2003/11/swrl#Variable"
-    ]
-  },
-  {
-    "@id": "http://purl.org/dc/elements/1.1/description",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "urn:swrl#sj",
-    "@type": [
-      "http://www.w3.org/2003/11/swrl#Variable"
-    ]
-  },
-  {
-    "@id": "http://purl.org/dc/elements/1.1/contributor",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "http://www.w3.org/2000/01/rdf-schema#comment",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "http://purl.org/spar/pwo/isIntervalFor",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://purl.org/vocab/vann/example": [
-      {
-        "@value": "\n    "
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "The relation between an interval describing when an event happened and the related event."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://purl.org/spar/pwo/"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "is interval for"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@id": "http://purl.org/linked-data/registry#statusStable"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.ontologydesignpatterns.org/cp/owl/parameter.owl#hasParameter",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A relation between a concept and a parameter."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/parameter.owl#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "has parameter"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/spar/pwo/involvesAction",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://purl.org/vocab/vann/example": [
-      {
-        "@value": "\n    :my-workflow-execution a pwo:WorkflowExecution ;\n        pwo:executes :my-workflow ;\n        pwo:involvesAction \n            :my-action ,\n            :my-another-action .\n    "
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "The relation between a particular execution of a workflow and an action."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://purl.org/spar/pwo/WorkflowExecution"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://purl.org/spar/pwo/"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "involves action"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://purl.org/spar/pwo/Action"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#inverseOf": [
-      {
-        "@id": "http://purl.org/spar/pwo/isActionInvolvedIn"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#propertyChainAxiom": [
-      {
-        "@list": [
-          {
-            "@id": "http://purl.org/spar/pwo/executes"
-          },
-          {
-            "@id": "http://purl.org/spar/pwo/hasStep"
-          },
-          {
-            "@id": "http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#isExecutedIn"
-          }
-        ]
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@id": "http://purl.org/linked-data/registry#statusStable"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#TimeInterval",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Two (starting and ending) points in time that define a particular period of time."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "time interval"
       }
     ]
   },
@@ -1035,241 +2163,6 @@
     ]
   },
   {
-    "@id": "http://purl.org/dc/elements/1.1/rights",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#definesTask",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "A relation between a description and a task."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "defines task"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/taskrole.owl#Task"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#Plan",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "A description having an explicit goal to be achieved by executing tasks."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "plan"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/spar/pwo/isProducedBy",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://purl.org/vocab/vann/example": [
-      {
-        "@value": "\n    :step-one a pwo:Step ;\n        pwo:hasNextStep :step-two .\n\n    :my-output \n        pwo:isProducedBy :step-one .\n    "
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "The relation between something and the workflow step or an event (e.g. an action executing a workflow step) that produces, creates or results in that thing."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://purl.org/spar/pwo/"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "is produced by"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#inverseOf": [
-      {
-        "@id": "http://purl.org/spar/pwo/produces"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@id": "http://purl.org/linked-data/registry#statusStable"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#forEntity",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "The relation between a time-indexed situation and an entity involved in it."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#TimeIndexedSituation"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "for entity"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#hasIntervalDate",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "A date value assigned to a time interval."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#TimeInterval"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "has interval date"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.ontologydesignpatterns.org/cp/owl/taskrole.owl#Task",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A piece of work to be done or undertaken."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/taskrole.owl#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "task"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/spar/pwo/produces",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://purl.org/vocab/vann/example": [
-      {
-        "@value": "\n    :step-one a pwo:Step ;\n        pwo:hasNextStep :step-two ;\n        taskex:isExecutedIn :my-action ;\n        pwo:produces :my-output . \n    "
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "The relation between a workflow step or an event (e.g. an action executing a workflow step) and the thing that the step/event produces, creates or results in."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb18"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://purl.org/spar/pwo/"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "produces"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@id": "http://purl.org/linked-data/registry#statusStable"
-      }
-    ]
-  },
-  {
-    "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb18",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "http://purl.org/spar/pwo/Step"
-          },
-          {
-            "@id": "http://www.ontologydesignpatterns.org/cp/owl/participation.owl#Event"
-          }
-        ]
-      }
-    ]
-  },
-  {
     "@id": "http://purl.org/spar/pwo/needs",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
@@ -1287,7 +2180,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb15"
+        "@id": "_:nec6db8b92ea1452eadb52214435a22d7b15"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -1308,7 +2201,7 @@
     ]
   },
   {
-    "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb15",
+    "@id": "_:nec6db8b92ea1452eadb52214435a22d7b15",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -1322,807 +2215,6 @@
             "@id": "http://www.ontologydesignpatterns.org/cp/owl/participation.owl#Event"
           }
         ]
-      }
-    ]
-  },
-  {
-    "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplanexecution.owl#PlanExecution",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "An event with at least one agent participating in it, and that executes a task."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplanexecution.owl#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "plan execution"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#executesTask",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "The relation between an action and a task."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#Action"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "executes task"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/taskrole.owl#Task"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.ontologydesignpatterns.org/cp/owl/participation.owl#Object",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Any physical, social, or mental object, or substance."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/participation.owl#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "object"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.ontologydesignpatterns.org/cp/owl/situation.owl#isSettingFor",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "The relation between a situation and something that situation is a setting for."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/situation.owl#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "is setting for"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#precedes",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "A relation between entities, expressing a 'sequence' schema. E.g. 'year 1999 precedes 2000', 'deciding what coffee to use' precedes 'preparing coffee', 'World War II follows World War I', 'in the Milan to Rome autoroute, Bologna precedes Florence', etc. It can then be used between tasks, processes, time intervals, spatially locate objects, situations, etc. Subproperties can be defined in order to distinguish the different uses."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "precedes"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/spar/pwo/isNeededBy",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://purl.org/vocab/vann/example": [
-      {
-        "@value": "\n    :step-one a pwo:Step ;\n        pwo:hasNextStep :step-two ;\n        taskex:isExecutedIn :my-action .\n    \n    :my-draft \n        pwo:isNeededBy :step-one . \n    "
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "The relation between a thing required to undertake a workflow step or an event (e.g. an action executing a workflow step) and the step/event itself."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://purl.org/spar/pwo/"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "is needed by"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#inverseOf": [
-      {
-        "@id": "http://purl.org/spar/pwo/needs"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@id": "http://purl.org/linked-data/registry#statusStable"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/spar/pwo/Step",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/vocab/vann/example": [
-      {
-        "@value": "\n    :step-one a pwo:Step ;\n        pwo:hasNextStep :step-two ;\n        taskex:isExecutedIn :my-action ;\n        pwo:needs :my-draft ;\n        pwo:produces :my-output .\n    "
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "An atomic unit of a workflow, that may be characterized by a starting time and an ending time, and may be associated with one or more events.  A workflow step usually involves some input information, material or energy needed to complete the step, and some output information, material or energy produced by that step.  In the case of a publishing workflow, a step typically results in the creation of a publication entity, usually by the modification of another pre-existing publication entity, e.g. the creation of an edited paper from a rough draft, or of an HTML representation from an XML mark-up."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://purl.org/spar/pwo/"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "step"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb26"
-      },
-      {
-        "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb27"
-      },
-      {
-        "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb28"
-      },
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/taskrole.owl#Task"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@id": "http://purl.org/linked-data/registry#statusStable"
-      }
-    ]
-  },
-  {
-    "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb26",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "http://purl.org/spar/pwo/Action"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#isExecutedIn"
-      }
-    ]
-  },
-  {
-    "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb27",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onClass": [
-      {
-        "@id": "http://www.w3.org/2006/time#DurationDescription"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/parameter.owl#hasParameter"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#qualifiedCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ]
-  },
-  {
-    "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb28",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "http://purl.org/spar/pwo/Workflow"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#isTaskDefinedIn"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#isTaskDefinedIn",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "A relation between a task and its description."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/taskrole.owl#Task"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "is task defined in"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/dc/elements/1.1/creator",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "http://www.w3.org/2002/07/owl#versionInfo",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "http://purl.org/spar/pwo/happened",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://purl.org/vocab/vann/example": [
-      {
-        "@value": "\n    :my-event \n        pwo:happened :my-event-time .\n    "
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "The relation between an event and the interval when it happened."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/participation.owl#Event"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://purl.org/spar/pwo/"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "happened"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#TimeInterval"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#inverseOf": [
-      {
-        "@id": "http://purl.org/spar/pwo/isIntervalFor"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@id": "http://purl.org/linked-data/registry#statusStable"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/dc/elements/1.1/title",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb29",
-    "@type": [
-      "http://www.w3.org/2003/11/swrl#Imp"
-    ],
-    "http://www.w3.org/2003/11/swrl#body": [
-      {
-        "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb30"
-      }
-    ],
-    "http://www.w3.org/2003/11/swrl#head": [
-      {
-        "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb40"
-      }
-    ]
-  },
-  {
-    "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb30",
-    "@type": [
-      "http://www.w3.org/2003/11/swrl#AtomList"
-    ],
-    "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [
-      {
-        "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb31"
-      }
-    ],
-    "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [
-      {
-        "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb32"
-      }
-    ]
-  },
-  {
-    "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb31",
-    "@type": [
-      "http://www.w3.org/2003/11/swrl#ClassAtom"
-    ],
-    "http://www.w3.org/2003/11/swrl#argument1": [
-      {
-        "@id": "urn:swrl#si"
-      }
-    ],
-    "http://www.w3.org/2003/11/swrl#classPredicate": [
-      {
-        "@id": "http://purl.org/spar/pwo/Step"
-      }
-    ]
-  },
-  {
-    "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb32",
-    "@type": [
-      "http://www.w3.org/2003/11/swrl#AtomList"
-    ],
-    "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [
-      {
-        "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb33"
-      }
-    ],
-    "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [
-      {
-        "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb34"
-      }
-    ]
-  },
-  {
-    "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb33",
-    "@type": [
-      "http://www.w3.org/2003/11/swrl#ClassAtom"
-    ],
-    "http://www.w3.org/2003/11/swrl#argument1": [
-      {
-        "@id": "urn:swrl#sj"
-      }
-    ],
-    "http://www.w3.org/2003/11/swrl#classPredicate": [
-      {
-        "@id": "http://purl.org/spar/pwo/Step"
-      }
-    ]
-  },
-  {
-    "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb34",
-    "@type": [
-      "http://www.w3.org/2003/11/swrl#AtomList"
-    ],
-    "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [
-      {
-        "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb35"
-      }
-    ],
-    "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [
-      {
-        "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb36"
-      }
-    ]
-  },
-  {
-    "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb35",
-    "@type": [
-      "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"
-    ],
-    "http://www.w3.org/2003/11/swrl#argument1": [
-      {
-        "@id": "urn:swrl#si"
-      }
-    ],
-    "http://www.w3.org/2003/11/swrl#argument2": [
-      {
-        "@id": "urn:swrl#r"
-      }
-    ],
-    "http://www.w3.org/2003/11/swrl#propertyPredicate": [
-      {
-        "@id": "http://purl.org/spar/pwo/needs"
-      }
-    ]
-  },
-  {
-    "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb36",
-    "@type": [
-      "http://www.w3.org/2003/11/swrl#AtomList"
-    ],
-    "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [
-      {
-        "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb37"
-      }
-    ],
-    "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [
-      {
-        "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb38"
-      }
-    ]
-  },
-  {
-    "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb37",
-    "@type": [
-      "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"
-    ],
-    "http://www.w3.org/2003/11/swrl#argument1": [
-      {
-        "@id": "urn:swrl#sj"
-      }
-    ],
-    "http://www.w3.org/2003/11/swrl#argument2": [
-      {
-        "@id": "urn:swrl#r"
-      }
-    ],
-    "http://www.w3.org/2003/11/swrl#propertyPredicate": [
-      {
-        "@id": "http://purl.org/spar/pwo/produces"
-      }
-    ]
-  },
-  {
-    "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb38",
-    "@type": [
-      "http://www.w3.org/2003/11/swrl#AtomList"
-    ],
-    "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [
-      {
-        "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb39"
-      }
-    ],
-    "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [
-      {
-        "@list": []
-      }
-    ]
-  },
-  {
-    "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb39",
-    "@type": [
-      "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"
-    ],
-    "http://www.w3.org/2003/11/swrl#argument1": [
-      {
-        "@id": "urn:swrl#si"
-      }
-    ],
-    "http://www.w3.org/2003/11/swrl#argument2": [
-      {
-        "@id": "urn:swrl#sj"
-      }
-    ],
-    "http://www.w3.org/2003/11/swrl#propertyPredicate": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#precedes"
-      }
-    ]
-  },
-  {
-    "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb40",
-    "@type": [
-      "http://www.w3.org/2003/11/swrl#AtomList"
-    ],
-    "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [
-      {
-        "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb41"
-      }
-    ],
-    "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [
-      {
-        "@list": []
-      }
-    ]
-  },
-  {
-    "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb41",
-    "@type": [
-      "http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"
-    ],
-    "http://www.w3.org/2003/11/swrl#argument1": [
-      {
-        "@id": "urn:swrl#si"
-      }
-    ],
-    "http://www.w3.org/2003/11/swrl#argument2": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#string",
-        "@value": "A step cannot need a resource that will be produced by a following step"
-      }
-    ],
-    "http://www.w3.org/2003/11/swrl#propertyPredicate": [
-      {
-        "@id": "http://www.essepuntato.it/2009/10/error/hasError"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.ontologydesignpatterns.org/cp/owl/participation.owl#Event",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "An event that may happen during a publishing process, such as writing a draft, sending a preprint, publishing a paper, etc."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/participation.owl#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "event"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplan.owl#isSatisfiedBy",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A relation between a description and a situation."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplan.owl#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "satisfies"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#inverseOf": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplan.owl#satisfies"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/dc/elements/1.1/date",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplan.owl#satisfies",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A relation between a situation and a description."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplan.owl#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "satisfies"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#isExecutedIn",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "The relation between a task and an action."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "is executed in"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#inverseOf": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#executesTask"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#atTime",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#FunctionalProperty",
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "A time interval during which something is happening."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#TimeIndexedSituation"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "at time"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#TimeInterval"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/spar/pwo/hasPreviousStep",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://purl.org/vocab/vann/example": [
-      {
-        "@value": "\n    :step-two a pwo:Step ;\n        pwo:hasPreviousStep :step-one .\n    "
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "A relation between a step in a workflow and the step that directly precedes it."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://purl.org/spar/pwo/"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "has previous step"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#directlyFollows"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@id": "http://purl.org/linked-data/registry#statusStable"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.ontologydesignpatterns.org/cp/owl/participation.owl#isParticipantIn",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "The relation between an event and an object participating in that event."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/participation.owl#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "has participant"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#inverseOf": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/participation.owl#hasParticipant"
       }
     ]
   },
@@ -2155,7 +2247,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb7"
+        "@id": "_:nec6db8b92ea1452eadb52214435a22d7b7"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
@@ -2170,18 +2262,18 @@
     ]
   },
   {
-    "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb7",
+    "@id": "_:nec6db8b92ea1452eadb52214435a22d7b7",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2002/07/owl#complementOf": [
       {
-        "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb8"
+        "@id": "_:nec6db8b92ea1452eadb52214435a22d7b8"
       }
     ]
   },
   {
-    "@id": "_:nb6503e602e7041b297f9cdb0fc8ae89eb8",
+    "@id": "_:nec6db8b92ea1452eadb52214435a22d7b8",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -2197,122 +2289,30 @@
     ]
   },
   {
-    "@id": "http://www.ontologydesignpatterns.org/cp/owl/participation.owl#hasParticipant",
+    "@id": "http://purl.org/dc/elements/1.1/description",
     "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "The relation between an event and an object participating in that event."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/participation.owl#Event"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/participation.owl#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "has participant"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/participation.owl#Object"
-      }
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
     ]
   },
   {
-    "@id": "http://www.w3.org/2006/time#DurationDescription",
+    "@id": "http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#TimeIndexedSituation",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
-        "@value": "Description of temporal extent structured with separate values for the various elements of a calendar-clock system."
+        "@value": "A situation that is explicitly indexed at some time for at least one entity."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@id": "http://www.w3.org/2006/time#"
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "duration description"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/spar/pwo/isExecutedBy",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://purl.org/vocab/vann/example": [
-      {
-        "@value": "\n    :my-workflow a pwo:Workflow ;\n        pwo:isExecutedBy :my-workflow-execution .\n    "
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "The relation between a workflow description and the related workflow execution."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://purl.org/spar/pwo/"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "is executed by"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplan.owl#isSatisfiedBy"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@id": "http://purl.org/linked-data/registry#statusStable"
-      }
-    ]
-  },
-  {
-    "@id": "urn:swrl#si",
-    "@type": [
-      "http://www.w3.org/2003/11/swrl#Variable"
-    ]
-  },
-  {
-    "@id": "http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#directlyPrecedes",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "The intransitive precedes relation. For example, Monday directly precedes Tuesday. Directness of precedence depends on the designer conceptualization."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "directly precedes"
+        "@value": "time indexed situation"
       }
     ]
   }
