@@ -5,5 +5,5 @@
 planex:Action a owl:Class ;
     rdfs:label "action"@en ;
     rdfs:comment "An event with at least one agent that participates in it, and that executes a task." ;
-    rdfs:isDefinedBy <hhttp://www.ontologydesignpatterns.org/cp/owl/basicplanexecution.owl#> .
+    rdfs:isDefinedBy planex: .
 

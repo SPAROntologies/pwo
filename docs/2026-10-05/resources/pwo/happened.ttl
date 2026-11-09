@@ -1,0 +1,22 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix part: <http://www.ontologydesignpatterns.org/cp/owl/participation.owl#> .
+@prefix pwo: <http://purl.org/spar/pwo/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix ti: <http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+pwo:happened a owl:ObjectProperty ;
+    rdfs:label "happened"@en ;
+    vann:example """
+    :my-event 
+        pwo:happened :my-event-time .
+    """ ;
+    rdfs:comment "The relation between an event and the interval when it happened."@en ;
+    rdfs:domain part:Event ;
+    rdfs:isDefinedBy pwo: ;
+    rdfs:range ti:TimeInterval ;
+    owl:inverseOf pwo:isIntervalFor ;
+    vs:term_status reg:statusStable .
+

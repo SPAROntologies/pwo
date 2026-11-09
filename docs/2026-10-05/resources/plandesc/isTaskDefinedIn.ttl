@@ -1,0 +1,12 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix plandesc: <http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix taskex: <http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#> .
+@prefix taskrole: <http://www.ontologydesignpatterns.org/cp/owl/taskrole.owl#> .
+
+plandesc:isTaskDefinedIn a owl:ObjectProperty ;
+    rdfs:label "is task defined in"@en ;
+    rdfs:comment "A relation between a task and its description."@en ;
+    rdfs:domain taskrole:Task ;
+    rdfs:isDefinedBy taskex: .
+

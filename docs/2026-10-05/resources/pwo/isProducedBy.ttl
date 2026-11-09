@@ -1,0 +1,21 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pwo: <http://purl.org/spar/pwo/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+pwo:isProducedBy a owl:ObjectProperty ;
+    rdfs:label "is produced by"@en ;
+    vann:example """
+    :step-one a pwo:Step ;
+        pwo:hasNextStep :step-two .
+
+    :my-output 
+        pwo:isProducedBy :step-one .
+    """ ;
+    rdfs:comment "The relation between something and the workflow step or an event (e.g. an action executing a workflow step) that produces, creates or results in that thing."@en ;
+    rdfs:isDefinedBy pwo: ;
+    owl:inverseOf pwo:produces ;
+    vs:term_status reg:statusStable .
+
