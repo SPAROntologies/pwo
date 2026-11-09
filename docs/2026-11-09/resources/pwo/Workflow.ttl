@@ -17,7 +17,7 @@ pwo:Workflow a owl:Class ;
             :step-three .
     """ ;
     rdfs:comment "A sequence of connected steps, representing a sequence of publishing operations undertaken by agents. A workflow may be seen as an abstract model of real work."@en ;
-    rdfs:isDefinedBy pwo: ;
+    rdfs:isDefinedBy <http://purl.org/spar/pwo> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty pwo:hasFirstStep ;
             owl:someValuesFrom pwo:Step ],

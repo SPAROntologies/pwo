@@ -7,6 +7,6 @@ taskex:executesTask a owl:ObjectProperty ;
     rdfs:label "executes task"@en ;
     rdfs:comment "The relation between an action and a task."@en ;
     rdfs:domain taskex:Action ;
-    rdfs:isDefinedBy taskex: ;
+    rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl> ;
     rdfs:range taskrole:Task .
 

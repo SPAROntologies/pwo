@@ -17,7 +17,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@id": "http://purl.org/spar/pwo/"
+        "@id": "http://purl.org/spar/pwo"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -28,16 +28,16 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplanexecution.owl#PlanExecution"
-      },
-      {
         "@id": "http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#TimeIndexedSituation"
       },
       {
-        "@id": "_:nbd84bf33f5544f16a57c30d2846feb1fb1"
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplanexecution.owl#PlanExecution"
       },
       {
-        "@id": "_:nbd84bf33f5544f16a57c30d2846feb1fb6"
+        "@id": "_:n9392a4abbb364d5799b37d690f0f9757b1"
+      },
+      {
+        "@id": "_:n9392a4abbb364d5799b37d690f0f9757b6"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -47,7 +47,7 @@
     ]
   },
   {
-    "@id": "_:nbd84bf33f5544f16a57c30d2846feb1fb1",
+    "@id": "_:n9392a4abbb364d5799b37d690f0f9757b1",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -58,12 +58,12 @@
     ],
     "http://www.w3.org/2002/07/owl#someValuesFrom": [
       {
-        "@id": "_:nbd84bf33f5544f16a57c30d2846feb1fb2"
+        "@id": "_:n9392a4abbb364d5799b37d690f0f9757b2"
       }
     ]
   },
   {
-    "@id": "_:nbd84bf33f5544f16a57c30d2846feb1fb2",
+    "@id": "_:n9392a4abbb364d5799b37d690f0f9757b2",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -74,14 +74,14 @@
             "@id": "http://purl.org/spar/pwo/Action"
           },
           {
-            "@id": "_:nbd84bf33f5544f16a57c30d2846feb1fb3"
+            "@id": "_:n9392a4abbb364d5799b37d690f0f9757b3"
           }
         ]
       }
     ]
   },
   {
-    "@id": "_:nbd84bf33f5544f16a57c30d2846feb1fb3",
+    "@id": "_:n9392a4abbb364d5799b37d690f0f9757b3",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -97,7 +97,7 @@
     ]
   },
   {
-    "@id": "_:nbd84bf33f5544f16a57c30d2846feb1fb6",
+    "@id": "_:n9392a4abbb364d5799b37d690f0f9757b6",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],

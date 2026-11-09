@@ -17,7 +17,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@id": "http://purl.org/spar/pwo/"
+        "@id": "http://purl.org/spar/pwo"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -28,16 +28,16 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "_:nbd84bf33f5544f16a57c30d2846feb1fb28"
-      },
-      {
-        "@id": "_:nbd84bf33f5544f16a57c30d2846feb1fb26"
-      },
-      {
         "@id": "http://www.ontologydesignpatterns.org/cp/owl/taskrole.owl#Task"
       },
       {
-        "@id": "_:nbd84bf33f5544f16a57c30d2846feb1fb27"
+        "@id": "_:n9392a4abbb364d5799b37d690f0f9757b26"
+      },
+      {
+        "@id": "_:n9392a4abbb364d5799b37d690f0f9757b27"
+      },
+      {
+        "@id": "_:n9392a4abbb364d5799b37d690f0f9757b28"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -47,23 +47,7 @@
     ]
   },
   {
-    "@id": "_:nbd84bf33f5544f16a57c30d2846feb1fb28",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "http://purl.org/spar/pwo/Workflow"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#isTaskDefinedIn"
-      }
-    ]
-  },
-  {
-    "@id": "_:nbd84bf33f5544f16a57c30d2846feb1fb26",
+    "@id": "_:n9392a4abbb364d5799b37d690f0f9757b26",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -79,7 +63,7 @@
     ]
   },
   {
-    "@id": "_:nbd84bf33f5544f16a57c30d2846feb1fb27",
+    "@id": "_:n9392a4abbb364d5799b37d690f0f9757b27",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -97,6 +81,22 @@
       {
         "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
         "@value": "1"
+      }
+    ]
+  },
+  {
+    "@id": "_:n9392a4abbb364d5799b37d690f0f9757b28",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://purl.org/spar/pwo/Workflow"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#isTaskDefinedIn"
       }
     ]
   }

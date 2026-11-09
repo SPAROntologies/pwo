@@ -12,7 +12,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@id": "http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#"
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [

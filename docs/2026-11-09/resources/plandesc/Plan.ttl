@@ -5,5 +5,5 @@
 plandesc:Plan a owl:Class ;
     rdfs:label "plan"@en ;
     rdfs:comment "A description having an explicit goal to be achieved by executing tasks."@en ;
-    rdfs:isDefinedBy plandesc: .
+    rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl> .
 

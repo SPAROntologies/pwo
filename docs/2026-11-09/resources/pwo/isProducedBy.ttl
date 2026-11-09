@@ -15,7 +15,7 @@ pwo:isProducedBy a owl:ObjectProperty ;
         pwo:isProducedBy :step-one .
     """ ;
     rdfs:comment "The relation between something and the workflow step or an event (e.g. an action executing a workflow step) that produces, creates or results in that thing."@en ;
-    rdfs:isDefinedBy pwo: ;
+    rdfs:isDefinedBy <http://purl.org/spar/pwo> ;
     owl:inverseOf pwo:produces ;
     vs:term_status reg:statusStable .
 

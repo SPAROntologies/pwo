@@ -13,7 +13,7 @@ pwo:isExecutedBy a owl:ObjectProperty ;
         pwo:isExecutedBy :my-workflow-execution .
     """ ;
     rdfs:comment "The relation between a workflow description and the related workflow execution." ;
-    rdfs:isDefinedBy pwo: ;
+    rdfs:isDefinedBy <http://purl.org/spar/pwo> ;
     rdfs:subPropertyOf plan:isSatisfiedBy ;
     vs:term_status reg:statusStable .
 

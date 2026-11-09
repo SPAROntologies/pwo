@@ -12,7 +12,7 @@ pwo:hasFirstStep a owl:ObjectProperty ;
         pwo:hasFirstStep :step-one .
     """ ;
     rdfs:comment "The relation between a workflow and its first step."@en ;
-    rdfs:isDefinedBy pwo: ;
+    rdfs:isDefinedBy <http://purl.org/spar/pwo> ;
     rdfs:range [ a owl:Class ;
             owl:complementOf [ a owl:Restriction ;
                     owl:onProperty pwo:hasPreviousStep ;
